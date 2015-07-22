@@ -1,0 +1,67 @@
+<!--
+ Copyright (C) 2010 Software Languages Lab, Vrije Universiteit Brussel
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<html>
+<head>
+	<title>Profiler</title>
+</head>
+<script src="reflect.js"></script>
+<script>
+function makeSimpleProfiler(target) {
+  var count = Object.create(null);
+  return {
+    proxy: Proxy(target, {
+      get: function(target, name) {
+        count[name] = (count[name] || 0) + 1;
+        return Reflect.get(target, name);
+      }
+    }),
+    get stats() { return count; }
+  };
+}
+
+// plot a histogram using the Google Chart API
+function plotHistogram(count) {
+  var vals = [];
+  var props = [];
+  var max = 0;
+  for (var prop in count) {
+    vals.push(count[prop]);
+    props.push(prop);
+    if (count[prop] > max) { max = count[prop]; }
+  }
+  document.write(
+    '<img src="http://chart.apis.google.com/chart?cht=bvs&chs=250x100&chd=t:'+vals.join(',')+
+       '&chxr=1,0,'+max+',1&chds=0,'+max+
+       '&chxt=x,y&chxl=0:|'+props.join('|')+'"></img>');
+}
+
+function runApp(o) {
+  o.foo; o.foo; o.foo;
+  o.bar; o.bar;
+  o.baz;
+}
+
+var subject = { foo: 42, bar: 24 };
+var profiler = makeSimpleProfiler(subject);
+runApp(profiler.proxy);
+plotHistogram(profiler.stats);
+</script>
+
+<body>
+  <br>View source to see what's going on.
+<!--  <img src="http://chart.apis.google.com/chart?cht=bvs&chs=250x100&chd=t:3,1&chxr=1,0,3,1&chds=0,3&chxt=x,y&chxl=0:|foo|bar"></img> -->
+</body>
+</html>

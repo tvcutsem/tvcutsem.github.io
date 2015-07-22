@@ -1,0 +1,47 @@
+<!--
+ Copyright (C) 2010 Software Languages Lab, Vrije Universiteit Brussel
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+ http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<html>
+<head>
+	<title>NoSuchMethod emulation</title>
+</head>
+<script src="reflect.js"></script>
+<script>
+var NoSuchMethodTrap = Proxy({}, {
+  get: function(target, name, rcvr) {
+    if (name === '__noSuchMethod__') {
+      throw new Error("receiver does not implement __noSuchMethod__ hook");
+    } else {
+      return function() {
+        var args = Array.prototype.slice.call(arguments);
+        return this.__noSuchMethod__(name, args);
+      }
+    }
+  }
+});
+
+function MyObject() {};
+MyObject.prototype = Object.create(NoSuchMethodTrap);
+MyObject.prototype.__noSuchMethod__ = function(methName, args) {
+  return 'Hello, '+methName;
+};
+
+document.write(new MyObject().foo()) // returns 'Hello, foo'
+</script>
+
+<body>
+  <br>View source to see what's going on.
+</body>
+</html>

@@ -12,7 +12,7 @@ body {
 }
 
 .footer a {
-    color: #ee4444;
+    color: #727272;
 }
 
 .sidebar h1 {
@@ -38,14 +38,21 @@ body {
 }
 
 .well h1 {
-    color: #ee4444;
+    color: #727272;
     font-size: 1.3em;
 }
 
 .author {
-    color: #ee4444;
+    color: #727272;
 }
 
 .author a {
-    color: #ee4444;
+    color: #727272;
+}
+
+blockquote {
+    color: gray;
+    border-left: 4px solid gray;
+    font-size: 1em;
+    font-style: italic;
 }
