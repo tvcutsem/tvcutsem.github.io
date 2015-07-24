@@ -5,6 +5,8 @@ permalink: /cv/
 ---
 Download my [CV](/assets/Tom_Van_Cutsem_CV_02_2014.pdf) (last updated: February 2014).
 
+[![View my LinkedIn Profile](/assets/btn_viewmy_120x33.png)](http://be.linkedin.com/in/tomvc)
+
 ## Personal Facts
 
 Tom Van Cutsem
