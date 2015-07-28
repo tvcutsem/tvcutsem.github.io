@@ -3,7 +3,9 @@ title: About me
 layout: page
 permalink: /aboutme/
 ---
-<span>![Tom Van Cutsem](/assets/me.jpg)</span>
+<span>
+  <img src="/assets/me.jpg" width="100%" alt="Tom Van Cutsem">
+</span>
 
 As of February 2014 I am a senior researcher at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem). Prior to joining Bell Labs, I was a professor of Computer Science at the [Software Languages Lab](http://soft.vub.ac.be) of the [Vrije Universiteit Brussel](http://www.vub.ac.be). Prior to that I was a post-doc researcher, funded by the [Flanders Research Foundation](http://www.fwo.be). In 2008, I completed my doctoral dissertation on [AmbientTalk](http://soft.vub.ac.be/amop), a distributed programming language designed for mobile ad hoc networks. In 2009/2010 I was Visiting Faculty at Google where I contributed to the ECMAScript (aka Javascript) standardization process, in particular, together with Mark S. Miller I designed its [Proxy API](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies).
 
