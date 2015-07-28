@@ -6,6 +6,7 @@ tags:
   - formal semantics
   - event loop concurrency
 permalink: atsemantics
+comments: true
 ---
 Together with PhD students [Christophe Scholliers](http://soft.vub.ac.be/~cfscholl/) and [Dries Harnie](http://soft.vub.ac.be/~dharnie/), I recently completed an operational semantics of our [AmbientTalk](http://ambienttalk.googlecode.com) programming language. We believe this is the first formal account of an actor language based on communicating event loops. The paper is currently available as a [techreport](http://soft.vub.ac.be/Publications/2012/vub-soft-tr-12-04.pdf). From the abstract:
 

@@ -2,6 +2,7 @@
 title: AmbientTalk actors are data race and deadlock free
 layout: post
 tags: ambienttalk
+comments: true
 ---
 We recently published a new article on AmbientTalk, an actor language I co-designed with a focus on developing mobile applications for ad hoc wireless networks. The main novelty of the article is what we believe to be the first formal account of the [communicating event loops model](http://www.erights.org/talks/promises/), which is the concurrency model underlying the family of actor languages upon which AmbientTalk is based. Interestingly, this model is also closest to the concurrency model you get in JavaScript, if you think of a WebWorker as an actor. The article gives a comprehensive overview of AmbientTalk’s roots, the language itself, and introduces a “featherweight AmbientTalk” calculus with an operational semantics. We use it to establish data race freedom (actors have isolated memory) and deadlock freedom (assuming all event loop turns are finite, all asynchronous messages sent between actors will eventually be processed). The article [is published](http://dx.doi.org/10.1016/j.cl.2014.05.002) in the journal "Computer Languages, Systems & Structures". A preprint copy of the paper is available [here](http://soft.vub.ac.be/Publications/2014/vub-soft-tr-14-06.pdf). Quoting the abstract:
 

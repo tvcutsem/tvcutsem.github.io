@@ -9,6 +9,7 @@ tags:
   - Dr. SES
   - smart contracts
 permalink: drses
+comments: true
 ---
 This post is about a project I've been working on together with Mark Miller (with the help of many others) which we call "Dr. SES", for Distributed Resilient Secure ECMAScript". Dr. SES is a JavaScript extension aimed at secure, distributed computing.
 

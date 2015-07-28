@@ -4,6 +4,7 @@ layout: post
 tags: javascript proxies membranes
 permalink: js-membranes
 excerpt_separator: <!--more-->
+comments: true
 ---
 Membranes are a powerful new feature enabled by Javascript proxies, with various use cases. The goal of a membrane is to fully isolate two object graphs.<!--more--> Before I can dive into more practical applications of membranes, I need to explain what a membrane is in more detail, so bear with me.
 
@@ -35,7 +36,9 @@ dryB.y === 0
 
 After executing all this code, we end up with the following object graph:
 
-<center>![Membrane 1](/assets/Membrane1.jpg)</center>
+<center>
+  <img src="/assets/Membrane1.jpg" alt="Membrane 1" width="60%"></img>
+</center>
 
 The full circles represent regular Javascript objects, the half-circles represent proxies. Now, if we want to add references in the other direction, we'll need to add a method to one of our wet objects:
 
@@ -52,13 +55,17 @@ var dryD = dryA.m(dryC);
 
 And we end up with the following object graph:
 
-![Membrane 2](/assets/Membrane2.jpg)
+<center>
+  <img src="/assets/Membrane2.jpg" alt="Membrane 2" width="60%"></img>
+</center>
 
 ## Revocable Membranes
 
 This is all fine, but why is it useful? A membrane provides its creator with the power to intervene whenever a reference crosses the membrane (either in->out or out->in). One simple use case is for instance to install a kill-switch on the membrane: while the switch has not yet been triggered, all the wrappers belonging to the same membrane do nothing but transparently and dutifully forwarding all operations to their corresponding targets on the other side of the membrane. However, once the kill-switch is triggered, these wrappers instantaneously stop forwarding, drop the reference to their target, and will complain whenever clients still try to access their target. In effect, the membrane has hermetically sealed off its wrapped object graph from the world outside it: clients that only have membrane-wrapped references will hold on to nothing but useless pointers. After revocation, we are left with the following object graph:
 
-![Membrane 3](/assets/Membrane3.jpg)
+<center>
+  <img src="/assets/Membrane3.jpg" alt="Membrane 3" width="60%"></img>
+</center>
 
 Such membranes are called "revocable" membranes, and triggering the kill-switch is also called "revoking" the membrane. Revocable membranes are useful to exercise the principle of least authority in application design: module A may only want to provide module B with access to its objects for a limited amount of time. A can thus wrap its objects in a membrane, pass the wrapped version to B, and when A (the rightful owner of the objects) decides that B no longer has the right to access its objects, it revokes the membrane.
 

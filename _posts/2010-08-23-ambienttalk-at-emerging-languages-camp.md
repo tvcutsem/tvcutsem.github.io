@@ -2,5 +2,6 @@
 title: AmbientTalk at Emerging Languages Camp
 layout: post
 tags: AmbientTalk ELC OSCON Channel9
+comments: true
 ---
 Last July, I presented AmbientTalk at the first [Emerging Languages Camp](http://emerginglangs.com) at O'Reilly's [OSCON](http://www.oscon.com/oscon2010) in Portland. The talk was well received and AmbientTalk got some media coverage, among others an article in [Technology Review Magazine](http://www.technologyreview.in/computing/25854/) and an article in [Data News](http://datanews.rnews.be/nl/ict/nieuws/nieuwsoverzicht/2010/07/26/nood-aan-nieuwe-talen-en-aan-meertaligheid/article-1194782208102.htm?utm_source=Newsletter-26-07-2010&utm_medium=Email&utm_campaign=Newsletter-Datanews-nl) (in Dutch). Dean Wampler posted a good [summary of all discussed languages](http://blog.polyglotprogramming.com/2010/7/26/oscon-emerging-languages-camp) (including AmbientTalk) on his blog. After the conference, I was [interviewed for Microsoft's Channel 9](http://channel9.msdn.com/posts/Charles/Scenes-from-Emerging-Languages-Camp-2010-Standing-Roundtable-Discussion/) together with Mark S. Miller, Jonathan Shapiro and Gilad Bracha. It's a very impromptu interview, covering topics like static typing, mirror-based reflection and AmbientTalk's interoperability with the JVM.

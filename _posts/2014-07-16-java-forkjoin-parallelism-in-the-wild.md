@@ -5,6 +5,7 @@ tags:
   - java
   - fork/join
   - parallel programming
+comments: true
 ---
 My student [Mattias De Wael](http://soft.vub.ac.be/~madewael/), with guidance from [Stefan Marr](http://soft.vub.ac.be/~smarr/) and myself, recently published a study on how the [Java Fork/Join](http://docs.oracle.com/javase/tutorial/essential/concurrency/forkjoin.html) framework is being used in practice by developers. From the abstract:
 

@@ -4,6 +4,7 @@ layout: post
 tags: javascript proxies freezing invariants
 permalink: frozen-proxies
 excerpt_separator: <!--more-->
+comments: true
 ---
 This post is about how frozen Javascript objects interact with the upcoming [Proxy API](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies).<!--more-->
 
@@ -36,7 +37,9 @@ Here, <tt>proxy</tt> is a special proxy object that can intercept a number of Ja
 
 Below is a schematic representation that shows the relationship between a proxy, a target and its handler. Proxies can intercept many operations, such as property access and assignment, property lookup, enumeration, and so on. On the left, we show a couple of operations applied to the proxy, and how the proxy interprets them by dispatching to the handler.
 
-![Proxy API](/assets/proxy_api.jpg)
+<center>
+  <img src="/assets/proxy_api.jpg" alt="Proxy API" width="100%"></img>
+</center>
 
 In short, the proxy can fully customize the way it advertises its own properties to clients. In general, a proxy is not even obliged to return results that are consistent with its own target:
 

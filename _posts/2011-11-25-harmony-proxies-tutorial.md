@@ -7,6 +7,7 @@ tags:
   - proxies
 permalink: proxies_tutorial
 excerpt_separator: <!--more-->
+comments: true
 ---
 **Update (July 2015): Proxies are now officially part of the recently released [ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/) specification. This tutorial is still relevant, but dated. For up-to-date documentation, see e.g. [Mozilla's MDN page on proxies.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)**
 
@@ -402,5 +403,7 @@ The following is a list of dated resources that mostly deal with an old version 
 
 * * *
 
-<div style="font-size: 80%;">[![Creative Commons License](http://i.creativecommons.org/l/by-sa/2.5/80x15.png)](http://creativecommons.org/licenses/by-sa/2.5/)  
-This work is licensed under a [Creative Commons Attribution-ShareAlike 2.5 Generic License](http://creativecommons.org/licenses/by-sa/2.5/).</div>
+<sub>
+  [![Creative Commons License](http://i.creativecommons.org/l/by-sa/2.5/80x15.png)](http://creativecommons.org/licenses/by-sa/2.5/)  
+This work is licensed under a [CC BY-SA 2.5 Generic License](http://creativecommons.org/licenses/by-sa/2.5/).
+</sub>

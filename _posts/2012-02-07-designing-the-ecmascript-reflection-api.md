@@ -4,6 +4,7 @@ layout: post
 tags: javascript reflection proxies ecmascript
 permalink: esharmony_reflect
 excerpt_separator: <!--more-->
+comments: true
 ---
 For the past two years, I have been working on a new Reflection API for ECMAScript (the Javascript standard) together with [Mark Miller](http://research.google.com/pubs/author35958.html). Its most novel feature is its support for proxies, objects whose behavior in response to a large number of built-in functions and operators can be controlled in Javascript itself.
 

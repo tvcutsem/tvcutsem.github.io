@@ -4,6 +4,7 @@ layout: post
 tags: javascript proxies membranes
 permalink: notification-proxies
 excerpt_separator: <!--more-->
+comments: true
 ---
 At the May TC39 meeting I [presented](http://soft.vub.ac.be/~tvcutsem/invokedynamic/presentations/Notification Proxies-TC39-May-2013.pdf) [pdf] an overview of Notification Proxies, as a possible alternative to Direct Proxies. This post briefly summarizes my talk, and the feedback I got from the committee. tl;dr: notification proxies are off the table, we're sticking to direct proxies in ES6.<!--more-->
 
@@ -15,9 +16,9 @@ Here's a simple logger proxy that logs the outcome of all property accesses, wri
 var target = {};
 var handler = {
   get: function(target, name, receiver) {
-    console.log(“getting: ” + name);
+    console.log("getting: " + name);
     var result = Reflect.get(target, name, receiver);
-    console.log(“got: ” + result);
+    console.log("got: " + result);
     return result;
   }
 };
@@ -30,9 +31,9 @@ And here is the same example, implemented using notification proxies:
 var target = {};
 var handler = {
   onGet: function(target, name, receiver) {
-    console.log(“getting: ” + name);
+    console.log("getting: " + name);
     return function(target, name, receiver, result) {
-      console.log(“got: ” + result);
+      console.log("got: " + result);
     }
   }
 };
@@ -64,7 +65,7 @@ var dryB = dryA.x;
 
 Visualised:
 
-![membranes and frozen objects](/assets/Membrane_Frozen.jpg)
+<center><img src="/assets/Membrane_Frozen.jpg" width="60%" alt="membranes and frozen objects"></src></center>
 
 However, when executing the above code, a problem occurs when accessing <tt>dryA.x</tt>:
 
@@ -79,7 +80,7 @@ The necessary workaround is to have the direct proxy wrap a dummy, "shadow targe
 
 Applying the shadow target technique to membranes, the key idea (due to Mark S. Miller) is to have the shadow and the real target sit on opposite sides of the membrane. For instance, for a dry-to-wet proxy, the "real target" is "wet" (i.e. inside the membrane), while the "shadow target" is dry (i.e. outside the membrane). Whenever the dry-to-wet membrane proxy intercepts an operation, it retrieves the wet target's property and wraps it, defining a dry equivalent property on the shadow. Afterwards, it just forwards the intercepted operation to the dry shadow, which will at that point be correctly initialized.
 
-![membranes and shadow targets](/assets/Membrane_Shadow.jpg)
+<center><img src="/assets/Membrane_Shadow.jpg" width="60%" alt="membranes and shadow targets"></src></center>
 
 One "optimization" that membranes implemented using direct proxies can perform is to test whether the target object is frozen and if not, use the simple "try 1" approach of forwarding the operation to the target directly. If the target is frozen, the membrane can fall back on using the shadow target to define the wrapped property. In other words: as long as the target object is not actually frozen, the membrane does not need to copy properties onto the shadow target.
 
