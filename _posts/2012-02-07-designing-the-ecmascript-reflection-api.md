@@ -8,7 +8,9 @@ comments: true
 ---
 For the past two years, I have been working on a new Reflection API for ECMAScript (the Javascript standard) together with [Mark Miller](http://research.google.com/pubs/author35958.html). Its most novel feature is its support for proxies, objects whose behavior in response to a large number of built-in functions and operators can be controlled in Javascript itself.
 
-Last week, I finally [finished a paper](http://soft.vub.ac.be/Publications/2012/vub-soft-tr-12-03.pdf) that not only describes the new API in some detail, but also describes the principles that helped steer our design. <!--more-->From the paper's abstract:
+Last week, I finally [finished a paper](http://soft.vub.ac.be/Publications/2012/vub-soft-tr-12-03.pdf) that not only describes the new API in some detail, but also describes the principles that helped steer our design. From the paper's abstract:
+
+<!--more-->
 
 > We describe in detail the new reflection API of the upcoming Javascript standard. The most prominent feature of this new API is its support for creating proxies: virtual objects that behave as regular objects, but whose entire "meta-object protocol" is implemented in Javascript itself. Next to a detailed description of the API, we describe a more general set of design principles that helped steer the API's design, and which should be applicable to similar APIs for other languages. We also describe access control abstractions implemented in the new API, and provide an operational semantics of an extension of the untyped lambda-calculus featuring proxies.
 

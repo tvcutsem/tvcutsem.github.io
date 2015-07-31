@@ -57,3 +57,7 @@ blockquote {
     font-size: 1em;
     font-style: italic;
 }
+
+.post-tags {
+  font-size: 0.8em;
+}

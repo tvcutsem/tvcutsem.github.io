@@ -1,8 +1,11 @@
 ---
 layout: default
 ---
-
+<p>Posts indexed <a href="#bydate">by date</a> | <a href="#bytag">by tag</a>
+  
+<a name="bydate"></a>
 <div class="well">
+<h3>By Date</h3>
 {%for post in site.posts %}
     {% unless post.next %}
         <h1>{{ post.date | date: '%Y' }}</h1>
@@ -19,4 +22,24 @@ layout: default
     <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} - {{ post.title }}</a></li>
 {% endfor %}
 </ul>
+</div>
+
+<a name="bytag"></a>
+<div class="well">
+<h3>By Tag</h3>
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }},
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | strip_newlines | remove: ' ' | split:',' | sort %}
+
+{% for tag in sortedtags %}
+  <h1 id="{{ tag }}">{{ tag }}</h1>
+  <ul>
+  {% for post in site.tags[tag] %}
+    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  </ul>
+{% endfor %}
 </div>

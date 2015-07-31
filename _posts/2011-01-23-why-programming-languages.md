@@ -9,8 +9,10 @@ excerpt_separator: <!--more-->
 comments: true
 disqus: 'invokedynamic'
 ---
-When I present my research work on programming languages, people often ask me _"why do you need a new programming language to solve this problem? Why not just implement it as a library?"_ Or, I get asked _"why didn't you implement it as an extension to {some existing language}?"_ In this essay I will try to make explicit some of the goals and motivations behind language design.<!--more-->
+When I present my research work on programming languages, people often ask me _"why do you need a new programming language to solve this problem? Why not just implement it as a library?"_ Or, I get asked _"why didn't you implement it as an extension to {some existing language}?"_ In this essay I will try to make explicit some of the goals and motivations behind language design.
 They are formulated wholly from my own background in this area, so I might be missing some important ones I haven't thought about.
+
+<!--more-->
 
 In this essay, I will distinguish four primary goals that can drive the language design process:
 

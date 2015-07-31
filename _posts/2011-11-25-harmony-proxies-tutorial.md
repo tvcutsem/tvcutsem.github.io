@@ -14,6 +14,7 @@ comments: true
 The Proxy API enables the creation of dynamic proxies in Javascript. Dynamic proxies are useful for writing generic object or function wrappers or for creating virtual object abstractions. To avoid any confusion: these proxies have nothing to do with web proxy servers.
 
 Perhaps the most compelling use of proxies is the ability to create objects whose properties can be computed dynamically. Proxies encompass all use cases that one would use the SpiderMonkey hook <tt>__noSuchMethod__</tt> for (such as creating mock objects in testing frameworks, Rails ActiveRecord [dynamic finder](http://blog.hasmanythrough.com/2006/8/13/how-dynamic-finders-work)-like capabilities, etc.) but generalize to operations other than method invocation.
+
 <!--more-->
 
 ### What platforms support Proxies?

@@ -7,7 +7,9 @@ comments: true
 ---
 Next week I will be speaking at [jsconf.be](http://jsconf.be) in lovely Bruges, Belgium. It's the second edition of the local Belgian JavaScript community gathering and it's promising to be quite an interesting program with talks on some of the usual suspects: React, Angular, Meteor, node and some less usual suspects, like the [Cody CMS](http://www.cody-cms.org/en/), a content-management system written 100% in JS. Perhaps unsurprisingly given recent events, I will be speaking about ECMAScript 6, which is nearing completion (at the time of writing, TC39 itself has signed off on the spec, but it is pending formal approval from ECMA). This is quite a historical moment. As Allen Wirfs-Brock, the editor of the ES6 spec put in the foreword of the new spec:
 
-> Focused development of the sixth edition started in 2009, as the fifth edition was being prepared for publication. However, this was preceded by significant experimentation and language enhancement design efforts dating to the publication of the third edition in 1999\. In a very real sense, the completion of the sixth edition is the culmination of a fifteen year effort.
+<!--more-->
+
+> Focused development of the sixth edition started in 2009, as the fifth edition was being prepared for publication. However, this was preceded by significant experimentation and language enhancement design efforts dating to the publication of the third edition in 1999. In a very real sense, the completion of the sixth edition is the culmination of a fifteen year effort.
 
 The title of my talk at jsconf.be is "The Road to ES6, and Beyond". It'll be about three things:
 

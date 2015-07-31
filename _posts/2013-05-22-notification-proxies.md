@@ -6,7 +6,9 @@ permalink: notification-proxies
 excerpt_separator: <!--more-->
 comments: true
 ---
-At the May TC39 meeting I [presented](http://soft.vub.ac.be/~tvcutsem/invokedynamic/presentations/Notification Proxies-TC39-May-2013.pdf) [pdf] an overview of Notification Proxies, as a possible alternative to Direct Proxies. This post briefly summarizes my talk, and the feedback I got from the committee. tl;dr: notification proxies are off the table, we're sticking to direct proxies in ES6.<!--more-->
+At the May TC39 meeting I [presented](http://soft.vub.ac.be/~tvcutsem/invokedynamic/presentations/Notification Proxies-TC39-May-2013.pdf) [pdf] an overview of Notification Proxies, as a possible alternative to Direct Proxies. This post briefly summarizes my talk, and the feedback I got from the committee. tl;dr: notification proxies are off the table, we're sticking to direct proxies in ES6.
+
+<!--more-->
 
 Notification Proxies were first proposed on the es-discuss mailing list by E. Dean Tribble as a way to circumvent the [invariant checks]({% post_url 2012-05-07-proxies-and-frozen-objects %}) required by Direct Proxies to ensure that proxies don't violate the general JavaScript object invariants. Notification Proxies are simpler and easier to specify than Direct Proxies. The key idea behind notification proxies is that they turn traps into event notification callbacks, which can _react_ to operations intercepted on the proxy, but cannot _directly affect_ the outcome of the intercepted operation. Instead, the intercepted operation is always forwarded to the wrapped target object. Since the trap is still invoked _before_ the intercepted operation is forwarded, the proxy handler can still update the target object before forwarding, so it can still _indirectly_ influence the outcome of the intercepted operation.
 

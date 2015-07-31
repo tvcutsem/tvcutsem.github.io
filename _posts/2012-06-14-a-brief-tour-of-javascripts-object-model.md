@@ -7,6 +7,7 @@ excerpt_separator: <!--more-->
 comments: true
 ---
 In this post I will give an overview of Javascript's object model. To a first approximation, by "object model", I mean the mental model that a developer has of an object's structure and behavior. At the end, I will hint at how proxies can be used to implement (variations on) this object model in Javascript itself.
+
 <!--more-->
 
 ## Objects as Maps
