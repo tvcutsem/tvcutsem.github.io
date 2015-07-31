@@ -1,6 +1,10 @@
 {% if site.comments == true and site.disqus != '' %}
   <script type="text/javascript">
-    var disqus_shortname = '{{ site.disqus }}';
+   {% if page.disqus %}
+   var disqus_shortname = '{{ page.disqus }}';
+   {% else %}
+   var disqus_shortname = '{{ site.disqus }}';
+   {% endif %}
 
    (function () {
      var s = document.createElement('script'); s.async = true;
