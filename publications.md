@@ -16,7 +16,7 @@ For a list of my publications, see:
 On Dynamic proxies and reflection:
 
 *   Tom Van Cutsem, Mark S. Miller. Trustworthy Proxies: Virtualizing Objects with Invariants. In Proceedings of the 27th European Conference on Object-oriented Programming (ECOOP 2013), Giuseppe Castagna (Ed.), LNCS Vol. 7920, pp. 154-178, Springer, 2013\. [ [link](http://link.springer.com/chapter/10.1007%2F978-3-642-39038-8_7) ] [ [pdf](http://soft.vub.ac.be/Publications/2013/vub-soft-tr-13-03.pdf) ]
-*   Tom Van Cutsem, Mark S. Miller. Proxies: Design Principles for Robust Object-oriented Intercession APIs. In proceedings of the ACM SIGPLAN Dynamic Languages Symposium (DLS 2010) (Reno, Nevada, USA, Oct. 2010), pp. 59-72, ACM, NY. [ [link](http://portal.acm.org/citation.cfm?id=1869638) ] [ [pdf](/assets/proxies.pdf) ]
+*   Tom Van Cutsem, Mark S. Miller. Proxies: Design Principles for Robust Object-oriented Intercession APIs. In proceedings of the ACM SIGPLAN Dynamic Languages Symposium (DLS 2010) (Reno, Nevada, USA, Oct. 2010), pp. 59-72, ACM, NY. [ [link](http://portal.acm.org/citation.cfm?id=1869638) ] [ [pdf]({{site.asseturl}}/proxies.pdf) ]
 
 On Distributed computing in JavaScript:
 
@@ -36,6 +36,6 @@ On Traits:
 
 ## Theses
 
-My PhD thesis: _Ambient References: Object Designation in Mobile Ad Hoc Networks_. Doctoral Dissertation, Vrije Universiteit Brussel, Programming Technology Lab, May 2008\. [ [pdf](/assets/phd_tom_van_cutsem.pdf) \| [bibtex](/assets/phd_tom_van_cutsem.bib) \| [presentation](presentations/phd_talk_tom_van_cutsem.pdf) ]
+My PhD thesis: _Ambient References: Object Designation in Mobile Ad Hoc Networks_. Doctoral Dissertation, Vrije Universiteit Brussel, Programming Technology Lab, May 2008\. [ [pdf]({{site.asseturl}}/phd_tom_van_cutsem.pdf) \| [bibtex]({{site.asseturl}}/phd_tom_van_cutsem.bib) \| [presentation]({{site.asseturl}}/phd_talk_tom_van_cutsem.pdf) ]
 
-My MSc thesis: Tom Van Cutsem, Stijn Mostinckx (2004) _A Prototype-based Approach To Distributed Applications_. MSc thesis (Licentiaatsthesis), Vrije Universiteit Brussel, Programming Technology Lab. [ [pdf](/assets/vancutsem04prototypebased.pdf) \| [bibtex](/assets/vancutsem04prototypebased.bib) \| [presentation](presentations/prototype04prog.pdf) ]
+My MSc thesis: Tom Van Cutsem, Stijn Mostinckx (2004) _A Prototype-based Approach To Distributed Applications_. MSc thesis (Licentiaatsthesis), Vrije Universiteit Brussel, Programming Technology Lab. [ [pdf]({{site.asseturl}}/vancutsem04prototypebased.pdf) \| [bibtex]({{site.asseturl}}/vancutsem04prototypebased.bib) \| [presentation]({{site.asseturl}}/prototype04prog.pdf) ]

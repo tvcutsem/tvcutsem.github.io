@@ -13,6 +13,8 @@ url: http://tvcutsem.github.io
 #     run it like so: jekyll serve --baseurl=''
 baseurl: ''
 
+asseturl: 'http://soft.vub.ac.be/~tvcutsem/talks/presentations'
+
 # This can be '' to hide the Github nav button
 github: 'tvcutsem/tvcutsem.github.io'
 
