@@ -18,7 +18,8 @@ Programming languages, their history, their design and their implementation are 
 One of the best talks on the history of computing I came across is a talk by Doug Crockford titled [The Early Years](http://developer.yahoo.com/yui/theater/video.php?v=crockonjs-1) where he describes the major influences on Javascript. A more whimsical treatment of the history of programming languages is Guy Steele and Richard Gabriel's anniversary talk [50 in 50](http://blip.tv/file/1472720).
 
 <div style="text-align: center; margin-left: auto; margin-right: auto;">
-  <img alt="lambda" src="/assets/lambda.gif"><b>Power to the lambda!</b></img>
+<img alt="lambda" src="/assets/lambda.gif"></img>
+<strong>Power to the lambda!</strong>
 </div>
 
 <div style="text-align:justify;font-size:0.8em; margin: 10px;">
