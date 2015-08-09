@@ -6,7 +6,9 @@ permalink: frozen-proxies
 excerpt_separator: <!--more-->
 comments: true
 ---
-This post is about how frozen Javascript objects interact with the upcoming [Proxy API](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies).<!--more-->
+This post is about how frozen Javascript objects interact with the upcoming [Proxy API](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies).
+
+<!--more-->
 
 Since [ECMAScript 5th edition](http://es5.github.com/), Javascript objects can be _frozen_. John Resig has a good [blog post](http://ejohn.org/blog/ecmascript-5-objects-and-properties/) on the matter. To quote from his post:
 

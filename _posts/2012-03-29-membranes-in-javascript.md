@@ -7,8 +7,9 @@ excerpt_separator: <!--more-->
 comments: true
 ---
 Membranes are a powerful new feature enabled by Javascript proxies, with various use cases. The goal of a membrane is to fully isolate two object graphs.
-<!--more-->
 Before I can dive into more practical applications of membranes, I need to explain what a membrane is in more detail, so bear with me.
+
+<!--more-->
 
 ## What is a membrane?
 
