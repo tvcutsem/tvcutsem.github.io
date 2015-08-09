@@ -3,7 +3,7 @@ title: Talks
 layout: page
 permalink: /talks/
 ---
-Below is an overview of some of the research presentations I have given over the past years:
+Below is an overview of some of the talks I have given over the past years:
 
 ## 2015
 
