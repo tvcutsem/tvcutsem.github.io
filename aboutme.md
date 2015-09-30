@@ -15,6 +15,16 @@ From 2010 to 2014 I was a member of the jury of the annual [Vlaamse Programmeerw
 
 Programming languages, their history, their design and their implementation are my favourite part of computer science. I enjoy reading about the genealogy of programming languages, how ideas from one language find their way into other languages, and so on. I am particularly fond of Scheme, Self, Smalltalk, Javascript, Prolog, Ruby, Clojure and Erlang. If you want to read some of my musings, see this [essay on why I do research on programming languages.]({% post_url 2011-01-23-why-programming-languages %})
 
+I've been inspired the most by the following language designers:
+
+  * Mark Miller, creator of E, for showing that security and modularity are two sides of the same coin.
+  * Rich Hickey, creator of Clojure, for clearly articulating the differences between state and identity.
+  * Doug Crockford, discoverer of JSON, for showing that less can be a lot more.
+  * Dave Ungar and Randy Smith, creators of Self, for stressing the power of simplicity.
+  * Alan Kay, creator of Smalltalk, for stressing uniformity.
+  * Rob Pike, creator of Limbo, Plan 9 and Go, for reminding me of the power of CSP-style concurrency.
+  * Joe Armstrong, creator of Erlang, for showing that actors can be damned practical for building robust software.
+
 One of the best talks on the history of computing I came across is a talk by Doug Crockford titled [The Early Years](http://developer.yahoo.com/yui/theater/video.php?v=crockonjs-1) where he describes the major influences on Javascript. A more whimsical treatment of the history of programming languages is Guy Steele and Richard Gabriel's anniversary talk [50 in 50](http://blip.tv/file/1472720).
 
 <div style="text-align: center; margin-left: auto; margin-right: auto;">

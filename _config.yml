@@ -1,7 +1,7 @@
 # Jekyll configuration
 
 name: Invokedynamic
-description: Tom Van Cutsem's home on the web
+description: Tom Van Cutsem's blog
 author: Tom Van Cutsem
 
 # url is currently only used only for the RSS feed in feed.xml
