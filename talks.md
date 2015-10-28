@@ -7,6 +7,7 @@ Some of the talks I've given over the years (with link to slides):
 
 ## 2015
 
+*   [ECMAScript 2015: the Future of JavaScript is Now!]({{site.asseturl}}/ES2015_SPLASH_I_2015.pdf). Presented at the [SPLASH 2015](http://2015.splashcon.org) Industry Track, the ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity (SPLASH), Pittsburgh, PA, October 2015.
 *   [ECMAScript 6: the Future of JavaScript is Now!]({{site.asseturl}}/es6_ordina_join15.pdf). Presented at local developer event [JOIN'15](https://www.ordina.be/nl-nl/evenementen/2015/09-10-2015-join/), organized by Ordina in Mechelen, Belgium, September 2015.
 *   [The road to ES6, and beyond: a tale about JavaScript’s past, present and future]({{site.asseturl}}/es6_jsconf_2015.pdf). Presented at [jsconf.be](http://jsconf.be), Bruges, Belgium, April 2015.
 
