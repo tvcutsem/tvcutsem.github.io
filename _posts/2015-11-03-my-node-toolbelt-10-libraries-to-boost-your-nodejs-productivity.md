@@ -1,5 +1,5 @@
 ---
-title: My node toolbelt: 10 libraries to boost your node.js productivity
+title: "My node toolbelt: 10 libraries to boost your node.js productivity"
 layout: post
 tags: javascript node
 comments: true
