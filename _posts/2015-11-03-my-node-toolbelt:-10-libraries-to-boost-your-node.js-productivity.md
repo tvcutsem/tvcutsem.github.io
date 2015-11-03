@@ -3,8 +3,6 @@ title: My node toolbelt: 10 libraries to boost your node.js productivity
 layout: post
 tags: javascript node
 ---
-# My node toolbelt: 10 libraries to boost your node.js productivity
-
 This article surveys 10 libraries that I have found to be tremendously useful while developing
 back-end node.js services. They mostly address _generic_ tasks that you will come across again and again: support for configuration, logging, processing command-line arguments, code coverage, asynchronous control flow, unit testing and more. While the focus is mostly on supporting back-end services, some of these libraries can equally well be used for front-end JavaScript development. I picked these 10 libraries based purely on personal experience and am documenting them in the hope they will prove useful to others.
 
