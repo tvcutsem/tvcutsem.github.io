@@ -266,6 +266,8 @@ Github stars: 3267
 
 Unit testing is essential to obtain confidence in your JavaScript code. But unit tests alone are not enough: you need to know what parts of your code are covered by your unit tests, and what parts are not. [Istanbul](https://gotwarlost.github.io/istanbul/) is a code coverage tool for JavaScript. You can use it to verify precisely what lines of code got executed by a unit test suite, for example. Istanbul can generate nice HTML reports with non-executed lines colored in red, allowing you to easily spot parts of your code in need for testing.
 
+![istanbul](http://onsen.io/blog/content/images/2015/Aug/es5-coverage.png "Istanbul HTML report")
+
 Istanbul by default assumes that you provide it with a node.js program as input, it runs the program, and then generates a report when the program terminates. This works well for traditional batch processing applications, but not very well for instrumenting HTTP servers that remain up all the time. If you want to test coverage of, say, an Express app, you can use [istanbul-middleware](https://github.com/gotwarlost/istanbul-middleware) to instrument your server-side code. It will also extend your Express app with a `/coverage` endpoint that serves up the current coverage statistics.
 
 You usually do not want to enable code coverage on an HTTP server by default, because the instrumented code will run a lot slower. I use a setup where I have a normal 'main' file to configure my express app, and an alternative 'main' file that enables code coverage before loading the normal 'main' file. Like this, when I fire up the server in 'coverage' mode, I can write unit tests that hit the server with various requests, and then browse to `/coverage` to check the code coverage of my unit tests on-the-fly. If I notice some code is not triggered, I can add a new unit test to my test suite, rerun the test suite, and simply refresh the `/coverage` page to see the updated code coverage, without restarting the server. I have found this to be an excellent workflow to quickly increase my code coverage.
@@ -326,7 +328,9 @@ which turns the above raw log record in:
         ...
 ```
 
-Bunyan offers colorized output to quickly identify certain log levels and allows you to include your own JSON-formatted properties in the log data, and knows how to properly render common node.js objects such as `Error` instances.
+Bunyan offers colorized output to quickly identify certain log levels and allows you to include your own JSON-formatted properties in the log data, and knows how to properly render common node.js objects such as `Error` instances. Here's what this would look like in a shell:
+
+![bunyan](https://camo.githubusercontent.com/3c66ffa5055a798569c1f0637963c990160eb9a4/68747470733a2f2f7261772e6769746875622e636f6d2f7472656e746d2f6e6f64652d62756e79616e2f6d61737465722f746f6f6c732f73637265656e73686f74312e706e67 "Bunyan logger output")
 
 ## Node-config
 
