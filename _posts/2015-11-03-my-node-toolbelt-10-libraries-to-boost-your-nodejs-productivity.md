@@ -266,7 +266,7 @@ Github stars: 3267
 
 Unit testing is essential to obtain confidence in your JavaScript code. But unit tests alone are not enough: you need to know what parts of your code are covered by your unit tests, and what parts are not. [Istanbul](https://gotwarlost.github.io/istanbul/) is a code coverage tool for JavaScript. You can use it to verify precisely what lines of code got executed by a unit test suite, for example. Istanbul can generate nice HTML reports with non-executed lines colored in red, allowing you to easily spot parts of your code in need for testing.
 
-<img src="http://onsen.io/blog/content/images/2015/Aug/es5-coverage.png" alt="Istanbul HTML Report" width="200px"/>
+<img src="http://onsen.io/blog/content/images/2015/Aug/es5-coverage.png" alt="Istanbul HTML Report" width="640px"/>
 
 Istanbul by default assumes that you provide it with a node.js program as input, it runs the program, and then generates a report when the program terminates. This works well for traditional batch processing applications, but not very well for instrumenting HTTP servers that remain up all the time. If you want to test coverage of, say, an Express app, you can use [istanbul-middleware](https://github.com/gotwarlost/istanbul-middleware) to instrument your server-side code. It will also extend your Express app with a `/coverage` endpoint that serves up the current coverage statistics.
 
