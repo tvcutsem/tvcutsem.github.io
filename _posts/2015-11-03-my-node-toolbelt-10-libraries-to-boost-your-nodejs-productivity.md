@@ -2,6 +2,7 @@
 title: "My node toolbelt: 10 libraries to boost your node.js productivity"
 layout: post
 tags: javascript node
+excerpt_separator: <!--more-->
 comments: true
 ---
 
@@ -11,6 +12,8 @@ back-end node.js services. They mostly address _generic_ tasks that you will com
 The libraries are discussed in decreasing order of the number of Github stars they had at the time of writing this article, so more popular libraries are discussed first, and the lesser-known gems are discussed near the bottom. Don't let this ranking trick you into thinking that this is a "top 10" article: I'm not comparing these libraries against one another.
 
 Enough intro, let's get started!
+
+<!--more-->
 
   * [Q](#q)
   * [Request](#request)
