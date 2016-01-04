@@ -26,7 +26,7 @@ JSHint is highly configurable (look here for the [list of configurable options](
  
 There is a jslint atom plug-in that will check your JavaScript files as you type, providing visible error highlighting like so:
 
-<img alt="jshint-atom" src="https://i.github-camo.com/ba07bf907da960531cd85f4d96175f178dd91f42/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3137303237302f333833343236362f35346164366231632d316461662d313165342d396334362d3938653665346162616230372e706e67"></img>
+<img alt="jshint-atom" width="80%" src="https://i.github-camo.com/ba07bf907da960531cd85f4d96175f178dd91f42/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3137303237302f333833343236362f35346164366231632d316461662d313165342d396334362d3938653665346162616230372e706e67"></img>
  
 To install the plug-in, in Atom, go to your Atom preferences > Packages > Install > search for "jshint".
  
