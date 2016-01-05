@@ -10,7 +10,7 @@ It also shows how to set up tooling for TypeScript, a typed dialect of JavaScrip
 
 ## Getting started
  
-Install [Node.js](https://nodejs.org/en/) v5 or higher (which comes with many ES6 features [enabled by default](https://nodejs.org/en/docs/es6/).
+Install [Node.js](https://nodejs.org/en/) v5 or higher (which comes with many ES6 features [enabled by default](https://nodejs.org/en/docs/es6/)).
  
 Install the [Atom](https://atom.io) text editor. Atom is a lightweight, easy-to-extend text editor with a [large repository of plug-ins](https://atom.io/packages).
  
@@ -24,7 +24,7 @@ When you program in JavaScript, using a linter is a must. It will catch errors l
  
 JSHint is highly configurable (look here for the [list of configurable options](http://jshint.com/docs/options/)). The easiest way to configure it is to set up a .jshintrc file in the root directory of your project. Here's a [good starting point](https://github.com/jshint/jshint/blob/master/examples/.jshintrc) for tweaking your .jshintrc file (comments in the config file are okay). To ensure JSHint doesn't choke on new ES6 features, set the option "esnext" to true (or in the next major release, set "esversion" to 6). I would also recommend to set the option "node" to true, so that JSHint understands your code will run in node.js and functions such as `require` will be available.
  
-There is a jslint atom plug-in that will check your JavaScript files as you type, providing visible error highlighting like so:
+There is a [jshint atom package](https://atom.io/packages/atom-jshint) that will check your JavaScript files as you type, providing visible error highlighting like so:
 
 <img alt="jshint-atom" width="80%" src="https://i.github-camo.com/ba07bf907da960531cd85f4d96175f178dd91f42/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3137303237302f333833343236362f35346164366231632d316461662d313165342d396334362d3938653665346162616230372e706e67"></img>
  
