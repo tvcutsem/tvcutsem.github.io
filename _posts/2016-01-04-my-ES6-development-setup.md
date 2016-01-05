@@ -29,12 +29,14 @@ There is a [jshint atom package](https://atom.io/packages/atom-jshint) that will
 <img alt="jshint-atom" width="80%" src="https://i.github-camo.com/ba07bf907da960531cd85f4d96175f178dd91f42/68747470733a2f2f636c6f75642e67697468756275736572636f6e74656e742e636f6d2f6173736574732f3137303237302f333833343236362f35346164366231632d316461662d313165342d396334362d3938653665346162616230372e706e67"></img>
  
 To install the plug-in, in Atom, go to your Atom preferences > Packages > Install > search for "jshint".
- 
-I always configure my JSHint file to require my JavaScript to be in "strict mode". This is a safer subset of JavaScript with better-behaved scoping rules and less "silent errors" (e.g. operations that would silently fail without error will throw an error in strict mode). To enter strict mode, it suffices to add the literal string "use strict" as the first line in your JavaScript file (as shown on the screenshot above).
+
+# Enforcing strict mode
+
+I always configure my JSHint file to require my JavaScript to be in ["strict mode"](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Strict_mode). This is a safer subset of JavaScript with better-behaved scoping rules and less "silent errors" (e.g. operations that would silently fail without error will throw an error in strict mode). To enter strict mode, it suffices to add the literal string "use strict" as the first line in your JavaScript file (as shown on the screenshot above). In JSHint, I set the "strict" option to "global" (enforcing a single global "use strict" directive at the top of the file).
  
 ## Configure typescript (optional)
  
-[TypeScript](http://www.typescriptlang.org/) is a typed dialect of JavaScript developed by Microsoft. It allows you to add optional static type annotations on functions and variables. In addition, it has a good type inferencer that will catch type errors even when your code is mostly unannotated. For a good intro to TypeScript, see [this book](https://basarat.gitbooks.io/typescript/).
+[TypeScript](http://www.typescriptlang.org/) is a typed dialect of JavaScript. It allows you to add optional static type annotations on functions and variables. In addition, it has a good type inferencer that will catch type errors even when your code is mostly unannotated. Finally, it implements most ES6 features and even [some ES7 features](http://blogs.msdn.com/b/typescript/archive/2015/11/03/what-about-async-await.aspx). For a good intro to TypeScript, see [this book](https://basarat.gitbooks.io/typescript/).
  
 # Configure typescript plug-in for Atom
 
@@ -45,7 +47,7 @@ Atom is one of the few open-source editors with very good TypeScript support, vi
  
 # Configure typescript compiler
 
-The TypeScript compiler is [configured using a configuration file](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) called `tsconfig.json` which usually lives in the root of your project. An example file can be found [here](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json#examples).
+The atom-typescript package comes pre-bundled with a bleeding-edge TypeScript compiler. The compiler is [configured using a configuration file](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json) called `tsconfig.json` which usually lives in the root of your project. An example file can be found [here](https://github.com/Microsoft/TypeScript/wiki/tsconfig.json#examples).
 If you don't yet have a tsconfig file, the atom-typescript plug-in usually detects that the file does not exist and will offer to create it for you with default settings.
  
 Two important properties in `tsconfig.json` to check are:
@@ -73,6 +75,7 @@ You will probably immediately want to install the type definitions for the node.
     tsd install node --save
  
 This will do two things:
+
   1. download the node.d.ts type definition file to a directory called `typings`.
   2. create a file `tsd.json` remembering what version of the type definition file was installed.
  
