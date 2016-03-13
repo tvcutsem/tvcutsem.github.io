@@ -5,6 +5,10 @@ permalink: /talks/
 ---
 Some of the talks I've given over the years (with link to slides):
 
+## 2016
+
+*   [Writing Robust JavaScript Code using Modern JavaScript]({{site.asseturl}}/JS_RobustModern_SecAppDev2016.pdf). Presented at the 10th [Secure Application Development](http://secappdev.org) Course series and a local Belgian [OWASP chapter meeting](https://www.owasp.org/index.php/Belgium#tab=Chapter_Meetings), Leuven, Belgium, March 2016.
+
 ## 2015
 
 *   [ECMAScript 2015: the Future of JavaScript is Now!]({{site.asseturl}}/ES2015_SPLASH_I_2015.pdf). Presented at the [SPLASH 2015](http://2015.splashcon.org) Industry Track, the ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity (SPLASH), Pittsburgh, PA, October 2015.<br/>
