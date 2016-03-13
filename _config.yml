@@ -28,11 +28,13 @@ disqus: 'drupalinvokedynamic'
 comments: true
 
 permalink: /:year/:month/:title
+
+gems: [jekyll-paginate]
 paginate: 5
 
 highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+markdown: kramdown
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
 
 exclude: ['README.md', 'LICENSE']
