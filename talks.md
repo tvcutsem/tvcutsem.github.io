@@ -7,7 +7,8 @@ Some of the talks I've given over the years (with link to slides):
 
 ## 2016
 
-*   [Writing Robust JavaScript Code using Modern JavaScript]({{site.asseturl}}/JS_RobustModern_SecAppDev2016.pdf). Presented at the 10th [Secure Application Development](http://secappdev.org) Course series and a local Belgian [OWASP chapter meeting](https://www.owasp.org/index.php/Belgium#tab=Chapter_Meetings), Leuven, Belgium, March 2016.
+* [Virtualizing The Object (aka the JavaScript Meta-object Protocol)]({{site.asseturl}}/virtualizing_objects_04_2016.pdf). Guest lecture at the Université Catholique de Louvain (UCL) in a course on [Programming paradigms : theory, practice and applications](http://www.uclouvain.be/en-cours-2015-LSINF2335.html), Louvain-la-Neuve, Belgium, April 2016.
+* [Writing Robust JavaScript Code using Modern JavaScript]({{site.asseturl}}/JS_RobustModern_SecAppDev2016.pdf). Presented at the 10th [Secure Application Development](http://secappdev.org) Course series and a local Belgian [OWASP chapter meeting](https://www.owasp.org/index.php/Belgium#tab=Chapter_Meetings), Leuven, Belgium, March 2016.
 
 ## 2015
 
