@@ -7,6 +7,7 @@ Some of the talks I've given over the years (with link to slides):
 
 ## 2016
 
+* [ECMAScript 2015 and beyond]({{site.asseturl}}/jsbe_05_2016_es2015_and_beyond.pdf). Invited talk at the first [js.be](http://jsbe.io/) Belgian JavaScript User Group [meetup](http://www.meetup.com/jsbe-io/events/230467183/), Brussels, Belgium, May 2016.
 * [Control Flow Goodness in ECMAScript 2015 and Beyond]({{site.asseturl}}/jsconf_2016_cflow.pdf). Keynote talk at [jsconf.be 2016](http://jsconf.be), Bruges, Belgium, May 2016.
 * [Virtualizing The Object (aka the JavaScript Meta-object Protocol)]({{site.asseturl}}/virtualizing_objects_04_2016.pdf). Guest lecture at the Université Catholique de Louvain (UCL) in a course on [Programming paradigms : theory, practice and applications](http://www.uclouvain.be/en-cours-2015-LSINF2335.html), Louvain-la-Neuve, Belgium, April 2016.
 * [Writing Robust JavaScript Code using Modern JavaScript]({{site.asseturl}}/JS_RobustModern_SecAppDev2016.pdf). Presented at the 10th [Secure Application Development](http://secappdev.org) Course series and a local Belgian [OWASP chapter meeting](https://www.owasp.org/index.php/Belgium#tab=Chapter_Meetings), Leuven, Belgium, March 2016.
