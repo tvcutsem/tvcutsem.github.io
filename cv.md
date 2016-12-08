@@ -23,9 +23,10 @@ Language proficiency: Dutch (Mother Tongue), English (Fluent)
 
 E-mail: tvcutsem _at_ vub _dot_ ac _dot_ be
 
-## Experience
+## Professional Experience
 
-*   **Feb 2014 - Present:** Senior researcher at [Alcatel-Lucent Bell Labs](https://bell-labs.com/).
+*   **Nov 2016 - present:** Department head at [Nokia Bell Labs](https://bell-labs.com/).
+*   **Feb 2014 - Nov 2015:** Senior researcher at [Nokia Bell Labs](https://bell-labs.com/).
 *   **Oct 2012 - Sept. 2014:** Professor at the Vrije Universiteit Brussel (University of Brussels, VUB).
 *   **Feb 2010 - Oct 2012:** Part-time Professor (10% ZAP-BOF) at the University of Brussels (VUB).
 *   **Nov 2009 - Apr 2010:** Visiting Faculty at Google, Inc. in Google's HQ in Mountain View, CA, USA. Work on various proposals for the next edition of the ECMAScript (aka Javascript) standard.
