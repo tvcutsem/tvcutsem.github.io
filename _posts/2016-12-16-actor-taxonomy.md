@@ -1,5 +1,5 @@
 ---
-title: 43 years of actors: a taxonomy of actor models
+title: "43 years of actors: a taxonomy of actor models"
 layout: post
 tags: actors
 excerpt_separator: <!--more-->
