@@ -5,6 +5,10 @@ permalink: /talks/
 ---
 Some of the talks I've given over the years (with link to slides):
 
+## 2017
+
+* [From Documents to Dialogues: Programming Technology for the Conversational Web](/assets/proweb_2017_keynote_tvancuts.pdf). Invited keynote talk at [ProWeb 17](http://2017.programming-conference.org/track/proweb-2017-papers), the first interational workshop on Programming Technology for the Future Web, co-located with [&lt;Programming&gt; 2017](http://2017.programming-conference.org/home), Brussels, Belgium, April 2017.
+
 ## 2016
 
 * [Microservices and docker: from theory to practice](/assets/Microservices_BellLabs_KULAK_final.pdf). Invited lecture at KULeuven KULAK Postgraduate Centre seminar on [Microservices: new building blocks in software development, applications and architecture](http://puc.kuleuven-kulak.be/opleidingen/info/2856). Kortrijk, Belgium, December 2016.
