@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/tvcutsem
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://tvcutsem.github.io
+  * I am tvcutsem (https://keybase.io/tvcutsem) on keybase.
+  * I have a public key ASCtXaBpDeiI_yfsA4ztoHV6TUELTu7GkAnyhL5GT-XY9go
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "01010ba231367ddfc299e244faee09168ac43e202b8b0ea2ae21da0d0a8946268ee70a",
+            "host": "keybase.io",
+            "kid": "0120ad5da0690de888ff27ec038ceda0757a4d410b4eeec69009f284be464fe5d8f60a",
+            "uid": "9b152b6ebdb8960ed849dab75bcaf319",
+            "username": "tvcutsem"
+        },
+        "service": {
+            "hostname": "tvcutsem.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.20"
+    },
+    "ctime": 1491511932,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1491511917,
+        "hash": "5f2adb2ac015e4d7888ba9d5ab2ce50fadb9aeaa62f36a5d2bbb17d7296f151829674c36e11f3ea5729bff0ed74b36f53bc8f5fa059cb9b441306df4aa01657f",
+        "seqno": 1003839
+    },
+    "prev": "9daca60c673fdadcb8b478ef810388f6050272439f194e9acb124ef5ec084e0d",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgrV2gaQ3oiP8n7AOM7aB1ek1BC07uxpAJ8oS+Rk/l2PYKp3BheWxvYWTFAvt7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxMGJhMjMxMzY3ZGRmYzI5OWUyNDRmYWVlMDkxNjhhYzQzZTIwMmI4YjBlYTJhZTIxZGEwZDBhODk0NjI2OGVlNzBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwYWQ1ZGEwNjkwZGU4ODhmZjI3ZWMwMzhjZWRhMDc1N2E0ZDQxMGI0ZWVlYzY5MDA5ZjI4NGJlNDY0ZmU1ZDhmNjBhIiwidWlkIjoiOWIxNTJiNmViZGI4OTYwZWQ4NDlkYWI3NWJjYWYzMTkiLCJ1c2VybmFtZSI6InR2Y3V0c2VtIn0sInNlcnZpY2UiOnsiaG9zdG5hbWUiOiJ0dmN1dHNlbS5naXRodWIuaW8iLCJwcm90b2NvbCI6Imh0dHBzOiJ9LCJ0eXBlIjoid2ViX3NlcnZpY2VfYmluZGluZyIsInZlcnNpb24iOjF9LCJjbGllbnQiOnsibmFtZSI6ImtleWJhc2UuaW8gZ28gY2xpZW50IiwidmVyc2lvbiI6IjEuMC4yMCJ9LCJjdGltZSI6MTQ5MTUxMTkzMiwiZXhwaXJlX2luIjo1MDQ1NzYwMDAsIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNDkxNTExOTE3LCJoYXNoIjoiNWYyYWRiMmFjMDE1ZTRkNzg4OGJhOWQ1YWIyY2U1MGZhZGI5YWVhYTYyZjM2YTVkMmJiYjE3ZDcyOTZmMTUxODI5Njc0YzM2ZTExZjNlYTU3MjliZmYwZWQ3NGIzNmY1M2JjOGY1ZmEwNTljYjliNDQxMzA2ZGY0YWEwMTY1N2YiLCJzZXFubyI6MTAwMzgzOX0sInByZXYiOiI5ZGFjYTYwYzY3M2ZkYWRjYjhiNDc4ZWY4MTAzODhmNjA1MDI3MjQzOWYxOTRlOWFjYjEyNGVmNWVjMDg0ZTBkIiwic2Vxbm8iOjgsInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RAQxi/ohoxMAJ93/l2uhhMhfDQ0WZXn/k5CXhwiya42Hz5XYRhqF/XvaDH1DWbZL2jXAt5vUF9j2Fo62LdALNED6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIKzFS5etTv1/0T4J8l/gPVdJxIROw3/gubolziXDymi7o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tvcutsem
+
+==================================================================
