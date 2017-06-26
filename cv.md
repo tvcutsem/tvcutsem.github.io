@@ -47,14 +47,16 @@ For a list of my academic publications and talks have a look at my [publications
 
 ## Achievements
 
-*   Together with Mark S. Miller (Google), developed a concrete proposal for extending the ECMAScript (Javascript) language with [proxies](http://wiki.ecmascript.org/doku.php?id=harmony:proxies).
-*   Together with Stijn Mostinckx at the University of Brussels, designed and implemented the distributed, open-source [AmbientTalk](http://code.google.com/p/ambienttalk) programming language.
+*   Built a wide-area distributed stream processing platform for IoT called [World-wide Streams](https://www.worldwidestreams.io/) (joint work with multiple colleagues from Nokia Bell Labs).
+*   Active contributor to the JavaScript standard. Designed the [ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/) Proxy and Reflect reflection APIs (joint work with Mark S. Miller from Google).
+*   Together with Stijn Mostinckx at the University of Brussels, designed and implemented the distributed, open-source [AmbientTalk](http://soft.vub.ac.be/amop/) programming language.
+*   Organized the 2013 [Flemish Programming Contest](http://www.vlaamseprogrammeerwedstrijd.be/2013/), a regional ACM-style programming contest, attracting 500 participants.
 *   Author of [reflect.js](https://github.com/tvcutsem/harmony-reflect), a Javascript reflection library making the ECMAScript 6 reflection API available on current platforms.
 *   Together with Dries Harnie, Joeri De Koster and Theo D'Hondt, designed [SchemeKen](https://github.com/tvcutsem/schemeken), a distributed, resilient dialect of Scheme.
 *   Author of [traits.js](https://github.com/traitsjs/traits.js), a minimal trait composition library for Javascript.
 *   Independently developed a 26-hour lecture series at university Master-level on [multicore programming](http://soft.vub.ac.be/~tvcutsem/multicore/) and an introductory university Bachelor-level course on [distributed systems](http://soft.vub.ac.be/~tvcutsem/distsys/).
 *   Author of [stm-in-clojure](https://github.com/tvcutsem/stm-in-clojure), a meta-circular implementation of software-transactional memory in Clojure. I use this library for teaching STM in my university course on [multicore programming](http://soft.vub.ac.be/~tvcutsem/multicore/).
-*   As a CS student, worked on several programming projects including a compiler for a C-like language for the JVM written in C++, a mobile agent travel reservation system in Java, a FFT-based gene sequence detector in Pico and a primitive 3D rendering engine based on Binary Space Partitions, a text-based RPG, and a spreadsheet in PLT Scheme.
+*   As a CS student, worked on several programming projects including a compiler for a C-like language for the JVM written in C++, a mobile agent travel reservation system in Java, a 3D rendering engine based on Binary Space Partitions, a text-based RPG, and a spreadsheet in PLT Scheme (now PLT Racket).
 
 ## Technical Skills and Competences
 
