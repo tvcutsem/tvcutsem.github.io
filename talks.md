@@ -7,6 +7,7 @@ Some of the talks I've given over the years (with link to slides):
 
 ## 2017
 
+* [XStream: Declarative authoring of distributed stream processing pipelines (Or, embedded DSLs make for great stream processing APIs)](/assets/XStream_ifip17.pdf). Presented at the [IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2017). Park City, Utah, USA, August 2017.
 * [From Documents to Dialogues: scripting the Conversational Web using Chatbots](/assets/proweb_2017_keynote_tvancuts.pdf). Invited talk at the fourth [jsconf.be](https://www.jsconf.be/en/), the Belgian JavaScript Conference. Bruges, Belgium, June 2017.
 * [From Documents to Dialogues: Programming Technology for the Conversational Web](/assets/proweb_2017_keynote_tvancuts.pdf). Invited keynote talk at [ProWeb 17](http://2017.programming-conference.org/track/proweb-2017-papers), the first international workshop on Programming Technology for the Future Web, co-located with [&lt;Programming&gt; 2017](http://2017.programming-conference.org/home), Brussels, Belgium, April 2017.
 
