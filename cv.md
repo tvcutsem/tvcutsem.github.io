@@ -3,7 +3,7 @@ title: CV
 layout: page
 permalink: /cv/
 ---
-Download my [CV](/assets/Tom_Van_Cutsem_CV_02_2014.pdf) (last updated: February 2014).
+Download my [CV](/assets/Tom_Van_Cutsem_CV_09_2017.pdf) (last updated: September 2017).
 
 [![View my LinkedIn Profile](/assets/btn_viewmy_120x33.png)](http://be.linkedin.com/in/tomvc)
 
@@ -15,13 +15,9 @@ Born: 1982, Leuven, Belgium.
 
 Nationality: Belgian
 
-PhD in Sciences (Dutch: "Doctor in de Wetenschappen"), Vrije Universiteit Brussel (VUB), 2008, Greatest Distinction;
-
-Master of Science in Computer Science (Dutch: "Licentiaat Informatica"), Vrije Universiteit Brussel (VUB), 2004, Greatest Distinction
-
 Language proficiency: Dutch (Mother Tongue), English (Fluent)
 
-E-mail: tvcutsem _at_ vub _dot_ ac _dot_ be
+E-mail: tvcutsem _at_ gmail _dot_ com
 
 ## Professional Experience
 
@@ -37,8 +33,8 @@ For a list of my academic publications and talks have a look at my [publications
 
 ## Higher Education
 
-*   **2004-2008:** Obtained the degree of PhD in Sciences (Grade: Summa Cum Laude) at the Programming Technology Laboratory of the Vrije Universiteit Brussel, Brussels. Promotors: Prof. Dr. Wolfgang De Meuter and Prof. Dr. Theo D'Hondt. My research was funded by means of a grant from the **Fund for Scientific Research, Flanders** (FWO) which is Belgium's flemish science foundation. It is the most prestigious research funding organisation of the country, funding only first-rate researchers to perform fundamental research in any scientific discipline.
-*   **2000-2004:** Vrije Universiteit Brussel, Brussels. Obtained the degree of Master of Science in Computer Science (Licentiaat in de Informatica):
+*   **2004-2008:** PhD in Computer Science, Vrije Universiteit Brussel, Brussels (Grade: Summa Cum Laude) at the Programming Technology Laboratory under the guidance of Prof. Dr. Wolfgang De Meuter and Prof. Dr. Theo D'Hondt. My research was funded by means of a grant from the **Fund for Scientific Research, Flanders** (FWO) which is Belgium's flemish science foundation. It is the most prestigious research funding organisation of the country, funding researchers to perform fundamental research in any scientific discipline.
+*   **2000-2004:** Master of Science in Computer Science, Vrije Universiteit Brussel, Brussels, Belgium
     *   1st year / 1ste kandidatuur (july 2001): Magna Cum Laude / Grote Onderscheiding
     *   2nd year / 2de kandidatuur (july 2002): Summa Cum Laude / Grootste Onderscheiding
     *   3rd year / 1ste licentie (july 2003): Summa Cum Laude / Grootste Onderscheiding
