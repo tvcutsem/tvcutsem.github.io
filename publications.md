@@ -6,10 +6,9 @@ permalink: /publications/
 For a list of my publications, see:
 
 *   My publications on [Google Scholar](http://scholar.google.com/citations?user=jtzNCwUAAAAJ&hl=en).
-*   [My VUB publications page](http://www.vub.ac.be/infovoor/onderzoekers/research/person_pub.php?person_id=25253).
 *   My [ACM Portal](http://portal.acm.org/author_page.cfm?id=81100203786) author page.
 *   My [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cutsem:Tom_Van.html) page.
-*   [My research page](https://soft.vub.ac.be/soft/members/tomvancutsem) on the SOFT website.
+*   [My ResearchGate profile](https://www.researchgate.net/profile/Tom_Van_Cutsem)
 
 ## Selected Publications
 
