@@ -3,7 +3,7 @@ title: CV
 layout: page
 permalink: /cv/
 ---
-Download my [CV](/assets/Tom_Van_Cutsem_CV_09_2017.pdf) (last updated: September 2017).
+Download my [CV 1 pager](/assets/cv1p.pdf) or [full CV](/assets/cv.pdf) (last updated: October 2017).
 
 [![View my LinkedIn Profile](/assets/btn_viewmy_120x33.png)](http://be.linkedin.com/in/tomvc)
 
