@@ -5,6 +5,8 @@ permalink: /cv/
 ---
 Download my [CV 1 pager](/assets/cv1p.pdf) or [full CV](/assets/cv.pdf) (last updated: October 2017).
 
+<a href="/assets/cv1p.png"><img src="/assets/cv1p.png" alt="CV 1-pager" width="500px"/></a>
+
 [![View my LinkedIn Profile](/assets/btn_viewmy_120x33.png)](http://be.linkedin.com/in/tomvc)
 
 ## Personal Facts
