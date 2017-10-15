@@ -54,7 +54,7 @@ For a list of my academic publications and talks have a look at my [publications
 *   Author of [traits.js](https://github.com/traitsjs/traits.js), a minimal trait composition library for Javascript.
 *   Independently developed a 26-hour lecture series at university Master-level on [multicore programming](http://soft.vub.ac.be/~tvcutsem/multicore/) and an introductory university Bachelor-level course on [distributed systems](http://soft.vub.ac.be/~tvcutsem/distsys/).
 *   Author of [stm-in-clojure](https://github.com/tvcutsem/stm-in-clojure), a meta-circular implementation of software-transactional memory in Clojure. I use this library for teaching STM in my university course on [multicore programming](http://soft.vub.ac.be/~tvcutsem/multicore/).
-*   As a CS student, worked on several programming projects including a compiler for a C-like language for the JVM written in C++, a mobile agent travel reservation system in Java, a 3D rendering engine based on Binary Space Partitions, a text-based RPG, and a spreadsheet in PLT Scheme (now PLT Racket).
+*   As a CS student, worked on several programming projects including a [compiler for a C-like language for the JVM written in C++](https://github.com/tvcutsem/tinyc), a mobile agent travel reservation system in Java, a 3D rendering engine based on Binary Space Partitions, a text-based RPG, and a spreadsheet in PLT Scheme (now PLT Racket).
 
 ## Technical Skills and Competences
 
