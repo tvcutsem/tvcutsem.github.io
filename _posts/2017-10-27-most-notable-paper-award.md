@@ -13,6 +13,8 @@ The paper explored a new mechanism to virtualize objects in object-oriented prog
 
 The award citation reads:
 
-<quote>The 2007 DLS paper "Mirages: Behavioral Intercession in a Mirror-based Architecture" combined the ideas of explicit mirrors for reflective introspection and modification with implicit mirrors for behavioral intercession. The work in this paper influenced and inspired the design of proxies in the JavaScript language, where it now has applications in areas such as security, testing, and virtualization of the DOM.</quote>
+<em>
+  The 2007 DLS paper "Mirages: Behavioral Intercession in a Mirror-based Architecture" combined the ideas of explicit mirrors for reflective introspection and modification with implicit mirrors for behavioral intercession. The work in this paper influenced and inspired the design of proxies in the JavaScript language, where it now has applications in areas such as security, testing, and virtualization of the DOM.
+</em>
 
 I'm honored to have received this award from the DLS community, which is one of the premier forums to discuss advances in dynamic languages.
