@@ -56,15 +56,25 @@ For a list of my academic publications and talks have a look at my [publications
 *   Author of [stm-in-clojure](https://github.com/tvcutsem/stm-in-clojure), a meta-circular implementation of software-transactional memory in Clojure. I use this library for teaching STM in my university course on [multicore programming](http://soft.vub.ac.be/~tvcutsem/multicore/).
 *   As a CS student, worked on several programming projects including a [compiler for a C-like language for the JVM written in C++](https://github.com/tvcutsem/tinyc), a mobile agent travel reservation system in Java, a 3D rendering engine based on Binary Space Partitions, a text-based RPG, and a spreadsheet in PLT Scheme (now PLT Racket).
 
+## Soft Skills
+
+Team leadership, delivering technical pitches, coaching people, coordinating a development team (in an architect role). Excellent writing skills.
+
 ## Technical Skills and Competences
 
-Writing project proposals, reviewing papers, writing technical documents, research, guiding people, good software design and engineering skills.
+Iron-strong software design and software engineering skills. Deep understanding of programming languages, compilers, virtual machines. Deep understanding of distributed systems. Hands-on experience with node.js, Cloud/AWS, Docker, RabbitMQ. Ask me about distributed systems concepts such as consistency, availability and partition-tolerance.
 
-I have experience in working in a software development team on small to medium-scale projects. In the context of my PhD research, I developed my own programming language in a team of 6 people. I managed most of the project: designing the system, coding the system, performing task management, version control, unit testing, bug tracking, website maintenance, etc. Task management included setting milestones, deadlines, dividing the work load between team members and the organization of meetings.
+Good understanding of Machine learning and its possibilities (classification/regression, supervised/unsupervised) and pitfalls (bias, overfitting). Ask me about classification trees, naive bayes, frequent itemsets, deep neural nets, word embeddings, distributed representations.
+I've wrangled data and trained models with Python.
 
-I am familiar with the traditional 'waterfall' model, but also have experience with **agile programming**, extreme programming and iterative development backed by rigorous **unit testing**.
+I consider myself proficient (i.e. have written programs over 10K SLoC) in Java and JavaScript (node.js) but have used a wide variety of different languages
+and systems, including C/C++, Prolog, Python, Erlang, Clojure and Smalltalk. I pick up new languages easily.
 
-Knowledge of: Java technology stack, Eclipse, C/C++, Scripting (JavaScript, Python, Ruby), MySQL, version-control systems (Git/CVS/SVN). Experience in a wide array of (academic and industrial) programming languages (Erlang, Clojure, Prolog, Smalltalk, ...). Expert in object-oriented technology, software development (analysis, design, design patterns and implementation) and programming languages. Thorough knowledge of compiler- and interpreter development, distributed, parallel and concurrent platforms and frameworks, transaction processing. Knowledge of **web development** (JavaScript, Ruby on rails, node.js) and content-management systems (drupal, wordpress).
+Expert in object-oriented software development, design patterns, TDD/BDD. Next to OO, also strong affinity with functional, relational and logic programming paradigms.
+
+Expert in concurrent and parallel systems. Ask me about race conditions, deadlocks, fork/join parallellism, SIMD/MIMD, threadpools and CAS.
+
+Used a variety of VCSes (git, mercurial, svn, cvs) and CMSes (drupal, wordpress, jekyll).
 
 ## References
 
