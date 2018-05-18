@@ -5,6 +5,10 @@ permalink: /talks/
 ---
 Some of the talks I've given over the years (with link to slides):
 
+## 2018
+
+* [Control-flow Goodness in Modern JavaScript](/assets/es_cflow_wgld2018.pdf). Presented at the 9th [IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2018). Antwerp, Belgium, May 2018.
+
 ## 2017
 
 * [XStream: Declarative authoring of distributed stream processing pipelines (Or, embedded DSLs make for great stream processing APIs)](/assets/XStream_ifip17.pdf). Presented at the [IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2017). Park City, Utah, USA, August 2017.
