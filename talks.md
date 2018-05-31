@@ -7,6 +7,7 @@ Some of the talks I've given over the years (with link to slides):
 
 ## 2018
 
+* [Streaming all the data: JavaScript for real-time data and video stream processing](https://www.jsconf.be/en/schedule), a tutorial on [worldwidestreams.io](https://worldwidestreams.io) including [XStream](/assets/XStream_ifip17.pdf). Workshop at the fifth [jsconf.be](https://www.jsconf.be/en/), the Belgian JavaScript Conference. Bruges, Belgium, May 2018.
 * [Control-flow Goodness in Modern JavaScript](/assets/es_cflow_wgld2018.pdf). Presented at the 9th [IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2018). Antwerp, Belgium, May 2018.
 
 ## 2017
@@ -67,11 +68,11 @@ Some of the talks I've given over the years (with link to slides):
 *   [Interview with Microsoft Channel 9](http://channel9.msdn.com/posts/Charles/Scenes-from-Emerging-Languages-Camp-2010-Standing-Roundtable-Discussion/) after the [Emerging Languages Camp](http://emerginglangs.com/) at the O'Reilly Open Source Conference (OSCON), July 2010, Portland, Oregon, USA
 *   [Invited Talk]({{site.asseturl}}/AmbientTalk.pdf) on [AmbientTalk](http://www.oscon.com/oscon2010/public/schedule/detail/15488) at the [Emerging Languages Camp](http://emerginglangs.com/), co-located with O'Reilly Open Source Conference (OSCON), July 2010, Portland, Oregon, USA
 *   [Changes to ECMAScript Part 2, Harmony Highlights: Proxies and Traits]({{site.asseturl}}/harmony_highlights_techtalk.pdf) - a Google tech talk about the work I did as visiting faculty at Google in Mountain View, USA, April 2010.
-<iframe width="560" height="315" src="http://www.youtube.com/embed/A1R8KGKkDjU" frameborder="0" allowfullscreen=""></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/A1R8KGKkDjU" frameborder="0" allowfullscreen=""></iframe>
 *   [Communicating Event Loops in Javascript](http://ssjs.pbworks.com/Communicating-Event-Loops) - a lighting talk given at a Server-Side Javascript Developer Meetup in San Francisco, USA, January 2010\. Thanks to Kris Kowal for uploading a video of the talk.
-<iframe src="http://player.vimeo.com/video/9149445" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
+<iframe src="https://player.vimeo.com/video/9149445" width="500" height="281" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
 
-[Communicating Event Loops](http://vimeo.com/9149445) from [Kris Kowal](http://vimeo.com/user2924382) on [Vimeo](http://vimeo.com).
+[Communicating Event Loops](https://vimeo.com/9149445) from [Kris Kowal](https://vimeo.com/user2924382) on [Vimeo](https://vimeo.com).
 
 ## 2009
 
