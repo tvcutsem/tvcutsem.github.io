@@ -5,14 +5,14 @@ permalink: /aboutme/
 ---
 <span>
   <img src="/assets/me.jpg" width="100%" alt="Tom Van Cutsem">
-  <sub>You don't grow old on the net. This is me way back in 2007 enjoying the ocean view on Rapa Nui.</sub>
+  <sub>You don't grow old on the net. This is me way back in 2007 enjoying the ocean view on <a href="https://goo.gl/maps/memrB1jEYan">Rapa Nui</a>.</sub>
 </span>
 
-I'm a computer scientist. I work at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem), the research arm of Nokia. I have the privilege of leading a fantastic team there where we're always working at the cutting edge of research in software. At Bell Labs I co-architected the [WorldWideStream](https://worldwidestreams.io) distributed stream processing platform.
+I'm a computer scientist. I work at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem), the research arm of Nokia. I have the privilege of leading a fantastic team there where we're always working at the cutting edge of research in software. At Bell Labs I co-architected the [WorldWideStreams](https://worldwidestreams.io) distributed stream processing platform.
 
 Prior to joining Bell Labs, I was a CS professor at the [Software Languages Lab](http://soft.vub.ac.be) of the [Vrije Universiteit Brussel](http://www.vub.ac.be). I also did my doctoral research there on [AmbientTalk](http://soft.vub.ac.be/amop), a distributed programming language designed for mobile ad hoc networks.
 
-In 2009/2010 I was Visiting Faculty at Google where I got involved in the standardization of JavaScript (aka ECMAScript). My biggest claim to language design faim is the creation of the JavaScript Proxy API together with Mark S. Miller, now shipping in all major browsers.
+In 2009/2010 I was Visiting Faculty at Google where I got involved in the standardization of JavaScript (aka ECMAScript). My biggest claim to language design faim is the creation of the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy API</a> together with <a href="https://ai.google/research/people/author35958">Mark S. Miller</a>, now shipping in all major browsers.
 
 I'm passionate about getting young people exposed to the art of programming.
 I've been quite active in organizing programming contests: I was a jury member and organizer of the [Flemish Programmign Contest](http://www.vlaamseprogrammeerwedstrijd.be), a regional ACM ICPC-inspired programming contest for students and professionals. For a time I was also a jury member of the [Belgian Olympiad in Informatics](http://be-oi.be/).
