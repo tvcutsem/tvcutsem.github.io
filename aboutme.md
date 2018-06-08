@@ -10,7 +10,7 @@ permalink: /aboutme/
 
 I'm a computer scientist. I work at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem), the research arm of Nokia (yes, that's the same Bell Labs that invented the transistor, the laser, UNIX, C and a host of other innovations). I have the privilege of leading a fantastic team there where we're always working at the cutting edge of research in software. At Bell Labs I co-architected the [WorldWideStreams](https://worldwidestreams.io) distributed stream processing platform.
 
-Prior to joining Bell Labs, I was a CS professor at the [Software Languages Lab](http://soft.vub.ac.be) of the [Vrije Universiteit Brussel](http://www.vub.ac.be). I also did my doctoral research there on [AmbientTalk](http://soft.vub.ac.be/amop), a distributed programming language designed for mobile ad hoc networks.
+Prior to joining Bell Labs, I was a CS professor at the [Software Languages Lab](http://soft.vub.ac.be) of the [Vrije Universiteit Brussel](http://www.vub.ac.be). I also did my doctoral research there on [AmbientTalk](http://soft.vub.ac.be/amop), a distributed programming language designed for mobile ad hoc networks, which got featured in [MIT Technology Review](https://www.technologyreview.com/s/419956/new-languages-and-why-we-need-them/).
 
 In 2009/2010 I was Visiting Faculty at Google where I got involved in the standardization of JavaScript (aka ECMAScript). My biggest claim to language design faim is the creation of the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy API</a> together with <a href="https://ai.google/research/people/author35958">Mark S. Miller</a>, now shipping in all major browsers.
 
