@@ -5,11 +5,17 @@ permalink: /aboutme/
 ---
 <span>
   <img src="/assets/me.jpg" width="100%" alt="Tom Van Cutsem">
+  <sub>You don't grow old on the net. This is me way back in 2007 enjoying the ocean view on Rapa Nui.</sub>
 </span>
 
-As of February 2014 I am a senior researcher at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem). Prior to joining Bell Labs, I was a professor of Computer Science at the [Software Languages Lab](http://soft.vub.ac.be) of the [Vrije Universiteit Brussel](http://www.vub.ac.be). Prior to that I was a post-doc researcher, funded by the [Flanders Research Foundation](http://www.fwo.be). In 2008, I completed my doctoral dissertation on [AmbientTalk](http://soft.vub.ac.be/amop), a distributed programming language designed for mobile ad hoc networks. In 2009/2010 I was Visiting Faculty at Google where I contributed to the ECMAScript (aka Javascript) standardization process, in particular, together with Mark S. Miller I designed its [Proxy API](http://wiki.ecmascript.org/doku.php?id=harmony:direct_proxies).
+I'm a computer scientist. I work at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem), the research arm of Nokia. I have the privilege of leading a fantastic team there where we're always working at the cutting edge of research in software. At Bell Labs I co-architected the [WorldWideStream](https://worldwidestreams.io) distributed stream processing platform.
 
-From 2010 to 2014 I was a member of the jury of the annual [Vlaamse Programmeerwedstrijd](http://www.vlaamseprogrammeerwedstrijd.be) (Flemish Programming Contest), a regional hands-on programming contest for students and professionals, inspired by ACM programming contests. I was main organizer of the 2013 edition, attracting over 500 participants. I was also involved in the organization of the [Belgian Olympiad in Informatics](http://be-oi.be/).
+Prior to joining Bell Labs, I was a CS professor at the [Software Languages Lab](http://soft.vub.ac.be) of the [Vrije Universiteit Brussel](http://www.vub.ac.be). I also did my doctoral research there on [AmbientTalk](http://soft.vub.ac.be/amop), a distributed programming language designed for mobile ad hoc networks.
+
+In 2009/2010 I was Visiting Faculty at Google where I got involved in the standardization of JavaScript (aka ECMAScript). My biggest claim to language design faim is the creation of the JavaScript Proxy API together with Mark S. Miller, now shipping in all major browsers.
+
+I'm passionate about getting young people exposed to the art of programming.
+I've been quite active in organizing programming contests: I was a jury member and organizer of the [Flemish Programmign Contest](http://www.vlaamseprogrammeerwedstrijd.be), a regional ACM ICPC-inspired programming contest for students and professionals. For a time I was also a jury member of the [Belgian Olympiad in Informatics](http://be-oi.be/).
 
 ## Programming Languages
 
