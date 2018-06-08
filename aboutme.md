@@ -8,7 +8,7 @@ permalink: /aboutme/
   <sub>You don't grow old on the net. This is me way back in 2007 enjoying the ocean view on <a href="https://goo.gl/maps/memrB1jEYan">Rapa Nui</a>.</sub>
 </span>
 
-I'm a computer scientist. I work at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem), the research arm of Nokia. I have the privilege of leading a fantastic team there where we're always working at the cutting edge of research in software. At Bell Labs I co-architected the [WorldWideStreams](https://worldwidestreams.io) distributed stream processing platform.
+I'm a computer scientist. I work at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem), the research arm of Nokia (yes, that's the same Bell Labs that invented the transistor, the laser, UNIX, C and a host of other innovations). I have the privilege of leading a fantastic team there where we're always working at the cutting edge of research in software. At Bell Labs I co-architected the [WorldWideStreams](https://worldwidestreams.io) distributed stream processing platform.
 
 Prior to joining Bell Labs, I was a CS professor at the [Software Languages Lab](http://soft.vub.ac.be) of the [Vrije Universiteit Brussel](http://www.vub.ac.be). I also did my doctoral research there on [AmbientTalk](http://soft.vub.ac.be/amop), a distributed programming language designed for mobile ad hoc networks.
 
