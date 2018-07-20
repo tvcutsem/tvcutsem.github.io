@@ -47,13 +47,13 @@ The above object model is not complete: we know that Javascript objects also hav
 point.hasOwnProperty("x") // true
 {% endhighlight %}
 
-The prototype link of an object can be obtained by calling <tt>Object.getPrototypeOf(point)</tt>, although many browsers also simply represent the prototype link as a regular property of the object with the funny name <tt>__proto__</tt>.
+The prototype link of an object can be obtained by calling <tt>Object.getPrototypeOf(point)</tt>, although many browsers also simply represent the prototype link as a regular property of the object with the funny name `__proto__`.
 
-I don't like to think of the prototype link as a normal property because this link has a large influence on virtually every operation applied to a Javascript object. The prototype link is really special, and setting <tt>point.__proto__</tt> to another object has a very large effect on the subsequent behavior of the <tt>point</tt> object. So, I'd like to think of the prototype link as the next addition to our object model: a javascript object = a map of normal properties + a special prototype link.
+I don't like to think of the prototype link as a normal property because this link has a large influence on virtually every operation applied to a Javascript object. The prototype link is really special, and setting `point.__proto__` to another object has a very large effect on the subsequent behavior of the `point` object. So, I'd like to think of the prototype link as the next addition to our object model: a javascript object = a map of normal properties + a special prototype link.
 
 ## Property attributes
 
-The object model just described (objects as maps of strings -> values + a prototype link) is sufficiently accurate to describe user-defined objects in Ecmascript 3\. However, Ecmascript 5 extends the Javascript object model with a number of new features, most notably property attributes, non-extensible objects and accessor properties. John Resig has a nice [blog post](http://ejohn.org/blog/ecmascript-5-objects-and-properties/) on the subject. I'll only briefly summarize the most salient features here.
+The object model just described (objects as maps of strings -> values + a prototype link) is sufficiently accurate to describe user-defined objects in Ecmascript 3. However, Ecmascript 5 extends the Javascript object model with a number of new features, most notably property attributes, non-extensible objects and accessor properties. John Resig has a nice [blog post](http://ejohn.org/blog/ecmascript-5-objects-and-properties/) on the subject. I'll only briefly summarize the most salient features here.
 
 Let's start with property attributes. Basically, in ES5, every Javascript property is associated with three _attributes_, which are simply boolean flags indicating whether the property is:
 
