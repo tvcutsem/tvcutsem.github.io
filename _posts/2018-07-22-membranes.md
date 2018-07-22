@@ -13,15 +13,21 @@ The pattern has been around for many years, but is not widely known. My aim in t
 
 <!--more-->
 
-## Isolating applications versus isolating application sub-components
+## Isolating applications versus application sub-components
 
 Operating systems commonly employ a variety of protection mechanisms to coordinate the interaction between applications. Processes, for example, introduce distinct address spaces to isolate applications from each other.
 
-Membranes are a secure programming pattern that achieve a similar kind of isolation, but *within* a single application rather than between different applications. The pattern was first proposed in the context of secure programming by Mark S. Miller in his [PhD thesis on robust composition](http://erights.org/talks/thesis/index.html). The name "membrane" is meant to evoke a a connotation with cell membranes, which protect delicate internals from a chaotic external environment while still enabling interaction with that environment.
+Membranes are a secure programming pattern that achieve a similar kind of isolation, but *within* a single application rather than between different applications. The pattern was first proposed in the context of secure programming by Mark S. Miller in his [PhD thesis on robust composition](http://erights.org/talks/thesis/index.html). The name "membrane" is meant to evoke a connotation with cell membranes, which protect delicate internals from a chaotic external environment while still enabling interaction with that environment.
 
 A membrane allows a coordinator to execute some logic in between every interaction with a particular sub-component (which may contain untrusted thrid-party code). A host webpage might want to protect itself from an embedded script. A browser might want to isolate a third-party browser extension (plug-in). A web framework might want to observe changes in the objects of its web app.
 
-A membrane is a security perimeter around one or more objects and is usually implemented through proxies or "wrapper" objects. In a typical membrane setup, the perimeter starts with a single root object. For example, code inside a web page might wrap its `window` object in a membrane proxy. The proxied window could then be passed on to an embedded third-party script.
+A membrane is a security perimeter around one or more objects and is usually implemented through proxies or "wrapper" objects. In a typical membrane setup, the perimeter starts with a single root object. For example, code inside a web page might wrap its `window` object in a membrane proxy. The proxied window could then be passed on to an embedded third-party script:
+
+<center>
+  <img src="/assets/Membrane2_1.png" alt="Membrane step 1" width="60%">
+</center>
+
+In the above figure, the half-circle represents a proxy object providing access to some resource (object) in another sub-component.
 
 ## Transparency
 
@@ -29,10 +35,6 @@ Membrane proxies are usually designed to be transparent. That is: to a client of
 
 Note that I wrote "the membrane proxy __appears__ indistinguishable": the creator of the membrane usually wants to execute some logic when the third-party code interacts with the wrapped object. This logic usually implements some kind of "distortion" on the wrapped object (this term is due to E. Dean Tribble and Mark S. Miller). In our web page example, the host page might have replaced some operations of the real window with less sensitive dummy operations, for example querying the window for its `history` could just return fake history data. A more sophisticated example could be a membrane that wraps a `<div>` DOM element in the host page into a virtual `window` object, such that a third-party script can only render content inside that `<div>` without affecting the rest of the webpage.
   
-<center>
-  <img src="/assets/Membrane2_1.png" alt="Membrane step 1" width="60%">
-</center>
-
 ## Transitivity
 
 Using proxy objects as wrappers for other objects is a very common [design pattern]() in object-oriented languages. So what makes a membrane different from a traditional proxy design pattern? The defining feature of a membrane is that any object that gets passed through a membrane proxy gets transitively wrapped inside another membrane proxy (usually enforcing the same logic as the original). For example, if `window` is the proxied window, then `window.document` will return a proxied [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) object.
@@ -49,11 +51,13 @@ window.document.onclick(function (event) {
 })
 {% endhighlight %}
 
+Here, the function object passed to [onclick](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) would be wrapped in another membrane proxy:
+
 <center>
   <img src="/assets/Membrane2_3.png" alt="Membrane step 3" width="60%">
 </center>
 
-Here, the function object passed to [onclick](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) would be wrapped in another membrane proxy. This ensures that, if code in the host later calls back on the function with some event `e`, the membrane can ensure a proxy to `e` is passed instead. Thus, the `event` parameter to the callback would be a wrapped [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent) object. The membrane can thus continue to interpose its logic to uphold its distortion. For instance, it can ensure that `event.target` returns a properly wrapped DOM node, rather than the real DOM node (from which the original `document` could be retrieved).
+This wrapping ensures that, if code in the host later calls back on the function with some event `e`, the membrane can ensure a proxy to `e` is passed instead. Thus, the `event` parameter to the callback would be a wrapped [MouseEvent](https://developer.mozilla.org/en-US/docs/Web/API/MouseEvent) object. The membrane can thus continue to interpose its logic to uphold its distortion. For instance, it can ensure that `event.target` returns a properly wrapped DOM node, rather than the real DOM node (from which the original `document` could be retrieved).
 
 <center>
   <img src="/assets/Membrane2_4.png" alt="Membrane step 4" width="60%">
@@ -73,23 +77,23 @@ Because membranes operate within a single application's process and address spac
 
 Let's review a few real-world examples of the membrane pattern.
 
-### Firefox script compartments
+### Script compartments in Firefox
 
 Perhaps one of the most widely deployed uses of membranes is inside the Firefox browser. Firefox's [script security architecture](https://developer.mozilla.org/en-US/docs/Mozilla/Gecko/Script_security) follows the membrane pattern to implement security boundaries between different site origins and privileged JavaScript code. The membrane pattern actually [helped to mitigate multiple high-severity security bugs](http://bholley.net/blog/2016/the-right-fix.html).
 
 Membranes in Firefox are called [cross compartment wrappers](https://dxr.mozilla.org/mozilla-central/source/js/src/proxy/CrossCompartmentWrapper.cpp).
 
-### Caja script sandboxing
+### Script sandboxing with Caja
 
 My running example of a host webpage trying to protect itself from an embedded script was the primary use case of [Google Caja](https://developers.google.com/caja/). Caja enables the safe embedding of third-party active content inside web pages and has been used to protect various Google products including [Google Sites](https://sites.google.com/), [Google Apps Scripts](https://developers.google.com/apps-script/overview) and [Google Earth Engine](https://earthengine.google.com/).
 
-### Private views on the DOM
+### Private DOMs with es-membrane
 
 As a spin-off on working on the [Verbosio XML editor](https://sourceforge.net/projects/templates.verbosio.p/) Alex J. Vincent created a reusable [membrane library for JavaScript](https://github.com/ajvincent/es-membrane). His primary use case was to enable different sub-components within a web page to have different views of the DOM, i.e. each sub-component can define its own ["expando"](https://developer.mozilla.org/en-US/docs/Glossary/Expando) properties.
 
 The [es-membrane](https://github.com/ajvincent/es-membrane) library was also the first to generalize a typical two-party membrane, as discussed above, into an N-party membrane where a coordinator can directly intermediate between multiple sub-components.
 
-### Observing mutations
+### Observing mutations with observable-membrane
 
 While membranes were originally proposed as a defensive programming abstraction to isolate sub-components, the membrane pattern can be used for other purposes beyond enforcing some security property. For example, Caridy Patiño and team at Salesforce have successfully used the membrane pattern to observe mutation on an object graph. Their implementation is [publicly available](https://github.com/salesforce/observable-membrane).
 
@@ -111,7 +115,7 @@ Examples include:
 
 Membranes are a defensive programming abstraction to isolate or intermediate between sub-components within a single application. They are usually implemented by creating a dynamically growing "distortion field" around objects by transitively wrapping each object in a protective proxy object.
 
-Implementing a membrane correctly is not easy. For example, in JavaScript, due to the complexity of the language there are many ways for objects to interact (just look at the number of traps in the Proxy API). In addition, in an imperative language like JavaScript you usually want a membrane to preserve object-identity across both sides of the membrane, i.e. you want to preserve invariants like `window.location === window.location`, and you want a wrapped value that is passed from one side and then back again to be "unwrapped" and replaced by its original. This usually requires membrane implementations to introduce caches so they can reuse wrappers, creating only a single wrapper per distinct object.
+Implementing a membrane correctly is not easy. For example, in JavaScript, due to the complexity of the language there are many ways for objects to interact (just look at the number of traps in the [Proxy API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy)). In addition, in an imperative language like JavaScript you usually want a membrane to preserve object-identity across both sides of the membrane, i.e. you want to preserve invariants like `window.location === window.location`, and you want a wrapped value that is passed from one side and then back again to be "unwrapped" and replaced by its original. This usually requires membrane implementations to introduce caches so they can reuse wrappers, creating only a single wrapper per distinct object.
 
 Luckily libraries like [es-membrane](https://github.com/ajvincent/es-membrane) and [observable-membrane](https://github.com/salesforce/observable-membrane) are starting to make things easier by offering membranes as an abstraction, letting you plug-in your "distortion logic" and letting the libraries take care of most of the implementation details.
 
