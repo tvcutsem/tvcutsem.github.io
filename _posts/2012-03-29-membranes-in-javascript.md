@@ -11,6 +11,8 @@ Before I can dive into more practical applications of membranes, I need to expla
 
 <!--more-->
 
+**Update**: I explain the ideas behind membranes more generally in [this article]({% post_url 2018-07-22-membranes.md %}).
+
 ## What is a membrane?
 
 A membrane is a wrapper around an entire object graph, as opposed to a wrapper for just a single object. Typically, the creator of a membrane starts out wrapping just a single object in a membrane. The key idea is that any object reference that crosses the membrane is itself transitively wrapped in the same membrane. Object references typically cross the membrane in one direction (out->in) by passing parameters to an object's method, and in the opposite direction (in->out) by being returned as a value from a method or by being thrown as an exception.
@@ -140,3 +142,5 @@ My current [experimental version](http://code.google.com/p/es-lab/source/browse/
 ## Only scratching the surface...
 
 Revocable membranes only scratch the surface of what membranes can support. Often one can think of the wet objects inside of the membrane as some precious resource needing protection. But one can think of opposite use cases as well, where the dry outside world wants to be protected from the wet objects inside of the membrane. For instance, Mark Miller (designer of the Caja secure subset of Javascript) [came up with the idea](http://code.google.com/p/es-lab/#Script_Compartments) of wrapping (a secure version of) the Javascript <tt>eval</tt> function in a membrane so that any untrusted third-party code eval-ed with this wrapped <tt>eval</tt> function is born inside of a membrane: any references that code ever establishes to the outside environment would be wrapped. When the untrusted third-party code is no longer needed or wanted, the membrane can be revoked. Not only does this render the third-party code harmless (it no longer has access to anything in the enclosing environment), if the membrane is carefully implemented and the Javascript engine fully supports WeakMaps, then the GC can recognize that the membraned object graph is now fully isolated, and can be garbage-collected.
+
+**Update**: read more about [the general principles behind membranes]({% post_url 2018-07-22-membranes.md %}).
