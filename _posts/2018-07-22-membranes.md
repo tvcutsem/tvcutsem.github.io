@@ -10,15 +10,15 @@ Membranes are a defensive programming pattern used to intermediate between sub-c
 
 <!--more-->
 
-The pattern has been around for many years, but is not widely known. My aim in this article is to lay out the general ideas behind membranes. Because most of my experience with membranes has been built up in the context of Web standards, I will mostly be covering this from the angle of JavaScript and Web platform-related use cases. Remember though that the membrane pattern is more widely applicable.
+The pattern has been around for many years, but is not widely known. My aim in this article is to lay out the general ideas behind membranes. Because most of my experience with membranes has been built up in the context of Web standards, I will mostly be covering this from the angle of JavaScript and Web platform-related use cases. Remember though that the membrane pattern is more widely applicable and not in any specific way tied to the Web.
 
 ## Isolating applications versus application sub-components
 
 Operating systems commonly employ a variety of protection mechanisms to coordinate the interaction between applications. Processes, for example, introduce distinct address spaces to isolate applications from each other.
 
-Membranes are a secure programming pattern that achieve a similar kind of isolation, but *within* a single application rather than between different applications. The pattern was first proposed in the context of secure programming by Mark S. Miller in his [PhD thesis on robust composition](http://erights.org/talks/thesis/index.html). The name "membrane" is meant to evoke a connotation with cell membranes, which protect delicate internals from a chaotic external environment while still enabling interaction with that environment.
+Membranes are a secure programming pattern that achieve a similar kind of isolation, but *within* a single application rather than between different applications. The pattern was first proposed in the context of secure programming by Mark S. Miller in his [PhD thesis on robust composition](http://erights.org/talks/thesis/index.html). The name "membrane" is meant to evoke a connotation with cell membranes, which protect delicate internals from a chaotic external environment while still enabling regulated interaction with that environment.
 
-A membrane allows a coordinator to execute some logic in between every interaction with a particular sub-component (which may contain untrusted thrid-party code). A host webpage might want to protect itself from an embedded script. A browser might want to isolate a third-party browser extension (plug-in). A web framework might want to observe changes in the objects of its web app.
+A membrane allows a coordinator to execute some logic in between every interaction with a particular sub-component (which may contain untrusted thrid-party code). A host webpage might want to protect itself from an embedded script. A browser might want to isolate a third-party browser extension (plug-in). A web framework might want to track and observe mutations in the objects of its web app to refresh the UI.
 
 A membrane is a security perimeter around one or more objects and is usually implemented through proxies or "wrapper" objects. In a typical membrane setup, the perimeter starts with a single root object. For example, code inside a web page might wrap its `window` object in a membrane proxy. The proxied window could then be passed on to an embedded third-party script:
 
@@ -32,13 +32,13 @@ In the above figure, the half-circle represents a proxy object providing access 
 
 Let's briefly go over the key properties of a typical membrane pattern.
 
-### Transparent: membranes preserve behavior
+### Membranes are transparent and mostly preserve behavior
 
 Membrane proxies are usually designed to be transparent. That is: to a client of the proxy, interacting with the membrane proxy appears indistinguishable from interacting with the object it wraps. This is important, because client code that expected a real object will still work when it is passed a proxy instead. In the example of the third-party script that receives a proxied window, the script is likely unaware that it received a proxied window, and will use the proxied window as if it were the real window object.
 
 Note that I wrote "the membrane proxy __appears__ indistinguishable": the creator of the membrane usually wants to execute some logic when the third-party code interacts with the wrapped object. This logic usually implements some kind of "distortion" on the wrapped object (this term is due to E. Dean Tribble and Mark S. Miller). In our web page example, the host page might have replaced some operations of the real window with less sensitive dummy operations, for example querying the window for its `history` could just return fake history data. A more sophisticated example could be a membrane that wraps a `<div>` DOM element in the host page into a virtual `window` object, such that a third-party script can only render content inside that `<div>` without affecting the rest of the webpage.
 
-### Transitive: membranes interpose transitively
+### Membrane interposition is transitive
 
 Using proxy objects as wrappers for other objects is a very common [design pattern](https://en.wikipedia.org/wiki/Proxy_pattern) in object-oriented languages. So what makes a membrane different from a traditional proxy design pattern? The defining feature of a membrane is that any object that gets passed through a membrane proxy gets transitively wrapped inside another membrane proxy (usually enforcing the same logic as the original). For example, if `window` is the proxied window, then `window.document` will return a proxied [Document](https://developer.mozilla.org/en-US/docs/Web/API/Document) object.
 
@@ -68,9 +68,7 @@ This wrapping ensures that, if code in the host later calls back on the function
 
 The fact that a membrane "grows" itself through transitive interposition is extremely powerful and useful, because it means the security perimeter around a set of objects is flexible and dynamic. There is no need to list all objects to be wrapped upfront. This transitive wrapping also allows membranes to deal with complex ("higher-order") object-oriented or functional interfaces, where objects or functions are routinely parameter-passed as values to other objects or functions, supporting dynamic data flows that cannot be statically predicted.
 
-### Homomorphic: membranes preserve identity 
-
-In mathematics, a [homomorphism](https://en.wikipedia.org/wiki/Homomorphism) is a structure-preserving map between two algebraic data types. Membranes similarly preserve structure between the "unwrapped" and the "wrapped" data. Why is this important?
+### Membranes preserve identity
 
 Many programming languages have mutable data types, such as objects or records with mutable fields. Mutable values have identity. For example, in most object-oriented languages, objects have identity, and this identity can be directly observed through identity-equality operators like `==` in Java or `===` in JavaScript.
 
@@ -95,6 +93,8 @@ document.removeEventListener("click", handler);
   <img src="/assets/Membrane2_6.png" alt="Membrane step 6" width="60%">
 </center>
 
+In order for `removeEventListener` to find and unregister the function installed by `addEventListener`, the argument passed to both functions should be identical, otherwise the original handler function would never be found.
+
 Finally, we usually want a wrapped value that is passed from one side
 of the membrane to the other, and then back again, to be replaced by its original value. To see why, consider the simple identity function:
 
@@ -104,15 +104,15 @@ function identity(x) {
 }
 {% endhighlight %}
 
-Let's assume this function gets exposed through a membrane as a wrapped function named `id`. Then, on the other side of the membrane, for any value `v`, we would like `id(v) === v` to hold.
+Let's assume this function gets exposed through a membrane as a wrapped function named `id`. Then, on the other side of the membrane, for any value `v`, we would like `id(v) === v` to hold. This can only be the case if membrane wraps `v` when passing it as an argument to `id` and then unwraps it again when passing it as the return value back to the client.
 
 Preserving identity usually requires membrane implementations to use caches to ensure that they only allocate a single canonical wrapper for every stateful value. To make sure these caches don't leak memory, implementations would use data structures like a [WeakHashMap](https://docs.oracle.com/javase/7/docs/api/java/util/WeakHashMap.html) in Java or a [WeakMap](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) in JavaScript. These maps hold only weak references to their keys and so do not prevent the objects from being garbage collected.
 
 ## Strengths and limitations
 
-To really be effective in isolating application sub-components, it is really critical that a membrane can intercept all possible interactions between objects of different sub-components. In particular this requires the complete absence of mutable state that is globally visible across sub-components. In languages like JavaScript, this usually requires making sure the global environment is either made immutable or virtualized as well (see [Secure ECMAScript](https://github.com/agoric/SES) for a principled attempt to do this). In languages like Java, this usually requires avoiding static fields or dangerous APIs (see [Joe-E](https://code.google.com/archive/p/joe-e/) for a subset of Java that enforces such properties).
+To really be effective in isolating application sub-components, it is crucial for a membrane to intercept **all** possible interactions between objects of the sub-components it is trying to isolate. In particular this requires the complete absence of mutable state that is globally visible across sub-components. In languages like JavaScript, this usually requires making sure the global environment is either made immutable or virtualized as well (see [Secure ECMAScript](https://github.com/agoric/SES) for a principled attempt to do this). In languages like Java, this usually requires avoiding static fields or dangerous APIs (see [Joe-E](https://code.google.com/archive/p/joe-e/) for a subset of Java that enforces such properties).
 
-One advantage of using membranes to isolate different parts of an application is that the objects on different sides of the membrane still reside in the same address space, and so can still communicate through standard programming abstractions such as method calls or field accesses. They can also share direct pointers to (usually immutable) shared state. This is very different from isolation through process-like abstractions, which introduce separate address spaces. This usually forces the use of inter-process communication (IPC) mechanisms, and usually requires redesigning the APIs of the sub-components of the application. For example, in browsers, another way of isolating different parts of a web application is through [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), which then requires explicit communication.
+One advantage of using membranes to isolate different parts of an application is that the objects on different sides of the membrane still reside in the same address space, and so can still communicate through standard programming abstractions such as method calls or field accesses. They can also share direct pointers to (usually immutable) shared state. This is very different from isolation through process-like abstractions, which introduce separate address spaces. This usually forces the use of inter-process communication (IPC) mechanisms, and usually requires redesigning the APIs of the sub-components of the application. For example, in browsers, another way of isolating different parts of a web application is through [Web Workers](https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers), which can only interact by asynchronous message passing.
 
 Because membranes operate within a single application's process and address space, they do __not__ protect against denial-of-service attacks or crashes of the isolated sub-components.
 
@@ -128,19 +128,19 @@ Membranes in Firefox are called [cross compartment wrappers](https://dxr.mozilla
 
 ### Script sandboxing with Caja
 
-My running example of a host webpage trying to protect itself from an embedded script was the primary use case of [Google Caja](https://developers.google.com/caja/). Caja enables the safe embedding of third-party active content inside web pages and has been used to protect various Google products including [Google Sites](https://sites.google.com/), [Google Apps Scripts](https://developers.google.com/apps-script/overview) and [Google Earth Engine](https://earthengine.google.com/).
+My running example of a host webpage trying to protect itself from an embedded script is one of the primary use cases of [Google Caja](https://developers.google.com/caja/). Caja enables the safe embedding of third-party active content inside web pages and has been used to protect various Google products including [Google Sites](https://sites.google.com/), [Google Apps Scripts](https://developers.google.com/apps-script/overview) and [Google Earth Engine](https://earthengine.google.com/).
 
 ### Private DOMs with es-membrane
 
-As a spin-off on working on the [Verbosio XML editor](https://sourceforge.net/projects/templates.verbosio.p/) Alex J. Vincent created a reusable [membrane library for JavaScript](https://github.com/ajvincent/es-membrane). His primary use case was to enable different sub-components within a web page to have different views of the DOM, i.e. each sub-component can define its own ["expando"](https://developer.mozilla.org/en-US/docs/Glossary/Expando) properties.
+As a spin-off on working on the [Verbosio XML editor](https://sourceforge.net/projects/templates.verbosio.p/) Alex J. Vincent created a reusable [membrane library for JavaScript](https://github.com/ajvincent/es-membrane). His primary use case is to enable different sub-components within a web page to have different views of the DOM, i.e. each sub-component can define its own ["expando"](https://developer.mozilla.org/en-US/docs/Glossary/Expando) properties.
 
-The [es-membrane](https://github.com/ajvincent/es-membrane) library was also the first to generalize a typical two-party membrane, as discussed above, into an N-party membrane where a coordinator can directly intermediate between multiple sub-components.
+The [es-membrane](https://github.com/ajvincent/es-membrane) library was also the first to generalize a typical two-party membrane, as discussed above, into an N-party membrane where a coordinator can directly intermediate between multiple sub-components without having to create multiple membranes.
 
 ### Observing mutations with observable-membrane
 
 While membranes were originally proposed as a defensive programming abstraction to isolate sub-components, the membrane pattern can be used for other purposes beyond enforcing some security property. For example, Caridy Patiño and team at Salesforce have successfully used the membrane pattern to observe mutation on an object graph. Their implementation is [publicly available](https://github.com/salesforce/observable-membrane).
 
-One reason one may want to observe mutations on an object graph is to enable data-binding in a web application framework: the web framework observes the object graph of its web application, and mutations require the web framework to refresh the UI. [This example code](https://github.com/salesforce/observable-membrane/tree/master/examples/reactivo-element) shows how to build reactive web components using this pattern.
+One reason one would want to observe mutations on an object graph is to enable data-binding in a web application framework: the web framework observes the object graph of its web application, and mutations require the web framework to refresh the UI. [This example code](https://github.com/salesforce/observable-membrane/tree/master/examples/reactivo-element) shows how to build reactive web components using this pattern.
 
 ## What experience tells us
 
