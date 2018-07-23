@@ -11,7 +11,7 @@ Before I can dive into more practical applications of membranes, I need to expla
 
 <!--more-->
 
-**Update**: I explain the ideas behind membranes more generally in [this article]({% post_url 2018-07-22-membranes.md %}).
+**Update**: I explain the ideas behind membranes more generally in [this article]({% post_url 2018-07-22-membranes %}).
 
 ## What is a membrane?
 
