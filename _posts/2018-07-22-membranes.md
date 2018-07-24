@@ -86,7 +86,7 @@ let handler = function(event) {
 }
 document.addEventListener("click", handler, true);
 // sometime later...
-document.removeEventListener("click", handler);
+document.removeEventListener("click", handler, true);
 {% endhighlight %}
 
 <center>
