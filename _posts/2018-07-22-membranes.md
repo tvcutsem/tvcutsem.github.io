@@ -20,7 +20,7 @@ Membranes are a secure programming pattern that achieve a similar kind of isolat
 
 A membrane allows a coordinator to execute some logic in between every interaction with a particular sub-component (which may contain untrusted thrid-party code). A host webpage might want to protect itself from an embedded script. A browser might want to isolate a third-party browser extension (plug-in). A web framework might want to track and observe mutations in the objects of its web app to refresh the UI.
 
-A membrane is a security perimeter around one or more objects and is usually implemented through proxies or "wrapper" objects. In a typical membrane setup, the perimeter starts with a single root object. For example, code inside a web page might wrap its `window` object in a membrane proxy. The proxied window could then be passed on to an embedded third-party script:
+A membrane is a controlled perimeter around one or more objects and is usually implemented through proxies or "wrapper" objects. In a typical membrane setup, the perimeter starts with a single root object. For example, code inside a web page might wrap its `window` object in a membrane proxy. The proxied window could then be passed on to an embedded third-party script:
 
 <center>
   <img src="/assets/Membrane2_1.png" alt="Membrane step 1" width="60%">
@@ -49,9 +49,9 @@ Using proxy objects as wrappers for other objects is a very common [design patte
 Often we don't just want to isolate the third-party code from the host, but also isolate the host from the third-party code. A membrane can accomodate this by wrapping the arguments passed to methods on a membraned object:
 
 {% highlight javascript %}
-window.document.onclick(function (event) {
+window.document.onclick = function (event) {
   console.log(event.target)
-})
+}
 {% endhighlight %}
 
 Here, the function object passed to [onclick](https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onclick) would be wrapped in another membrane proxy:
@@ -84,7 +84,7 @@ We would also like values that cross the membrane multiple times to retain their
 let handler = function(event) {
   console.log(event)
 }
-document.addEventListener("click", handler);
+document.addEventListener("click", handler, true);
 // sometime later...
 document.removeEventListener("click", handler);
 {% endhighlight %}
@@ -130,9 +130,9 @@ Membranes in Firefox are called [cross compartment wrappers](https://dxr.mozilla
 
 My running example of a host webpage trying to protect itself from an embedded script is one of the primary use cases of [Google Caja](https://developers.google.com/caja/). Caja enables the safe embedding of third-party active content inside web pages and has been used to protect various Google products including [Google Sites](https://sites.google.com/), [Google Apps Scripts](https://developers.google.com/apps-script/overview) and [Google Earth Engine](https://earthengine.google.com/).
 
-### Private DOMs with es-membrane
+### Custom DOM views with es-membrane
 
-As a spin-off on working on the [Verbosio XML editor](https://sourceforge.net/projects/templates.verbosio.p/) Alex J. Vincent created a reusable [membrane library for JavaScript](https://github.com/ajvincent/es-membrane). His primary use case is to enable different sub-components within a web page to have different views of the DOM, i.e. each sub-component can define its own ["expando"](https://developer.mozilla.org/en-US/docs/Glossary/Expando) properties.
+As a spin-off on working on the [Verbosio XML editor](https://sourceforge.net/projects/templates.verbosio.p/) Alexander J. Vincent created a reusable [membrane library for JavaScript](https://github.com/ajvincent/es-membrane). His original use case was to coordinate different Firefox add-ons, enabling each add-on to have a custom view of the same DOM. For instance, each add-on could define its own ["expando"](https://developer.mozilla.org/en-US/docs/Glossary/Expando) properties on a shared DOM.
 
 The [es-membrane](https://github.com/ajvincent/es-membrane) library was also the first to generalize a typical two-party membrane, as discussed above, into an N-party membrane where a coordinator can directly intermediate between multiple sub-components without having to create multiple membranes.
 
