@@ -3,7 +3,6 @@ title: Isolating application sub-components with membranes
 layout: post
 tags: membranes proxies javascript security
 permalink: membranes
-excerpt_separator: <!--more-->
 comments: true
 ---
 Membranes are a defensive programming pattern used to intermediate between sub-components of an application. The pattern is applicable in any memory-safe programming language, and [I explain elsewhere on this blog]({% post_url 2012-03-29-membranes-in-javascript %}) how they work in JavaScript.
