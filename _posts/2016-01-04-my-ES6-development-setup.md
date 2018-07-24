@@ -8,6 +8,8 @@ comments: true
 I recently switched from TextMate to [Atom](https://atom.io), a lightweight cross-platform text editor and thought it would be useful to write down how to configure the editor and various related tools to be productive with ECMAScript 6.
 It also shows how to set up tooling for TypeScript, a typed dialect of JavaScript, which aligns well with ECMAScript 6 and gives you optional static type checking and type inference. IMHO, if you're going to invest in new tooling for ECMAScript 6, going the extra mile to switch to TypeScript is worth it.
 
+<!--more-->
+
 ## Getting started
  
 Install [Node.js](https://nodejs.org/en/) v5 or higher (which comes with many ES6 features [enabled by default](https://nodejs.org/en/docs/es6/)).
