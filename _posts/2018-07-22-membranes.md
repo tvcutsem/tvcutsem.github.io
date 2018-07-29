@@ -11,7 +11,7 @@ Membranes are a defensive programming pattern used to intermediate between sub-c
 
 The pattern has been around for many years, but is not widely known. My aim in this article is to lay out the general ideas behind membranes. Because most of my experience with membranes has been built up in the context of Web standards, I will mostly be covering this from the angle of JavaScript and Web platform-related use cases. Remember though that the membrane pattern is more widely applicable and not in any specific way tied to the Web.
 
-> **Historical note**: membranes originate from research on [capability-secure systems](https://en.wikipedia.org/wiki/Capability-based_security), going back at least to early capability-secure operating systems such as [KeyKOS](http://cap-lore.com/CapTheory/KK/) and capability-secure languages such as [Joule](http://www.erights.org/history/joule/index.html) and [E](http://www.erights.org/index.html). The pattern as presented in this article is mostly based on the description in Mark S. Miller’s [PhD thesis on robust composition](http://erights.org/talks/thesis/index.html).
+**Historical note**: membranes originate from research on [capability-secure systems](https://en.wikipedia.org/wiki/Capability-based_security), going back at least to early capability-secure operating systems such as [KeyKOS](http://cap-lore.com/CapTheory/KK/) and capability-secure languages such as [Joule](http://www.erights.org/history/joule/index.html) and [E](http://www.erights.org/index.html). The pattern as presented in this article is mostly based on the description in Mark S. Miller’s [PhD thesis on robust composition](http://erights.org/talks/thesis/index.html).
 
 ## Isolating applications versus application sub-components
 
