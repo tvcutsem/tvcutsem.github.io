@@ -20,7 +20,7 @@ Operating systems commonly employ a variety of protection mechanisms to coordina
 
 Membranes are a secure programming pattern that achieve a similar kind of isolation, but *within* a single application rather than between different applications. The name "membrane" is meant to evoke an association with cell membranes, which protect delicate internals from a chaotic external environment while still enabling regulated interaction with that environment.
 
-A membrane allows a coordinator to execute some logic in between every interaction with a particular sub-component (which may contain untrusted thrid-party code). A host webpage might want to protect itself from an embedded script. A browser might want to isolate a third-party browser extension (plug-in). A web framework might want to track and observe mutations in the objects of its web app to refresh the UI.
+A membrane allows a coordinator to execute some logic in between every interaction with a particular sub-component (which may contain untrusted third-party code). A host webpage might want to protect itself from an embedded script. A browser might want to isolate a third-party browser extension (plug-in). A web framework might want to track and observe mutations in the objects of its web app to refresh the UI.
 
 A membrane is a controlled perimeter around one or more objects and is usually implemented through proxies or "wrapper" objects. In a typical membrane setup, the perimeter starts with a single root object. For example, code inside a web page might wrap its `window` object in a membrane proxy. The proxied window could then be passed on to an embedded third-party script:
 
