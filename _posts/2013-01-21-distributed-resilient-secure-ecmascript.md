@@ -26,6 +26,6 @@ Mark recently got invited as a speaker at [ESOP 2013](http://www.ccs.neu.edu/eso
 The paper is based on two earlier talks of Mark:
 
 *   Bringing Object-orientation to Security Programming ([video](http://www.youtube.com/watch?v=oBqeDYETXME), [slides](http://soft.vub.ac.be/events/mobicrant_talks/talk2_OO_security.pdf)), which provides a good introduction to object-capabilities and the Purse example in particular.
-*   Two-phase commit among strangers ([slides](https://es-lab.googlecode.com/files/friam.pdf), [audio](https://docs.google.com/file/d/0Bw0VXJKBgYPMU1gzQ3hkY0Vrbmc/edit)), which provides a general overview of Dr. SES (with a particular focus on Q) and of the escrow exchange contract, which is discussed in detail in the paper.
+*   Two-phase commit among strangers ([slides](https://github.com/erights/slides/blob/master/2phase-commit-among-strangers.pdf), [audio](https://www.youtube.com/watch?v=WG0JuONIE-c&index=16&list=PLKr-mvz8uvUgybLg53lgXSeLOp4BiwvB2)), which provides a general overview of Dr. SES (with a particular focus on Q) and of the escrow exchange contract, which is discussed in detail in the paper.
 
-The source code discussed in the paper is [available](http://code.google.com/p/es-lab/source/browse/trunk/src/ses/contract/).
+The source code discussed in the paper is [available](https://github.com/tvcutsem/es-lab/tree/master/src/ses/contract).
