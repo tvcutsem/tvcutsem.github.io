@@ -14,6 +14,8 @@ Five years ago, I [wrote on this blog about a distributed computing platform cal
 to build a secure distributed computing platform harnessing the power of
 [object-capabilities](https://en.wikipedia.org/wiki/Object-capability_model) to build [smart contracts](https://en.wikipedia.org/wiki/Smart_contract). 
 
+<!--more-->
+
 The visionary behind this project is Mark S. Miller. Back in 2013 I helped Mark put his ideas [on paper](https://ai.google/research/pubs/pub40673).
 
 Five years later, the rise of Bitcoin and in its wake other cryptocurrencies and blockchain technology, has all of a sudden turned smart contracts from an idealistic vision into a tangible economic reality. Blockchain platforms such as Ethereum now boast turing-complete programming languages to implement smart contracts such as the one explored in our paper. Unfortunately, the world has [already learned the hard way](https://medium.com/swlh/the-story-of-the-dao-its-history-and-consequences-71e6a8a551ee) that today's languages to implement smart contracts are extremely fragile.
