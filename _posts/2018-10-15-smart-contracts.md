@@ -28,5 +28,5 @@ If you are interested in latest developments on this work, I strongly
 recommend watching Mark's [Programming Secure Smart Contracts](https://www.youtube.com/watch?v=Em7tHO6fXPQ) talk which he gave at SF Crypto Developers conference in October 2018. The one-hour talk offers a precise, detailed description of the entire distributed computing fabric, explaining the different layers of abstraction that allow us to build flexible electronic rights out of raw bits and bytes:
 
 <center>
-  <img src="/assets/SES_layers.png" alt="Distributed Computing layers of abstraction" width="80%">
+  <img src="/assets/SES_Layers.png" alt="Distributed Computing layers of abstraction" width="80%">
 </center>
