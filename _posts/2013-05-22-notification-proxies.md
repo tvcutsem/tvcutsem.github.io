@@ -6,7 +6,7 @@ permalink: notification-proxies
 excerpt_separator: <!--more-->
 comments: true
 ---
-At the May TC39 meeting I [presented](http://soft.vub.ac.be/~tvcutsem/invokedynamic/presentations/Notification Proxies-TC39-May-2013.pdf) [pdf] an overview of Notification Proxies, as a possible alternative to Direct Proxies. This post briefly summarizes my talk, and the feedback I got from the committee. tl;dr: notification proxies are off the table, we're sticking to direct proxies in ES6.
+At the May TC39 meeting I [presented](http://soft.vub.ac.be/~tvcutsem/talks/presentations/Notification Proxies-TC39-May-2013.pdf) [pdf] an overview of Notification Proxies, as a possible alternative to Direct Proxies. This post briefly summarizes my talk, and the feedback I got from the committee. tl;dr: notification proxies are off the table, we're sticking to direct proxies in ES6.
 
 <!--more-->
 
