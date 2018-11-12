@@ -67,7 +67,7 @@ var dryB = dryA.x;
 
 Visualised:
 
-<center><img src="/assets/Membrane_Frozen.jpg" width="60%" alt="membranes and frozen objects"></src></center>
+<center><img src="/assets/Membrane_Frozen.jpg" width="60%" alt="membranes and frozen objects"></center>
 
 However, when executing the above code, a problem occurs when accessing <tt>dryA.x</tt>:
 
@@ -82,7 +82,7 @@ The necessary workaround is to have the direct proxy wrap a dummy, "shadow targe
 
 Applying the shadow target technique to membranes, the key idea (due to Mark S. Miller) is to have the shadow and the real target sit on opposite sides of the membrane. For instance, for a dry-to-wet proxy, the "real target" is "wet" (i.e. inside the membrane), while the "shadow target" is dry (i.e. outside the membrane). Whenever the dry-to-wet membrane proxy intercepts an operation, it retrieves the wet target's property and wraps it, defining a dry equivalent property on the shadow. Afterwards, it just forwards the intercepted operation to the dry shadow, which will at that point be correctly initialized.
 
-<center><img src="/assets/Membrane_Shadow.jpg" width="60%" alt="membranes and shadow targets"></src></center>
+<center><img src="/assets/Membrane_Shadow.jpg" width="60%" alt="membranes and shadow targets"></center>
 
 One "optimization" that membranes implemented using direct proxies can perform is to test whether the target object is frozen and if not, use the simple "try 1" approach of forwarding the operation to the target directly. If the target is frozen, the membrane can fall back on using the shadow target to define the wrapped property. In other words: as long as the target object is not actually frozen, the membrane does not need to copy properties onto the shadow target.
 
