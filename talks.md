@@ -5,6 +5,10 @@ permalink: /talks/
 ---
 Some of the talks I've given over the years (with link to slides):
 
+## 2019
+
+* [Browsing NPM packages more effectively with Code Compass](/assets/codecompass_jsconf2019.pdf). Invited talk at the sixth [jsconf.be](https://www.jsconf.be/en/), the Belgian JavaScript Conference. Bruges, Belgium, June 2019.
+
 ## 2018
 
 * [Streaming all the data: JavaScript for real-time data and video stream processing](https://www.jsconf.be/en/schedule), a tutorial on [worldwidestreams.io](https://worldwidestreams.io) including [XStream](/assets/XStream_ifip17.pdf). Workshop at the fifth [jsconf.be](https://www.jsconf.be/en/), the Belgian JavaScript Conference. Bruges, Belgium, May 2018.
