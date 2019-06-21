@@ -5,20 +5,46 @@ permalink: /talks/
 ---
 Some of the talks I've given over the years (with link to slides):
 
-## 2019
+<table class="table table-hover">
 
-* [Browsing NPM packages more effectively with Code Compass](/assets/codecompass_jsconf2019.pdf). Invited talk at the sixth [jsconf.be](https://www.jsconf.be/en/), the Belgian JavaScript Conference. Bruges, Belgium, June 2019.
+<colgroup>
+<col width="8%" />
+<col width="8%" />
+<col width="60%" />
+<col width="15%" />
+<col width="9%" />
+</colgroup>
 
-## 2018
-
-* [Streaming all the data: JavaScript for real-time data and video stream processing](https://www.jsconf.be/en/schedule), a tutorial on [worldwidestreams.io](https://worldwidestreams.io) including [XStream](/assets/XStream_ifip17.pdf). Workshop at the fifth [jsconf.be](https://www.jsconf.be/en/), the Belgian JavaScript Conference. Bruges, Belgium, May 2018.
-* [Control-flow Goodness in Modern JavaScript](/assets/es_cflow_wgld2018.pdf). Presented at the 9th [IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2018). Antwerp, Belgium, May 2018.
-
-## 2017
-
-* [XStream: Declarative authoring of distributed stream processing pipelines (Or, embedded DSLs make for great stream processing APIs)](/assets/XStream_ifip17.pdf). Presented at the [IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2017). Park City, Utah, USA, August 2017.
-* [From Documents to Dialogues: scripting the Conversational Web using Chatbots](/assets/proweb_2017_keynote_tvancuts.pdf). Invited talk at the fourth [jsconf.be](https://www.jsconf.be/en/), the Belgian JavaScript Conference. Bruges, Belgium, June 2017.
-* [From Documents to Dialogues: Programming Technology for the Conversational Web](/assets/proweb_2017_keynote_tvancuts.pdf). Invited keynote talk at [ProWeb 17](http://2017.programming-conference.org/track/proweb-2017-papers), the first international workshop on Programming Technology for the Future Web, co-located with [&lt;Programming&gt; 2017](http://2017.programming-conference.org/home), Brussels, Belgium, April 2017.
+<thead>
+<tr class="header">
+<th>Date</th>
+<th>Type</th>
+<th>Title</th>
+<th>Venue</th>
+<th>Place</th>
+</tr>
+</thead>
+<tbody>
+{% for year in site.data.talks %}
+<tr class="info">
+  <td markdown="span">**{{year.year}}**</td>
+  <td markdown="span"></td>
+  <td markdown="span"></td>
+  <td markdown="span"></td>
+  <td markdown="span"></td>
+</tr>
+{% for talk in year.talks %}
+  <tr>
+    <td markdown="span">{{talk.date}}</td>
+    <td markdown="span">{{talk.type}}</td>
+    <td markdown="span">{{talk.title}} ([slides]({{site.baseurl}}{{talk.slides_path}}))</td>
+    <td markdown="span">{{talk.venue}}</td>
+    <td markdown="span">{{talk.place}}, {{talk.country}}</td>
+  </tr>
+{% endfor %}
+{% endfor %}
+</tbody>
+</table>
 
 ## 2016
 

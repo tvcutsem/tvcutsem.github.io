@@ -1,0 +1,54 @@
+- year: 2019
+  talks:
+  - date: June 2019
+    type: Conference Talk
+    title: Browsing NPM packages more effectively with Code Compass
+    slides_path: "/assets/codecompass_jsconf2019.pdf"
+    venue: "[jsconf.be](https://www.jsconf.be/en/)"
+    place: Bruges
+    country: BE
+
+- year: 2018
+  talks:
+  - date: May 2018
+    type: Workshop
+    title: "Streaming all the data: JavaScript for real-time data and video stream processing (tutorial on [WorldWideStreams](https://worldwidestreams.io) and XStream)"
+    slides_path: "/assets/XStream_ifip17.pdf"
+    venue: "[jsconf.be](https://www.jsconf.be/en/)"
+    place: Bruges
+    country: BE
+    
+  - date: May 2018
+    type: Conference Talk
+    title: "Control-flow Goodness in Modern JavaScript"
+    slides_path: "/assets/es_cflow_wgld2018.pdf"
+    venue: "[IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2018)"
+    place: Antwerp
+    country: BE
+
+- year: 2017
+  talks:
+
+  - date: Aug 2017
+    type: Conference Talk
+    title: "XStream: Declarative authoring of distributed stream processing pipelines (Or, embedded DSLs make for great stream processing APIs)"
+    slides_path: "/assets/XStream_ifip17.pdf"
+    venue: "[IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2017)"
+    place: Park City, Utah
+    country: US
+
+  - date: June 2017
+    type: Conference Talk
+    title: "From Documents to Dialogues: scripting the Conversational Web using Chatbots"
+    slides_path: "/assets/proweb_2017_keynote_tvancuts.pdf"
+    venue: "[jsconf.be](https://www.jsconf.be/en/)"
+    place: Bruges
+    country: BE
+    
+  - date: April 2017
+    type: Keynote
+    title: "From Documents to Dialogues: Programming Technology for the Conversational Web"
+    slides_path: "/assets/proweb_2017_keynote_tvancuts.pdf"
+    venue: "[ProWeb 17](http://2017.programming-conference.org/track/proweb-2017-papers) (workshop at [&lt;Programming&gt; 2017](http://2017.programming-conference.org/home))"
+    place: Brussels
+    country: BE
