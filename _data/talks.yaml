@@ -3,7 +3,8 @@
   - date: June 2019
     type: Conference Talk
     title: Browsing NPM packages more effectively with Code Compass
-    slides_path: "/assets/codecompass_jsconf2019.pdf"
+    tags: ["machine learning", "software engineering", javascript]
+    slides_path: "codecompass_jsconf2019.pdf"
     venue: "[jsconf.be](https://www.jsconf.be/en/)"
     place: Bruges
     country: BE
@@ -13,7 +14,8 @@
   - date: May 2018
     type: Workshop
     title: "Streaming all the data: JavaScript for real-time data and video stream processing (tutorial on [WorldWideStreams](https://worldwidestreams.io) and XStream)"
-    slides_path: "/assets/XStream_ifip17.pdf"
+    tags: ["stream processing", javascript]
+    slides_path: "XStream_ifip17.pdf"
     venue: "[jsconf.be](https://www.jsconf.be/en/)"
     place: Bruges
     country: BE
@@ -21,7 +23,8 @@
   - date: May 2018
     type: Conference Talk
     title: "Control-flow Goodness in Modern JavaScript"
-    slides_path: "/assets/es_cflow_wgld2018.pdf"
+    tags: ["programming", javascript]
+    slides_path: "es_cflow_wgld2018.pdf"
     venue: "[IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2018)"
     place: Antwerp
     country: BE
@@ -32,7 +35,8 @@
   - date: Aug 2017
     type: Conference Talk
     title: "XStream: Declarative authoring of distributed stream processing pipelines (Or, embedded DSLs make for great stream processing APIs)"
-    slides_path: "/assets/XStream_ifip17.pdf"
+    tags: ["stream processing", javascript]
+    slides_path: "XStream_ifip17.pdf"
     venue: "[IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2017)"
     place: Park City, Utah
     country: US
@@ -40,7 +44,8 @@
   - date: June 2017
     type: Conference Talk
     title: "From Documents to Dialogues: scripting the Conversational Web using Chatbots"
-    slides_path: "/assets/proweb_2017_keynote_tvancuts.pdf"
+    tags: ["chatbots"]
+    slides_path: "proweb_2017_keynote_tvancuts.pdf"
     venue: "[jsconf.be](https://www.jsconf.be/en/)"
     place: Bruges
     country: BE
@@ -48,7 +53,56 @@
   - date: April 2017
     type: Keynote
     title: "From Documents to Dialogues: Programming Technology for the Conversational Web"
-    slides_path: "/assets/proweb_2017_keynote_tvancuts.pdf"
+    tags: ["chatbots"]
+    slides_path: "proweb_2017_keynote_tvancuts.pdf"
     venue: "[ProWeb 17](http://2017.programming-conference.org/track/proweb-2017-papers) (workshop at [&lt;Programming&gt; 2017](http://2017.programming-conference.org/home))"
     place: Brussels
     country: BE
+
+- year: 2016
+  talks:
+    
+    - date: December 2016
+      type: Seminar
+      title: "Microservices and docker: from theory to practice"
+      tags: ["microservices", "DevOps"]
+      slides_path: "Microservices_BellLabs_KULAK_final.pdf"
+      venue: "KULeuven KULAK Postgraduate Centre [seminar on microservices](http://puc.kuleuven-kulak.be/opleidingen/info/2856)"
+      place: Kortrijk
+      country: BE
+      
+    - date: May 2016
+      type: Conference Talk
+      title: "ECMAScript 2015 and beyond"
+      tags: ["programming", "javascript"]
+      slides_path: "jsbe_05_2016_es2015_and_beyond.pdf"
+      venue: "[js.be](http://jsbe.io/) Belgian JavaScript User Group meetup"
+      place: Brussels
+      country: BE
+      
+    - date: May 2016
+      type: Keynote
+      title: "Control Flow Goodness in ECMAScript 2015 and Beyond"
+      tags: ["programming", "javascript"]
+      slides_path: "jsconf_2016_cflow.pdf"
+      venue: "[jsconf.be](http://jsconf.be)"
+      place: Bruges
+      country: BE    
+      
+    - date: April 2016
+      type: Guest Lecture
+      title: "Virtualizing The Object (aka the JavaScript Meta-object Protocol)"
+      tags: ["reflection", "javascript"]
+      slides_path: "virtualizing_objects_04_2016.pdf"
+      venue: "Université Catholique de Louvain (UCL), [Programming paradigms](http://www.uclouvain.be/en-cours-2015-LSINF2335.html) course"
+      place: Louvain-la-Neuve
+      country: BE
+      
+    - date: March 2016
+      type: Seminar
+      title: "Writing Robust JavaScript Code using Modern JavaScript"
+      tags: ["security", "javascript"]
+      slides_path: "JS_RobustModern_SecAppDev2016.pdf"
+      venue: "[SecAppDev](http://secappdev.org) (Secure Application Development) and Belgian OWASP chapter [meetup](https://www.owasp.org/index.php/Belgium#tab=Chapter_Meetings)"
+      place: Leuven
+      country: BE
