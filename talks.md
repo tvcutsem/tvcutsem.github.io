@@ -40,23 +40,19 @@ I regularly speak at developer conferences, academic conferences, meetups and un
   <tr>
     <td markdown="span">{{talk.date}}</td>
     <td markdown="span">{{talk.type}}</td>
-    <td markdown="span">{{talk.title}} ([slides]({{site.asseturl}}/{{talk.slides_path}}))<br>
-    {% for tag in talk.tags %}<span class="btn btn-default btn-xs disabled">{{tag}}</span> {% endfor %}
+    <td markdown="span">{{talk.title}}<br>
+      <a class="btn btn-info btn-xs" target="_blank" href="{{site.asseturl}}/{{talk.slides_path}}">slides</a>
+    {% if talk.video_url %}<a class="btn btn-warning btn-xs" target="_blank" href="{{ talk.video_url }}">video recording</a>
+    {% endif %}
+    {%- for tag in talk.tags -%}<span class="btn btn-default btn-xs disabled">{{tag}}</span> {% endfor %}
     </td>
     <td markdown="span">{{talk.venue}}</td>
-    <td markdown="span">{{talk.place}}, {{talk.country}}</td>
+    <td markdown="span">{{talk.place}}<br><span title="{{talk.country}}" class="flag-icon flag-icon-{{talk.country | downcase}} flag-icon-squared"></span></td>
   </tr>
 {% endfor %}
 {% endfor %}
 </tbody>
 </table>
-
-## 2015
-
-*   [ECMAScript 2015: the Future of JavaScript is Now!]({{site.asseturl}}/ES2015_SPLASH_I_2015.pdf). Presented at the [SPLASH 2015](http://2015.splashcon.org) Industry Track, the ACM SIGPLAN conference on Systems, Programming, Languages and Applications: Software for Humanity (SPLASH), Pittsburgh, PA, October 2015.<br/>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/wfbmIb-1EG8" frameborder="0" allowfullscreen></iframe>
-*   [ECMAScript 6: the Future of JavaScript is Now!]({{site.asseturl}}/es6_ordina_join15.pdf). Presented at local developer event [JOIN'15](https://www.ordina.be/nl-nl/evenementen/2015/09-10-2015-join/), organized by Ordina in Mechelen, Belgium, September 2015.
-*   [The road to ES6, and beyond: a tale about JavaScript’s past, present and future]({{site.asseturl}}/es6_jsconf_2015.pdf). Presented at [jsconf.be](http://jsconf.be), Bruges, Belgium, April 2015.
 
 ## 2014
 

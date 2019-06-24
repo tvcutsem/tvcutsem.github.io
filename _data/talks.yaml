@@ -38,7 +38,7 @@
     tags: ["stream processing", javascript]
     slides_path: "XStream_ifip17.pdf"
     venue: "[IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/Meeting2017)"
-    place: Park City, Utah
+    place: Park City
     country: US
 
   - date: June 2017
@@ -105,4 +105,35 @@
       slides_path: "JS_RobustModern_SecAppDev2016.pdf"
       venue: "[SecAppDev](http://secappdev.org) (Secure Application Development) and Belgian OWASP chapter [meetup](https://www.owasp.org/index.php/Belgium#tab=Chapter_Meetings)"
       place: Leuven
+      country: BE
+
+- year: 2015
+  talks:
+
+    - date: October 2015
+      type: Conference Talk
+      title: "ECMAScript 2015: the Future of JavaScript is Now!"
+      tags: ["javascript", "programming"]
+      slides_path: "ES2015_SPLASH_I_2015.pdf"
+      venue: "[SPLASH 2015](http://2015.splashcon.org) Industry Track"
+      place: "Pittsburgh"
+      country: US
+      video_url: "https://www.youtube.com/embed/wfbmIb-1EG8"
+      
+    - date: September 2015
+      type: Seminar
+      title: "ECMAScript 6: the Future of JavaScript is Now!"
+      tags: ["javascript", "programming"]
+      slides_path: "es6_ordina_join15.pdf"
+      venue: "Ordina [JOIN'15](https://www.ordina.be/nl-nl/evenementen/2015/09-10-2015-join/) developer event"
+      place: Mechelen
+      country: BE
+
+    - date: April 2015
+      type: Keynote
+      title: "The road to ES6, and beyond: a tale about JavaScript’s past, present and future"
+      tags: ["javascript", "programming"]
+      slides_path: "es6_jsconf_2015.pdf"
+      venue: "[jsconf.be](http://jsconf.be)"
+      place: Bruges
       country: BE
