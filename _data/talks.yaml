@@ -137,3 +137,42 @@
       venue: "[jsconf.be](http://jsconf.be)"
       place: Bruges
       country: BE
+
+- year: 2014
+  talks:
+    
+    - date: September 2014
+      type: Invited Talk
+      title: "ECMAScript 5 and 6: the present and future of JavaScript"
+      tags: ["javascript", "programming"]
+      slides_path: "ES5ES6_presentfuture_09_2014.pdf"
+      venue: "[Cegeka](http://www.cegeka.com/en/)"
+      place: Leuven
+      country: BE      
+      
+    - date: July 2014
+      type: Seminar
+      title: "Membranes as Ownership Boundaries"
+      tags: ["javascript", "security"]
+      slides_path: "Dagstuhl_membranes.pdf"
+      venue: "Dagstuhl Seminar on [Scripting Languages and Frameworks](http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=14271)"
+      place: Dagstuhl
+      country: DE      
+      
+    - date: March 2014
+      type: Keynote
+      title: "JavaScript: the Good, the Bad, the Strict and the New Parts"
+      tags: ["javascript", "programming"]
+      slides_path: "JSConfbe2014.pdf"
+      venue: "First [jsconf.be](http://jsconf.be)"
+      place: Bruges
+      country: BE
+      
+    - date: February 2014
+      type: Seminar
+      title: "Writing Robust JavaScript Code"
+      tags: ["javascript", "security"]
+      slides_path: "RobustJS.pdf"
+      venue: "[SecAppDev](http://secappdev.org) (Secure Application Development) seminar"
+      place: Leuven
+      country: BE

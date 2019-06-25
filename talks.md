@@ -54,13 +54,6 @@ I regularly speak at developer conferences, academic conferences, meetups and un
 </tbody>
 </table>
 
-## 2014
-
-*   [ECMAScript 5 and 6: the present and future of JavaScript]({{site.asseturl}}/ES5ES6_presentfuture_09_2014.pdf). Presented to software developers of ICT consultancy and service provider [Cegeka](http://www.cegeka.com/en/), Leuven, Belgium, September 2014.
-*   [Membranes as Ownership Boundaries]({{site.asseturl}}/Dagstuhl_membranes.pdf). Presented at the Dagstuhl Seminar on [Scripting Languages and Frameworks: Analysis and Verification](http://www.dagstuhl.de/en/program/calendar/semhp/?semnr=14271). Dagstuhl, Germany, July 2014.
-*   [JavaScript: the Good, the Bad, the Strict and the New Parts]({{site.asseturl}}/JSConfbe2014.pdf). Presented at the first [JSConf.be](http://jsconf.be) JavaScript conference, Bruges, Belgium, March 2014.
-*   [Writing Robust JavaScript Code]({{site.asseturl}}/RobustJS.pdf). Presented at the 8th [Secure Application Development](http://secappdev.org) Course series, Leuven, Belgium, February 2014.
-
 ## 2013
 
 *   [Bitcoin: payments at the scale and speed of the Internet]({{site.asseturl}}/bitcoin_payments_talk.pdf), presentation given at the Steering Committee meeting of the Innoviris Strategic Platforms research project "MobiCraNT", Brussels, October 2013
