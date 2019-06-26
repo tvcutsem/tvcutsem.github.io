@@ -54,13 +54,6 @@ I regularly speak at developer conferences, academic conferences, meetups and un
 </tbody>
 </table>
 
-## 2013
-
-*   [Bitcoin: payments at the scale and speed of the Internet]({{site.asseturl}}/bitcoin_payments_talk.pdf), presentation given at the Steering Committee meeting of the Innoviris Strategic Platforms research project "MobiCraNT", Brussels, October 2013
-*   [When Peer-to-peer meets Money: an introduction to Bitcoin]({{site.asseturl}}/p2p_meets_money_tvcutsem.pdf), lab seminar talk at Software Languages Lab, Brussels, July 2013
-*   [Trustworthy Proxies: virtualizing objects with invariants]({{site.asseturl}}/TrustworthyProxies.pdf). Presented at the European Conference on Object-oriented Programming [(ECOOP)](http://www.lirmm.fr/ecoop13/), Montpellier, France, July 2013
-*   [JavaScript: the Good, the Bad, the Strict and the Secure Parts]({{site.asseturl}}/tvcutsem_JS_Security.pdf). Presented at the 7th [Secure Application Development](http://secappdev.org) Symposium, Leuven, Belgium, March 2013.
-
 ## 2012
 
 *   [Tradeoffs in language design: the case of Javascript proxies]({{site.asseturl}}/Tradeoffs_WGLD2012_Austin.pdf). [Presented](http://secappdev.org/lectures/165) at the third [IFIP WG 2.16 on programming language design](http://program-transformation.org/WGLD/Austin2012), Austin, Texas, December 2012.

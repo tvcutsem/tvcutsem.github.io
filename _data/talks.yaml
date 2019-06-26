@@ -176,3 +176,42 @@
       venue: "[SecAppDev](http://secappdev.org) (Secure Application Development) seminar"
       place: Leuven
       country: BE
+
+- year: 2013
+  talks:
+    
+    - date: October 2013
+      type: Seminar
+      title: "Bitcoin: payments at the scale and speed of the Internet"
+      tags: ["bitcoin"]
+      slides_path: "bitcoin_payments_talk.pdf"
+      venue: "Steering Committee meeting of the MobiCraNT research project"
+      place: Brussels
+      country: BE
+      
+    - date: July 2013
+      type: Seminar
+      title: "When Peer-to-peer meets Money: an introduction to Bitcoin"
+      tags: ["bitcoin"]
+      slides_path: "p2p_meets_money_tvcutsem.pdf"
+      venue: "Software Languages Lab research seminar, Vrije Universiteit Brussel"
+      place: Brussels
+      country: BE
+      
+    - date: July 2013
+      type: Conference Talk
+      title: "Trustworthy Proxies: virtualizing objects with invariants"
+      tags: ["javascript", "reflection"]
+      slides_path: "TrustworthyProxies.pdf"
+      venue: "[ECOOP](http://www.lirmm.fr/ecoop13/), the European Conference on Object-oriented Programming"
+      place: Montpellier
+      country: FR
+      
+    - date: March 2013
+      type: Seminar
+      title: "JavaScript: the Good, the Bad, the Strict and the Secure Parts"
+      tags: ["javascript", "security"]
+      slides_path: "tvcutsem_JS_Security.pdf"
+      venue: "[SecAppDev](http://secappdev.org) (Secure Application Development) seminar"
+      place: Leuven
+      country: BE
