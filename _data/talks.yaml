@@ -215,3 +215,60 @@
       venue: "[SecAppDev](http://secappdev.org) (Secure Application Development) seminar"
       place: Leuven
       country: BE
+
+- year: 2012
+  talks:
+    
+    - date: December 2012
+      type: Conference Talk
+      title: "Tradeoffs in language design: the case of Javascript proxies"
+      tags: ["javascript", "reflection"]
+      slides_path: "Tradeoffs_WGLD2012_Austin.pdf"
+      venue: "[IFIP Working Group on programming language design](http://program-transformation.org/WGLD/Austin2012)"
+      place: Austin, TX
+      country: US
+
+    - date: June 2012
+      type: Tutorial
+      title: "The Javascript Meta-object Protocol"
+      tags: ["javascript", "reflection"]
+      slides_path: "JSMop_ECOOP.pdf"
+      venue: "[ECOOP 2012 Summer School](http://ecoop12.cs.purdue.edu)"
+      place: Peking
+      country: CN
+
+    - date: June 2012
+      type: Keynote
+      title: "AmbientTalk: Modern Actors for Modern Networks"
+      tags: ["ambienttalk", "distributed systems"]
+      slides_path: "AmbientTalk_FTfJP2012.pdf"
+      venue: "[Workshop on Formal Techniques for Java-like Programs](http://www.comp.nus.edu.sg/~ftfjp/) (FTfJP) at ECOOP 2012"
+      place: Peking
+      country: CN
+
+    - date: May 2012
+      type: Lecture
+      title: "Clojure in a nutshell, a 2-hour introductory lecture to the Clojure programming language"
+      tags: ["clojure", "functional programming"]
+      slides_path: "Clojure-intro.pdf"
+      venue: "Vrije Universiteit Brussel"
+      place: Brussels
+      country: BE
+
+    - date: February 2012
+      type: Conference Talk
+      title: "Evolution in Programming Language Design?"
+      tags: ["programming languages"]
+      slides_path: "pldesign_evolution.pdf"
+      venue: "[IFIP Working Group on Language Design](http://program-transformation.org/WGLD/London2012)"
+      place: London
+      country: GB
+
+    - date: February 2012
+      type: Conference Talk
+      title: "Experiments with MapReduce in Erlang"
+      tags: ["erlang", "distributed systems"]
+      slides_path: "tvcutsem_MapReduce_ErlangFactory.pdf"
+      venue: "[Erlang Factory Lite](https://www.erlang-factory.com/conference/Brussels)"
+      place: Brussels
+      country: BE

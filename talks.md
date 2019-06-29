@@ -54,15 +54,6 @@ I regularly speak at developer conferences, academic conferences, meetups and un
 </tbody>
 </table>
 
-## 2012
-
-*   [Tradeoffs in language design: the case of Javascript proxies]({{site.asseturl}}/Tradeoffs_WGLD2012_Austin.pdf). [Presented](http://secappdev.org/lectures/165) at the third [IFIP WG 2.16 on programming language design](http://program-transformation.org/WGLD/Austin2012), Austin, Texas, December 2012.
-*   [The Javascript Meta-object Protocol]({{site.asseturl}}/JSMop_ECOOP.pdf), a tutorial at the [ECOOP 2012 Summer School](http://ecoop12.cs.purdue.edu), June 2012, Peking, China.
-*   [AmbientTalk: Modern Actors for Modern Networks]({{site.asseturl}}/AmbientTalk_FTfJP2012.pdf), an overview of the AmbientTalk programming language given as a Keynote talk at the [14th Workshop on Formal Techniques for Java-like Programs](http://www.comp.nus.edu.sg/~ftfjp/) (FTfJP) at ECOOP 2012, June 2012, Peking, China.
-*   [Clojure in a nutshell]({{site.asseturl}}/Clojure-intro.pdf), a 2-hour introductory lecture to the [Clojure](http://clojure.org) programming language.
-*   [Evolution in Programming Language Design?]({{site.asseturl}}/pldesign_evolution.pdf), presentation given at the [IFIP 2.16 Working Group on Language Design](http://program-transformation.org/WGLD/London2012) meeting, February 28th, 2012, London, UK
-*   [Experiments with MapReduce in Erlang]({{site.asseturl}}/tvcutsem_MapReduce_ErlangFactory.pdf), presentation given at the [Erlang Factory Lite Brussels](https://www.erlang-factory.com/conference/Brussels), February 1st, 2012, Brussels, Belgium
-
 ## 2011
 
 *   [Adventures in Clojure, Navigating the STM sea and exploring Worlds]({{site.asseturl}}/adventures-in-clojure.pdf), research talk at Software Languages Lab, Brussels, October 2011
