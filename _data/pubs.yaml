@@ -1,0 +1,111 @@
+- date: 2014
+  type: Journal Paper
+  authors: ["Tom Van Cutsem", "Elisa Gonzalez Boix", "Christophe Scholliers", "Andoni Lombide Carreton", "Dries Harnie", "Kevin Pinte", "Wolfgang De Meuter"]
+  title: "AmbientTalk: programming responsive mobile peer-to-peer applications with actors"
+  venue: "Elsevier Computer Languages, Systems and Structures"
+  tags: ["mobile computing", "ambienttalk"]
+  path: null
+  url: "http://soft.vub.ac.be/Publications/2014/vub-soft-tr-14-06.pdf"
+  publisher_link: "http://www.sciencedirect.com/science/article/pii/S1477842414000335"
+
+- date: 2013
+  type: Conference Paper
+  authors: ["Tom Van Cutsem", "Mark S. Miller"]
+  title: "Trustworthy Proxies: Virtualizing Objects with Invariants"
+  venue: ECOOP 2013
+  tags: ["reflection", "proxies"]
+  path: null
+  url: "http://soft.vub.ac.be/Publications/2013/vub-soft-tr-13-03.pdf"
+  publisher_link: "http://link.springer.com/chapter/10.1007%2F978-3-642-39038-8_7"
+  
+- date: 2013
+  type: Invited Paper
+  authors: ["Mark S. Miller", "Tom Van Cutsem", "Bill Tulloh"]
+  title: "Distributed Electronic Rights in JavaScript"
+  venue: ESOP 2013
+  tags: ["distributed computing", "javascript"]
+  path: null
+  url: "http://soft.vub.ac.be/Publications/2013/vub-soft-tr-13-01.pdf"
+  publisher_link: "http://link.springer.com/chapter/10.1007%2F978-3-642-37036-6_1"
+
+- date: 2012
+  type: Journal Paper
+  authors: ["Tom Van Cutsem", "Mark S. Miller"]
+  title: "Robust Trait Composition for Javascript"
+  venue: "Elsevier Science of Computer Programming"
+  tags: ["software composition"]
+  path: null
+  url: null
+  publisher_link: "http://dx.doi.org/10.1016/j.scico.2012.11.001"
+
+- date: 2010
+  type: Conference Paper
+  authors: ["Tom Van Cutsem", "Mark S. Miller"]
+  title: "Proxies: Design Principles for Robust Object-oriented Intercession APIs"
+  venue: DLS 2010
+  tags: ["reflection", "proxies"]
+  path: "proxies.pdf"
+  url: null
+  publisher_link: "http://portal.acm.org/citation.cfm?id=1869638"
+
+- date: 2009
+  type: Journal Paper
+  authors: ["Stijn Mostinckx", "Tom Van Cutsem", "Stijn Timbermont", "Elisa Gonzalez Boix", "Eric Tanter", "Wolfgang De Meuter"]
+  title: "Mirror-based Reflection in AmbientTalk"
+  venue: "Wiley Software: Practice & Experience"
+  tags: ["reflection", "ambienttalk"]
+  path: null
+  url: null
+  publisher_link: "http://dx.doi.org/10.1002/spe.v39:7"
+
+- date: 2009
+  type: Journal Paper
+  authors: ["Tom Van Cutsem", "Stijn Mostinckx", "Wolfgang De Meuter"]
+  title: "Linguistic Symbiosis between Event Loop Actors and Threads"
+  venue: "Elsevier Computer Languages, Systems and Structures"
+  tags: ["concurrency", "ambienttalk"]
+  path: null
+  url: null
+  publisher_link: "http://portal.acm.org/ft_gateway.cfm?id=1412800&type=pdf"
+
+- date: 2009
+  type: Conference Paper
+  authors: ["Tom Van Cutsem", "Alexandre Bergel", "Stéphane Ducasse", "Wolfgang De Meuter"]
+  title: "Adding State and Visibility Control to Traits using Lexical Nesting"
+  venue: "ECOOP 2009"
+  tags: ["software composition"]
+  path: null
+  url: null
+  publisher_link: "http://www.springerlink.com/content/lp27g6t432k36461/"
+
+- date: 2008
+  type: PhD Thesis
+  authors: ["Tom Van Cutsem"]
+  title: "Ambient References: Object Designation in Mobile Ad Hoc Networks"
+  venue: "Vrije Universiteit Brussel"
+  tags: ["mobile computing", "ambienttalk"]
+  path: "phd_tom_van_cutsem.pdf"
+  slides_path: "phd_talk_tom_van_cutsem.pdf"
+  url: null
+  publisher_link: null
+
+- date: 2006
+  type: Conference Paper
+  authors: ["Jessie Dedecker", "Tom Van Cutsem", "Stijn Mostinckx", "Theo D'Hondt", "Wolfgang De Meuter"]
+  title: "Ambient-oriented Programming in AmbientTalk"
+  venue: "ECOOP 2006"
+  tags: ["mobile computing", "ambienttalk"]
+  path: null
+  url: null
+  publisher_link: "http://www.springerlink.com/content/n10178312021350u/"
+
+- date: 2004
+  type: MSc Thesis
+  authors: ["Tom Van Cutsem", "Stijn Mostinckx"]
+  title: "A Prototype-based Approach To Distributed Applications"
+  venue: "Vrije Universiteit Brussel"
+  tags: ["mobile computing", "ambienttalk"]
+  path: "vancutsem04prototypebased.pdf"
+  slides_path: "prototype04prog.pdf"
+  url: null
+  publisher_link: null
