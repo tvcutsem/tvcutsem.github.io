@@ -37,12 +37,16 @@ Below is a selection of my academic publications. For a complete list, see:
   <tr>
     <td markdown="span">{{pub.date}}</td>
     <td markdown="span">{{pub.type}}</td>
-    <td markdown="span">
+    <td>
+      <ul class="list-unstyled">      
       {%- for author in pub.authors -%}
-      {%- if author == 'Tom Van Cutsem' %}<strong>{{author}}<br/></strong>
-      {%- else %}{{ author }}<br/>
+      <li>      
+      {%- if author == 'Tom Van Cutsem' %}<strong>{{author}}</strong>
+      {%- else %}{{ author }}
       {%- endif %}
+      </li>
       {% endfor %}
+      </ul>
     </td>
     <td markdown="span">{{pub.title}}<br>
     {% if pub.path %}<a class="btn btn-info btn-xs" target="_blank" href="{{site.asseturl}}/{{pub.path}}">author copy</a>{% endif %}
