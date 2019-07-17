@@ -1,3 +1,13 @@
+- date: 2019
+  type: Conference Paper
+  authors: ["Bart Theeten", "Frederik Vandeputte", "Tom Van Cutsem"]
+  title: "Import2vec: Learning Embeddings for Software Libraries"
+  venue: MSR 2019
+  tags: ["machine learning", "information retrieval"]
+  path: null
+  url: "https://arxiv.org/pdf/1904.03990.pdf"
+  publisher_link: "https://dl.acm.org/citation.cfm?id=3341883.3341887"
+
 - date: 2014
   type: Journal Paper
   authors: ["Tom Van Cutsem", "Elisa Gonzalez Boix", "Christophe Scholliers", "Andoni Lombide Carreton", "Dries Harnie", "Kevin Pinte", "Wolfgang De Meuter"]
