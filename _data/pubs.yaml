@@ -38,6 +38,16 @@
   url: "http://soft.vub.ac.be/Publications/2013/vub-soft-tr-13-01.pdf"
   publisher_link: "http://link.springer.com/chapter/10.1007%2F978-3-642-37036-6_1"
 
+- date: 2013
+  type: Survey Paper
+  authors: [Engineer Bainomugisha, Andoni Lombide Carreton, Tom Van Cutsem, Stijn Mostinckx, Wolfgang de Meuter]
+  title: "A survey on reactive programming"
+  venue: ACM Computing Surveys
+  tags: ["reactive programming"]
+  path: null
+  url: "http://soft.vub.ac.be/Publications/2012/vub-soft-tr-12-13.pdf"
+  publisher_link: "https://dl.acm.org/citation.cfm?doid=2501654.2501666"
+
 - date: 2012
   type: Journal Paper
   authors: ["Tom Van Cutsem", "Mark S. Miller"]
@@ -98,6 +108,16 @@
   slides_path: "phd_talk_tom_van_cutsem.pdf"
   url: null
   publisher_link: null
+
+- date: 2007
+  type: Conference Paper
+  authors: [Stijn Mostinckx, Tom Van Cutsem, Stijn Timbermont, "Eric Tanter"]
+  title: "Mirages: behavioral intercession in a mirror-based architecture"
+  venue: "DLS 2007 ([Most Notable Paper Award](https://dynamic-languages-symposium.org/media/dls2017mnp2007.pdf))"
+  tags: ["computational reflection"]
+  path: null
+  url: "http://soft.vub.ac.be/Publications/2007/vub-prog-tr-07-16.pdf"
+  publisher_link: "https://dl.acm.org/citation.cfm?doid=1297081.1297095"
 
 - date: 2006
   type: Conference Paper

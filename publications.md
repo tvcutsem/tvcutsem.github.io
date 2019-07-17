@@ -6,11 +6,11 @@ permalink: /publications/
 
 ## Selected Publications
 
-Below is a selection of my academic publications. For a complete list, see:
+Below is a selection of my scientific publications. For a complete list, see:
 
 *   My publications on [Google Scholar](http://scholar.google.com/citations?user=jtzNCwUAAAAJ&hl=en).
-*   My [ACM Portal](http://portal.acm.org/author_page.cfm?id=81100203786) author page.
 *   My [DBLP](http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/c/Cutsem:Tom_Van.html) page.
+*   My [ACM Portal](http://portal.acm.org/author_page.cfm?id=81100203786) author page.
 *   [My ResearchGate profile](https://www.researchgate.net/profile/Tom_Van_Cutsem)
 
 <table class="table table-hover">
