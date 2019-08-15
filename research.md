@@ -3,53 +3,65 @@ title: Research
 layout: page
 permalink: /research/
 ---
-_There are creatures which have evolved to live in coral reefs and simply could not survive in the rough, tooth-filled wastes of the open sea. They continue to exist by lurking among the dangerous tentacles of the sea anemone or around the lips of the giant clam and other perilous crevices shunned by all sensible fish._
 
-_A university is very much like a coral reef. It provides calm waters and food particles for delicate yet marvellously constructed organisms that could not possibly survive in the pounding surf of reality, where people ask questions like 'Is what you do of any use?' and other nonsense._
+# Research
 
-<div style="text-align:right">- Terry Pratchett, Ian Stewart & Jack Cohen, The Science of Discworld</div>
+My broad research area involves programming languages, software systems and software engineering. In short, my goal is to help developers write code better (the software engineering view), and to write better code (the programming languages view).
 
-## Keywords
+Below is a brief overview of concrete research projects I have worked on, with pointers where to learn more.
 
-My area of expertise is [programming language theory](http://en.wikipedia.org/wiki/Programming_language_theory), with a particular focus on concurrent, distributed and parallel programming languages. Some keywords to capture what I have been working on in the past:
+### Machine Learning on Code
 
-*   programming language design
-*   distributed computing
-*   concurrency control (actors, STM, event-driven computing)
-*   multi-core and parallel computing
-*   virtual machines, interpreters, compilers
-*   object-oriented composition (traits)
-*   mobile computing, mobile ad hoc networks
-*   AmbientTalk
-*   JavaScript
+Learning representations of software libraries (import2vec), from which we built a practical contextual search engine for software packages called [Code Compass](https://bell-labs.com/code-compass).
 
-## Javascript
+### Distributed Stream Processing
 
-From November 2009 to April 2010 I was a Visiting Faculty member at Google in Mountain View, USA. Together with [Mark S. Miller](http://www.erights.org) I experimented with proposed extensions to the Javascript programming language (a project known as [ES-lab](http://code.google.com/p/es-lab/)). Concretely:
+With colleages in Bell Labs, created a stream processing platform called [World Wide Streams](https://worldwidestreams.io) which is now in use inside Nokia.
 
-*   We proposed [proxies](http://wiki.ecmascript.org/doku.php?id=strawman:proxies) for inclusion in a future ECMAScript standard. This proposal is based on the reflective architecture of AmbientTalk.
-*   We created an [OMeta](http://tinlizzie.org/ometa)-based [parser](http://es-lab.googlecode.com/svn/trunk/site/esparser/index.html) for the latest ECMAScript standard (edition 5). This parser is used in a meta-circular experimental [interpreter](http://code.google.com/p/es-lab/source/browse/trunk/src/eval/eval.js) and a [verifier](http://code.google.com/p/es-lab/source/browse/trunk/src/ses/verifySES.js) for [SES](http://code.google.com/p/es-lab/wiki/SecureEcmaScript), a secure subset of ECMAScript.
-*   We have implemented a [traits library](https://github.com/traitsjs/traits.js) for Javascript (original [here](http://code.google.com/p/es-lab/wiki/Traits)), enabling the robust composition of objects via reusable traits.
+My main contribution was in the platform's dataflow specification language, [XStream]({{site.asseturl}}/XStream_ifip17.pdf).
 
-## Concurrency Control
+### Reflection and Metaprogramming
 
-It is widely known throughout the field of computer science that developing concurrent software is notoriously difficult. I am interested in concurrency models that can make this burdensome task easier to perform for the programmer. I am particularly interested in event-driven concurrency models. **Event-driven models** seem a more natural fit for most software, which must react to various stimuli from both software and hardware sources. Moreover, event-driven systems have properties that make them less error-prone than the omnipresent shared-state concurrency model ("threads"). The advent of **multi-core processors** in particular seems to herald a new age of concurrent computing, one in which it is uncertain whether the contemporary concurrency models will remain scalable.
+I was the main designer of the ECMAScript 2015 [Proxy API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) and [Reflect API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Reflect), with Mark S. Miller. They are now available in all major browsers.
 
-I am also interested in how event-driven concurrency can be combined with other abstractions already present in our software-development model, such as objects. In this light, I have been researching adaptations on Agha and Hewitt's well-known actor model. I am especially interested in how advanced concurrency control (**transactions**, **high-level synchronization**, ...) can be expressed in languages with inherent support for **event loop** concurrency such as [E](http://www.erights.org) and [AmbientTalk](http://prog.vub.ac.be/amop).
+I maintain a self-hosted [implementation of Proxies and the ECMAScript Reflect API in JavaScript](https://github.com/tvcutsem/harmony-reflect) (mostly useful to use as a shim in older pre-ES6 environments). Over a 100 packages on NPM depend on it.
 
-## Ambient-oriented Programming
+My work on JavaScript Proxies was partly inspired by earlier work on [Mirages](http://soft.vub.ac.be/Publications/2007/vub-prog-tr-07-16.pdf) in the AmbientTalk programming language, work that won us the DLS 2017 [most notable paper award](https://dynamic-languages-symposium.org/media/dls2017mnp2007.pdf).
 
-At the [Software Languages Lab](http://soft.vub.ac.be) I am researching distributed programming languages designed for pervasive computing and mobile networks. More specifically, my colleagues and I have defined the [Ambient-oriented programming](http://soft.vub.ac.be/amop) paradigm as a superset of the distributed OOP paradigm. We have developed a concrete ambient-oriented programming language named [AmbientTalk](http://soft.vub.ac.be/amop). In **AmbientTalk**, network failures are considered the rule, rather than the exception, so programs developed in AmbientTalk are robust to failures by default. Of course, the programmer must still deal with these failures if they affect program behaviour. However, our premise is that, if the failure is only temporary (e.g. because of a network disconnection), then the program should not fail but rather continue to run without problems.
+### Ambient-oriented Programming
 
-The AmbientTalk project targets so-called **mobile ad hoc networks**: computer networks comprised of mobile devices that communicate wirelessly, without any centralized servers (strictly peer-to-peer).
+When I started my PhD in the early 2000s, smartphones as we know them today did not exist. There was no iPhone, no Android. There were awkward precursors to smartphones running on Windows CE, Symbian or J2ME. Developing applications for phones was a real pain, and mobile connectivity was expensive, slow and scarce (2G networks). Social networks barely existed. And yet, we understood the power of connected apps on phones. We just had to figure out a better way to program these apps.
 
-My PhD research was about [ambient references](http://soft.vub.ac.be/amop/research/ambientrefs).
+It was in that context that me and colleagues at the VUB Software Languages Lab defined [Ambient-oriented programming](http://soft.vub.ac.be/amop), a new programming paradigm geared towards writing peer-to-peer applications running on mobile "ad hoc" networks. A defining feature of the paradigm was that network failures are treated as a normal mode of operation.
 
-## Programming language design & implementation
+We designed the first "ambient-oriented" programming language which we called AmbientTalk. It was a dynamic scripting language, implemented on top of the JVM (not unlike e.g. Rhino, the JavaScript engine on the JVM).
 
-As co-designer of the AmbientTalk programming language, I remain interested in (almost) all facets of programming language design. In particular, I am interested in:
+Over the many years as a PhD and Post-doc student at the Vrije Universiteit Brussel, I [co-authored multiple papers on AmbientTalk](http://soft.vub.ac.be/amop/research/atpapers) and its features. Probably the best overview paper is [this one from 2007](http://soft.vub.ac.be/Publications/2007/vub-prog-tr-07-17.pdf).
 
-*   **software-composition techniques** such as [Traits](http://www.iam.unibe.ch/~scg/Research/Traits): how can we compose reusable building blocks into new functional program units?
-*   **object models**: what is the best way to represent objects in an object-oriented language?
-*   **reflection and metaprogramming**: what is a good object model to model other objects?
-*   **language symbiosis (aka language interoperability)**: how can objects written different languages interact without breaking the rules enforced by their respective languages?
+My PhD thesis ultimately focused on a very specific feature of AmbientTalk called [ambient references](http://soft.vub.ac.be/amop/research/ambientrefs): object pointers designed for mobile networks.
+
+### Concurrency Control
+
+I worked on a variety of concurrency control abstractions for programming languages, with a primary focus on a particular concurrency control paradigm called the [Actor Model](https://en.wikipedia.org/wiki/Actor_model). See for instance our taxonomy paper ["43 years of actors"](http://soft.vub.ac.be/Publications/2016/vub-soft-tr-16-11.pdf).
+
+I have also worked on Event Loop concurrency (widely deployed in JavaScript/nodejs), Futures/Promises and Reactive Programming (see our [ACM Computing Surveys paper](http://soft.vub.ac.be/Publications/2012/vub-soft-tr-12-13.pdf) on the subject).
+
+With Philipp Haller from the Scala team at EPFL, I designed [a library for Joins in Scala](http://lampwww.epfl.ch/~phaller/joins/index.html). I later contributed a chapter on MapReduce in Scala in Haller's book [Actors in Scala](https://www.amazon.com/Actors-Scala-Philipp-Haller/dp/0981531652).
+
+I also studied parallel computing models, with papers on [Java Fork/Join](http://soft.vub.ac.be/Publications/2014/vub-soft-tr-14-08.pdf) and an [ACM Computing Surveys paper](https://dl.acm.org/citation.cfm?id=2716320) on Partitioned Global Address Space (PGAS) models.
+
+### Software composition with traits
+
+I did research on new ways to compose objects in object-oriented programs, taking a lot of inspiration from the original research work on [Traits](http://www.iam.unibe.ch/~scg/Research/Traits).
+
+Our AmbientTalk language supports [traits with state and visibility control](https://soft.vub.ac.be/Publications/2009/vub-prog-tr-09-04.pdf) by exploiting lexical nesting.
+
+Later I designed a JavaScript library called [Traits.js](https://github.com/traitsjs/traits.js). To learn more about it, see this [blog post](https://howtonode.org/traitsjs) on HowToNode.
+
+### Distributed Secure Computing and Dr. SES
+
+See [this post]({% post_url 2013-01-21-distributed-resilient-secure-ecmascript %}).
+
+### Miscellaneous projects
+
+A variety of software projects can be found on my [GitHub page](https://github.com/tvcutsem).
