@@ -34,13 +34,15 @@ When I started my PhD in the early 2000s, smartphones as we know them today did 
 
 It was in that context that me and colleagues at the VUB Software Languages Lab defined [Ambient-oriented programming](http://soft.vub.ac.be/amop), a new programming paradigm geared towards writing peer-to-peer applications running on mobile "ad hoc" networks. A defining feature of the paradigm was that network failures are treated as a normal mode of operation.
 
-We designed the first "ambient-oriented" programming language which we called AmbientTalk. It was a dynamic scripting language, implemented on top of the JVM (not unlike e.g. Rhino, the JavaScript engine on the JVM).
+We designed the first "ambient-oriented" programming language which we called AmbientTalk. It was a dynamic scripting language, implemented on top of the JVM (not unlike e.g. Rhino, the JVM JavaScript engine), and when Android became widespread by 2010 we primarily ran AmbientTalk on Dalvik.
+
+AmbientTalk was featured in [MIT Technology Review](https://www.technologyreview.com/s/419956/new-languages-and-why-we-need-them/), in the Belgian Techzine [Datanews](http://soft.vub.ac.be/~tvcutsem/talks/presentations/datanews_feb2011.pdf) (article in Dutch), and software developed with AmbientTalk won prizes at DroidCon, such as a [collaborative drawing editor](https://www.youtube.com/watch?v=k0HYqRCxtHc) and a [peer-to-peer poker game](https://www.youtube.com/watch?v=HtYfGa0i2E0).
 
 Over the many years as a PhD and Post-doc student at the Vrije Universiteit Brussel, I [co-authored multiple papers on AmbientTalk](http://soft.vub.ac.be/amop/research/atpapers) and its features. Probably the best overview paper is [this one from 2007](http://soft.vub.ac.be/Publications/2007/vub-prog-tr-07-17.pdf).
 
 My PhD thesis ultimately focused on a very specific feature of AmbientTalk called [ambient references](http://soft.vub.ac.be/amop/research/ambientrefs): object pointers designed for mobile networks.
 
-### Concurrency Control
+### Concurrent and Parallel Computing
 
 I worked on a variety of concurrency control abstractions for programming languages, with a primary focus on a particular concurrency control paradigm called the [Actor Model](https://en.wikipedia.org/wiki/Actor_model). See for instance our taxonomy paper ["43 years of actors"](http://soft.vub.ac.be/Publications/2016/vub-soft-tr-16-11.pdf).
 
@@ -58,7 +60,7 @@ Our AmbientTalk language supports [traits with state and visibility control](htt
 
 Later I designed a JavaScript library called [Traits.js](https://github.com/traitsjs/traits.js). To learn more about it, see this [blog post](https://howtonode.org/traitsjs) on HowToNode.
 
-### Distributed Secure Computing and Dr. SES
+### Distributed Secure Computing
 
 See [this post]({% post_url 2013-01-21-distributed-resilient-secure-ecmascript %}).
 
