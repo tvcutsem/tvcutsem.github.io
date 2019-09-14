@@ -3,7 +3,7 @@ title: CV
 layout: page
 permalink: /cv/
 ---
-Download my [CV 1 pager](/assets/cv1p.pdf) or [full CV](/assets/cv.pdf) (last updated: October 2017).
+Download my [CV 1 pager](/assets/cv1p.pdf) or [full CV](/assets/cv.pdf) (last updated: September 2019).
 
 <a href="/assets/cv1p.png"><img src="/assets/cv1p.png" alt="CV 1-pager" width="500px"/></a>
 
