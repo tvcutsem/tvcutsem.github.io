@@ -1,5 +1,13 @@
 - year: 2019
   talks:
+  - date: October 2019
+    type: Conference Talk
+    title: Architecting robust JavaScript applications
+    tags: ["javascript", "security"]
+    slides_path: "robustjs_ictechday_10_2019.pdf"
+    venue: "Peopleware [ICTech Day](https://www.ictechday.be/)"
+    place: Antwerp
+    country: BE
   - date: June 2019
     type: Conference Talk
     title: Browsing NPM packages more effectively with Code Compass
