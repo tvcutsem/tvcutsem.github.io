@@ -1,7 +1,7 @@
 - year: 2019
   talks:
   - date: October 2019
-    type: Conference Talk
+    type: Seminar
     title: Architecting robust JavaScript applications
     tags: ["javascript", "security"]
     slides_path: "robustjs_ictechday_10_2019.pdf"
