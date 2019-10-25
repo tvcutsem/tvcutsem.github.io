@@ -15,7 +15,9 @@ Prior to joining Bell Labs, I was a CS professor at the [Software Languages Lab]
 In 2009/2010 I was Visiting Faculty at Google in Mountain View (US) where I got involved in the standardization of JavaScript (aka ECMAScript). My biggest claim to language design fame is the creation of the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy API</a> together with <a href="https://ai.google/research/people/author35958">Mark S. Miller</a>, now shipping in all major browsers.
 
 I'm passionate about getting young people exposed to the art of programming.
-I've been quite active in organizing programming contests: I was a jury member and organizer of the [Flemish Programmign Contest](http://www.vlaamseprogrammeerwedstrijd.be), a regional ACM ICPC-inspired programming contest for students and professionals. For a time I was also a jury member of the [Belgian Olympiad in Informatics](http://be-oi.be/).
+I'm the creator of [The Unix Game](https://unixgame.io/), a coding game I built at Bell Labs
+on the occasion of the [50th anniversary of Unix](https://www.bell-labs.com/unix50/).
+I've also been quite active in organizing programming contests: I was a jury member and organizer of the [Flemish Programmign Contest](http://www.vlaamseprogrammeerwedstrijd.be), a regional ACM ICPC-inspired programming contest for students and professionals. For a time I was also a jury member of the [Belgian Olympiad in Informatics](http://be-oi.be/).
 
 ## Programming Languages
 
