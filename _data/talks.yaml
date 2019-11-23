@@ -1,6 +1,15 @@
 - year: 2019
   talks:
   - date: October 2019
+    type: Conference Talk
+    title: "Pair Programming with an AI? Augmenting Software Developers with Machine Learning"
+    tags: ["software engineering", "machine learning"]
+    venue: "Bell Labs [Unix50](https://www.bell-labs.com/unix50/)"
+    place: Murray-hill, NJ
+    country: US
+    video_url: "http://www.youtube.com/watch?v=xnCgoEyz31M&t=37m55s"
+  
+  - date: October 2019
     type: Seminar
     title: Architecting robust JavaScript applications
     tags: ["javascript", "security"]
@@ -8,6 +17,7 @@
     venue: "Peopleware [ICTech Day](https://www.ictechday.be/)"
     place: Antwerp
     country: BE
+  
   - date: June 2019
     type: Conference Talk
     title: Browsing NPM packages more effectively with Code Compass

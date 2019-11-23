@@ -41,7 +41,8 @@ I regularly speak at developer conferences, academic conferences, meetups and un
     <td markdown="span">{{talk.date}}</td>
     <td markdown="span">{{talk.type}}</td>
     <td markdown="span">{{talk.title}}<br>
-      <a class="btn btn-info btn-xs" target="_blank" href="{{site.asseturl}}/{{talk.slides_path}}">slides</a>
+    {% if talk.slides_path %}<a class="btn btn-info btn-xs" target="_blank" href="{{site.asseturl}}/{{talk.slides_path}}">slides</a>
+    {% endif %}
     {% if talk.video_url %}<a class="btn btn-warning btn-xs" target="_blank" href="{{ talk.video_url }}">video recording</a>
     {% endif %}
     {%- for tag in talk.tags -%}<span class="btn btn-default btn-xs disabled">{{tag}}</span> {% endfor %}
