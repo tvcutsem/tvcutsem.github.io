@@ -20,6 +20,10 @@ Download my [CV 1 pager](/assets/cv1p.pdf) or [full CV](/assets/cv.pdf) (last up
 
 ## Past work that I am proud of
 
+*   I designed the [Unix Game](https://unixgame.io), an online coding game
+    built for the occasion of the 50th birthday of the Unix operating system.
+    A few days after launch the game went viral, attracting thousands of
+    players and tens of thousands of visitors worldwide.
 *   Designed a search engine for software packages called [Code Compass](https://www.code-compass.com/) powered by unsupervised machine learning algorithms (joint work with colleagues from Nokia Bell Labs).
 *   Built a wide-area distributed stream processing platform for IoT called [World-wide Streams](https://www.worldwidestreams.io/) (joint work with multiple colleagues from Nokia Bell Labs).
 *   Contributed to the JavaScript (ECMAScript) standard. Designed the [ECMAScript 2015](http://www.ecma-international.org/ecma-262/6.0/) Proxy and Reflect reflection APIs (joint work with Mark S. Miller from Google).

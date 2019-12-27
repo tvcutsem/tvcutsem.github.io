@@ -4,8 +4,10 @@ layout: page
 permalink: /aboutme/
 ---
 <span>
-  <img src="/assets/me.jpg" width="100%" alt="Tom Van Cutsem">
-  <sub>You don't grow old on the net. This is me way back in 2007 enjoying the ocean view on <a href="https://goo.gl/maps/memrB1jEYan">Rapa Nui</a>.</sub>
+  <img src="/assets/me2.jpg" width="100%" alt="Tom Van Cutsem">
+  <sub>Me explaining the <a href="https://unixgame.io">Unix Game</a> to visitors at Bell Labs' <a href="https://bell-labs.com/unix50">Unix50</a> event, October 2019</sub>
+  <!--
+  <sub>You don't grow old on the net. This is me way back in 2007 enjoying the ocean view on <a href="https://goo.gl/maps/memrB1jEYan">Rapa Nui</a>.</sub> !-->
 </span>
 
 You've reached the blog of Tom Van Cutsem. I'm a computer scientist at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem), the research arm of Nokia (yes, [that](https://www.nytimes.com/2012/03/20/books/the-idea-factory-by-jon-gertner.html&_r=0) [Bell Labs](https://en.wikipedia.org/wiki/Bell_Labs)). I have the privilege of leading a fantastic team there where we're always working at the cutting edge of software research. Also at Bell Labs I co-architected the [WorldWideStreams](https://worldwidestreams.io) distributed stream processing platform.
