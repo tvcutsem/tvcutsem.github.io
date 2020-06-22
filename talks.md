@@ -43,6 +43,8 @@ I regularly speak at developer conferences, academic conferences, meetups and un
     <td markdown="span">{{talk.title}}<br>
     {% if talk.slides_path %}<a class="btn btn-info btn-xs" target="_blank" href="{{site.asseturl}}/{{talk.slides_path}}">slides</a>
     {% endif %}
+    {% if talk.relative_slides_path %}<a class="btn btn-info btn-xs" target="_blank" href="{{talk.relative_slides_path | relative_url }}">slides</a>
+    {% endif %}
     {% if talk.video_url %}<a class="btn btn-warning btn-xs" target="_blank" href="{{ talk.video_url }}">video recording</a>
     {% endif %}
     {%- for tag in talk.tags -%}<span class="btn btn-default btn-xs disabled">{{tag}}</span> {% endfor %}

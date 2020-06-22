@@ -4,7 +4,7 @@
     type: Conference Talk
     title: Architecting robust JavaScript applications
     tags: ["javascript", "security"]
-    slides_path: "RobustJS_JSConf2020.pdf"
+    relative_slides_path: "/assets/RobustJS_JSConf2020.pdf"
     venue: "[jsconf.be 2020](https://jsconf.be/)"
     place: Virtual
     country: BE
