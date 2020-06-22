@@ -1,3 +1,13 @@
+- year: 2020
+  - date: June 2020
+    type: Conference
+    title: Architecting robust JavaScript applications
+    tags: ["javascript", "security"]
+    slides_path: "RobustJS_JSConf2020.pdf"
+    venue: "[jsconf.be 2020](https://jsconf.be/)"
+    place: Virtual
+    country: BE
+
 - year: 2019
   talks:
   - date: October 2019
