@@ -1,7 +1,7 @@
 - year: 2020
   talks:
   - date: June 2020
-    type: Conference
+    type: Conference Talk
     title: Architecting robust JavaScript applications
     tags: ["javascript", "security"]
     slides_path: "RobustJS_JSConf2020.pdf"
