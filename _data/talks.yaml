@@ -58,6 +58,15 @@
     place: Antwerp
     country: BE
 
+  - date: December 2018
+    type: Seminar
+    title: "Will software developers soon be replaced by AI? The sense and nonsense of Artificial Programming"
+    tags: ["artificial intelligence", "program synthesis"]
+    slides_path: "Kennismakers_ArtificialProgramming.pdf"
+    venue: "FWO [Kennismakers](https://www.kennismakers.be/)"
+    place: Antwerp
+    country: BE
+
 - year: 2017
   talks:
 
