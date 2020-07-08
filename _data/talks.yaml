@@ -8,6 +8,7 @@
     venue: "[jsconf.be 2020](https://jsconf.be/)"
     place: Virtual
     country: BE
+    video_url: "https://www.youtube.com/watch?v=tDhtgSOcaI4"
 
 - year: 2019
   talks:
@@ -18,7 +19,7 @@
     venue: "Bell Labs [Unix50](https://www.bell-labs.com/unix50/)"
     place: Murray-hill, NJ
     country: US
-    video_url: "http://www.youtube.com/watch?v=xnCgoEyz31M&t=37m55s"
+    video_url: "https://www.youtube.com/watch?v=xnCgoEyz31M&t=37m55s"
   
   - date: October 2019
     type: Seminar
