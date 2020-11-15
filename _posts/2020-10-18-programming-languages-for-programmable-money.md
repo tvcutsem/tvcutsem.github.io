@@ -4,7 +4,7 @@ layout: post
 tags:
   - smart contracts
   - blockchain
-permalink: smartcontracts
+permalink: programmablemoney
 comments: true
 ---
 In this post I introduce the notion of programmable money and smart contracts, why they go hand-in-hand with blockchains, how smart contracts are programmed today and how they might be programmed in the future.
