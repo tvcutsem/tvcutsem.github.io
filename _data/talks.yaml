@@ -1,3 +1,13 @@
+- year: 2021
+  - date: January 2021
+    type: Conference Talk
+    title: "A gentle introduction to Digital Currencies and Smart Contracts"
+    tags: ["smart contracts", "ethereum", "solidity"]
+    relative_slides_path: "/assets/intro_smart_contracts_WGLD_2021.pdf"
+    venue: "[IFIP Working Group on Programming Language Design](http://program-transformation.org/WGLD/)"
+    place: Virtual
+    country: BE
+
 - year: 2020
   talks:
   - date: June 2020
