@@ -1,5 +1,15 @@
 - year: 2021
   talks:
+  - date: February 2021
+    type: Seminar
+    title: "The Future of Software Development"
+    tags: ["software engineering", "machine learning"]
+    relative_slides_path: "/assets/future_software_vtk_02_2021.pdf"
+    venue: "[Building the Network for the Cloud](https://www.linkedin.com/events/6765536193275822080/) Nokia student seminar"
+    place: Antwerp
+    country: BE
+    video_url: "https://www.youtube.com/watch?v=jRxMbyvDlDc&t=49m19s"
+    
   - date: January 2021
     type: Conference Talk
     title: "A gentle introduction to Digital Currencies and Smart Contracts"
