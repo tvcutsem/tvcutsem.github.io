@@ -1,5 +1,14 @@
 - year: 2021
   talks:
+  - date: May 2021
+    type: Conference Talk
+    title: "Architecting robust JS apps: a practitioner's guide to Secure ECMAScript"
+    tags: ["javascript", "security"]
+    relative_slides_path: "/assets/RobustJS_Techorama2021.pdf"
+    venue: "[Techorama](https://techorama.be/) IT Conference"
+    place: Virtual
+    country: BE
+
   - date: February 2021
     type: Seminar
     title: "The Future of Software Development"
