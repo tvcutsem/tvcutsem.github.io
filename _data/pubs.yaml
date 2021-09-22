@@ -1,3 +1,12 @@
+- date: 2021
+  type: Conference Paper
+  authors: ["Geert Heyman", "Raf Huysegems", "Pascal Justen", "Tom Van Cutsem"]
+  title: "Natural Language-guided Programming"
+  venue: Onward! 2021
+  tags: ["machine learning", "AI pair programming"]
+  path: null
+  url: "https://arxiv.org/abs/2108.05198"
+
 - date: 2019
   type: Conference Paper
   authors: ["Bart Theeten", "Frederik Vandeputte", "Tom Van Cutsem"]
