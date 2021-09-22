@@ -6,19 +6,17 @@ permalink: /research/
 
 # Research
 
-My broad research area involves programming languages, software systems and software engineering. In short, my goal is to help developers write code better (the software engineering view), and to write better code (the programming languages view).
+My broad research area involves programming languages, distributed systems and software engineering. In short, my goal is to help developers write code better (the software engineering view), and to write better code (the programming languages view).
 
 Below is a brief overview of concrete research projects I have worked on, with pointers where to learn more.
 
 ### Machine Learning on Code
 
-Learning representations of software libraries (import2vec), from which we built a practical contextual search engine for software packages called [Code Compass](https://bell-labs.com/code-compass).
+At Bell Labs between 2018 and 2021 I've worked on novel developer tools that "learn from code", including [code completion](https://arxiv.org/abs/2108.05198) from natural language using neural language models, [code snippet retrieval](https://arxiv.org/abs/2008.12193) via neural code search and a [package recommendation engine](https://bell-labs.com/code-compass) based on machine-learned representations of software libraries ([import2vec](https://arxiv.org/abs/1904.03990)). These tools have been used by software developers at Nokia.
 
 ### Distributed Stream Processing
 
-With colleages in Bell Labs, created a stream processing platform called [World Wide Streams](https://worldwidestreams.io) which is now in use inside Nokia.
-
-My main contribution was in the platform's dataflow specification language, [XStream]({{site.asseturl}}/XStream_ifip17.pdf).
+At Bell Labs between 2015 and 2017 I co-architected a distributed stream processing platform called [World Wide Streams](https://worldwidestreams.io) which is now in use inside Nokia. My main contribution was in the platform's dataflow specification language [XStream]({{site.asseturl}}/XStream_ifip17.pdf) and its compiler. Dataflows written in XStream are compiled into query plans and seamlessly deployed across a wide-area compute infrastructure (across device, edge and core Cloud).
 
 ### Reflection and Metaprogramming
 
