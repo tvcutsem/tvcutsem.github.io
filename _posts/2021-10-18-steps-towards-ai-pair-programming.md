@@ -19,7 +19,7 @@ One particular area that I've found quite compelling has been the area of transl
 
 ### The Vision: Natural language-guided Programming
 
-My co-authors and I recently published a paper titled ["natural language-guided programming"](https://arxiv.org/abs/2108.05198) at the [Onward!](https://2021.splashcon.org/track/splash-2021-Onward-papers#program) symposium. The paper paints a vision of a not-so-distant future in which developers will be able to interact with AI assistants through natural language to more quickly and effectively "get things done" without wasting time manually searching, copy-pasting and adapting code examples that they find online.
+My co-authors and I recently published a paper titled ["natural language-guided programming"](https://dl.acm.org/doi/abs/10.1145/3486607.3486749) at the [Onward!](https://2021.splashcon.org/track/splash-2021-Onward-papers#program) symposium. The paper (author copy [here](https://arxiv.org/abs/2108.05198)) paints a vision of a not-so-distant future in which developers will be able to interact with AI assistants through natural language to more quickly and effectively "get things done" without wasting time manually searching, copy-pasting and adapting code examples that they find online.
 
 Natural language-guided programming (NLGP) is all about helping developers find and use library APIs faster. If you're familiar with [GitHub CoPilot](https://copilot.github.com/), you get the gist of it. (note: CoPilot was not yet publicly released when our paper was originally written and submitted.)
 
