@@ -1,4 +1,4 @@
-- year: 2021
+- year: 2022
   talks:
   - date: January 2022
     type: Conference Talk
@@ -9,6 +9,8 @@
     place: Virtual
     country: US
 
+- year: 2021
+  talks:
   - date: May 2021
     type: Conference Talk
     title: "Architecting robust JS apps: a practitioner's guide to Secure ECMAScript"
