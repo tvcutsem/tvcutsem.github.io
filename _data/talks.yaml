@@ -1,5 +1,14 @@
 - year: 2021
   talks:
+  - date: January 2022
+    type: Conference Talk
+    title: "Improving JavaScript (d)app security by practicing extreme modularity (upcoming)"
+    tags: ["javascript", "security", "smart contracts"]
+    relative_slides_path: "/assets/HardenedJS_BlueLava2022.pdf"
+    venue: "[Blue Lava](https://www.bluelava.live/) JavaScript Web3 Conference"
+    place: Virtual
+    country: US
+
   - date: May 2021
     type: Conference Talk
     title: "Architecting robust JS apps: a practitioner's guide to Secure ECMAScript"
