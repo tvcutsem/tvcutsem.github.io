@@ -15,13 +15,13 @@ I serve or have served on the following conference PCs:
   * [Onward! 2022](https://2022.splashcon.org/track/splash-2022-Onward-papers), Papers track (with SPLASH)
   * [SecDev 2021](https://secdev.ieee.org/2021/home/)
   * [WWW 2018](https://www2018.thewebconf.org/call-for-papers/web-programming-cfp/), Web Programming track
-  * [IEEE SCAM 2018](www.ieee-scam.org/2018/#progcomeng), Engineering track
+  * [IEEE SCAM 2018](https://www.ieee-scam.org/2018/#progcomeng), Engineering track
   * [OOPSLA 2017](https://2017.splashcon.org/track/splash-2017-OOPSLA)
   * [ECOOP 2015](https://2015.ecoop.org/)
   * [Onward! 2014](https://2014.onward-conference.org/)
-  * [DLS 2012](www.dynamic-languages-symposium.org/dls-12/index.html)
-  * [Onward! 2012](onward-conference.org/2012/)
-  * [Onward! 2011](onward-conference.org/2011/)
+  * [DLS 2012](https://www.dynamic-languages-symposium.org/dls-12/index.html)
+  * [Onward! 2012](https://onward-conference.org/2012/)
+  * [Onward! 2011](https://onward-conference.org/2011/)
 
 ## Projects
 
