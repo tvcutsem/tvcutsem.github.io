@@ -2,6 +2,15 @@
   talks:
   - date: November 2022
     type: Seminar
+    title: "Object-capability security for JavaScript applications"
+    tags: ["javascript", "security"]
+    relative_slides_path: "/assets/ocaps_js_11_2022.pdf"
+    venue: "Seminar on Cybersecurity at KU Leuven"
+    place: Leuven
+    country: BE
+  
+  - date: November 2022
+    type: Seminar
     title: "Secure and dependable software services for the Internet of Value"
     tags: ["web3", "smart contracts"]
     relative_slides_path: "/assets/Inaugural_Lecture_KULeuven_11_2022.pdf"
