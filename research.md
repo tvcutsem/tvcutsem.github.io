@@ -6,26 +6,19 @@ permalink: /research/
 
 # Research
 
-My broad research area involves programming languages, distributed systems and software engineering. In short, my goal is to help developers write code better (the software engineering view), and to write better code (the programming languages view).
+My research interests include programming languages, distributed systems and software engineering.
 
 ## Conference Program Committees
 
-I serve or have served on the following conference PCs:
+See [here](https://distrinet.cs.kuleuven.be/people/TomVanCutsem) for a recent list.
 
-  * [Onward! 2022](https://2022.splashcon.org/track/splash-2022-Onward-papers), Papers track (with SPLASH)
-  * [SecDev 2021](https://secdev.ieee.org/2021/home/)
-  * [WWW 2018](https://www2018.thewebconf.org/call-for-papers/web-programming-cfp/), Web Programming track
-  * [IEEE SCAM 2018](https://www.ieee-scam.org/2018/#progcomeng), Engineering track
-  * [OOPSLA 2017](https://2017.splashcon.org/track/splash-2017-OOPSLA)
-  * [ECOOP 2015](https://2015.ecoop.org/)
-  * [Onward! 2014](https://2014.onward-conference.org/)
-  * [DLS 2012](https://www.dynamic-languages-symposium.org/dls-12/index.html)
-  * [Onward! 2012](https://onward-conference.org/2012/)
-  * [Onward! 2011](https://onward-conference.org/2011/)
+## Recent Projects
 
-## Projects
+I study decentralized systems, blockchains and smart contract platforms, both from a language engineering perspective (designing safer languages to write smart contracts) as well as from a systems engineering perspective (improving the transaction scalability of such systems). Can we use [secure distributed objects]({% post_url 2013-01-21-distributed-resilient-secure-ecmascript %}) as the foundation for safer smart contracts?
 
-Below is a brief overview of concrete research projects I have worked on, with pointers where to learn more.
+## Past Projects
+
+Below is a brief overview of past research projects I have worked on, with pointers where to learn more.
 
 ### Machine Learning on Code
 

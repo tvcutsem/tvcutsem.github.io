@@ -10,11 +10,13 @@ permalink: /aboutme/
   <sub>You don't grow old on the net. This is me way back in 2007 enjoying the ocean view on <a href="https://goo.gl/maps/memrB1jEYan">Rapa Nui</a>.</sub> !-->
 </span>
 
-You've reached the blog of Tom Van Cutsem. I'm a computer scientist at [Bell Labs](https://www.bell-labs.com/usr/tom.van_cutsem), the research arm of Nokia (yes, [that](https://www.nytimes.com/2012/03/20/books/the-idea-factory-by-jon-gertner.html&_r=0) [Bell Labs](https://en.wikipedia.org/wiki/Bell_Labs)). I have the privilege of leading a fantastic team there where we're always working at the cutting edge of software research. Also at Bell Labs I co-architected the [WorldWideStreams](https://worldwidestreams.io) distributed stream processing platform.
+You've reached the blog of Tom Van Cutsem. I'm an associate professor of Computer Science at KU Leuven, within the [DistriNet](https://distrinet.cs.kuleuven.be/) research group of the [Computer Science department](https://wms.cs.kuleuven.be/cs/english). My research interests are secure distributed computing, decentralized systems and smart contracts.
+
+I am also a scientific advisor to [Bell Labs](https://www.bell-labs.com/), the research arm of Nokia (yes, [that](https://www.nytimes.com/2012/03/20/books/the-idea-factory-by-jon-gertner.html&_r=0) [Bell Labs](https://en.wikipedia.org/wiki/Bell_Labs)). Prior to (re)joining academia, I led the Software Systems research department at Bell Labs, focusing on trusted data sharing and AI pair programming solutions.
 
 Prior to joining Bell Labs, I was a CS professor at the [Software Languages Lab](http://soft.vub.ac.be) of the [Vrije Universiteit Brussel](http://www.vub.ac.be). I also did my doctoral research there on [AmbientTalk](http://soft.vub.ac.be/amop), a distributed programming language designed for mobile ad hoc networks, which got featured in [MIT Technology Review](https://www.technologyreview.com/s/419956/new-languages-and-why-we-need-them/).
 
-In 2009/2010 I was Visiting Faculty at Google in Mountain View (US) where I got involved in the standardization of JavaScript (aka ECMAScript). My biggest claim to language design fame is the creation of the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy API</a> together with <a href="https://ai.google/research/people/author35958">Mark S. Miller</a>, now shipping in all major browsers.
+In 2009/2010 I was Visiting Faculty at Google in Mountain View (US) where I got involved in the standardization of JavaScript (aka ECMAScript). My biggest claim to language design fame is the creation of the JavaScript <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy">Proxy API</a> together with <a href="https://papers.agoric.com/authors/mark-s-miller/">Mark S. Miller</a>, now shipping in all major browsers.
 
 I'm passionate about getting young people exposed to the art of programming.
 I'm the creator of [The Unix Game](https://unixgame.io/), a coding game I built at Bell Labs
