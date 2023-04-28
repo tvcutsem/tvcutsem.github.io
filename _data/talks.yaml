@@ -8,6 +8,7 @@
     venue: "Seminar on Cybersecurity at KU Leuven"
     place: Leuven
     country: BE
+    video_url: "https://youtu.be/bc6JzoCkCE0"
   
   - date: November 2022
     type: Seminar
