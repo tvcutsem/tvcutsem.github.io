@@ -1,3 +1,14 @@
+- year: 2023
+  talks:
+  - date: April 2023
+    type: Seminar
+    title: "Exploring the design space of smart contract languages"
+    tags: ["web3", "smart contracts"]
+    relative_slides_path: "/assets/exploring_smart_contracts_ifip2023.pdf"
+    venue: "[IFIP Working Group on Programming Language Design](http://languagedesign.org/)"
+    place: Delft
+    country: NL
+
 - year: 2022
   talks:
   - date: November 2022
