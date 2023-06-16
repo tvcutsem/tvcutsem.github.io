@@ -1,5 +1,14 @@
 - year: 2023
   talks:
+  - date: June 2023
+    type: Seminar
+    title: "Trust through replication: research challenges in decentralized applications"
+    tags: ["web3", "blockchain", "smart contracts"]
+    relative_slides_path: "/assets/trust_through_replication_06_2023.pdf"
+    venue: "[First Workshop on Security, Privacy & Verifiable Computing for contemporary distributed systems
+](https://www.esat.kuleuven.be/cosic/cosicevent/workshop-security-privacy-verifiable-computing-for-contemporary-distributed-systems/)"
+    place: Leuven
+    country: BE
   - date: April 2023
     type: Seminar
     title: "Exploring the design space of smart contract languages"
