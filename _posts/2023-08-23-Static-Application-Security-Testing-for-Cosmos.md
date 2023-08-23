@@ -9,7 +9,7 @@ comments: true
 
 How effective are Static Application Security Testing (SAST) tools at finding bugs in consensus-critical code in application-specific blockchains?
 That's the question we addressed in our new paper "Static Application Security Testing of Consensus-Critical Code in the Cosmos Network" that recently got accepted at the 
-5th Conference on Blockchain Research & Applications for Innovative Networks and Services (BRAINS 2023).
+5th Conference on Blockchain Research & Applications for Innovative Networks and Services ([BRAINS 2023](https://brains.dnac.org/).
 
 <!--more-->
 
@@ -33,5 +33,5 @@ that use the Cosmos SDK to identify how prevalent these issues are, and whether 
 (cases that the rule flags as potential bugs which in practice turn out not to be really bugs after all). Reducing false positives for Static Application Security
 Testing (SAST) is important: it makes these tools more useful and usable, thereby ultimately strengthening the security of app-specific blockchains.
 
-If you're interested in the details, please refer to our paper which recently got accepted at BRAINS 2023. You can find our pre-print copy on [arXiv](https://arxiv.org/abs/2308.10613) and the
+If you're interested in the details, please refer to our paper which recently got accepted at [BRAINS 2023](https://brains.dnac.org/). You can find our pre-print copy on [arXiv](https://arxiv.org/abs/2308.10613) and the
 data associated with the paper, including the refactored CodeQL rules on [GitHub](https://github.com/JasperSurmont/cosmos-sdk-codeql).
