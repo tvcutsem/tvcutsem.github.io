@@ -1,5 +1,13 @@
 - year: 2023
   talks:
+  - date: October 2023
+    type: Guest Lecture
+    title: "Introduction to JavaScript and Asynchronous Control Flow"
+    tags: ["javascript", "promises"]
+    relative_slides_path: "/assets/intro_JS_async_2023.pdf"
+    venue: "Guest Lecture in the course Comparative Programming Languages KU Leuven"
+    place: Leuven
+    country: BE
   - date: June 2023
     type: Seminar
     title: "Trust through replication: research challenges in decentralized applications"
