@@ -1,3 +1,13 @@
+- year: 2024
+  talks:
+  - date: March 2024
+    type: Seminar
+    title: "Object-capabilities meet smart contracts"
+    tags: ["blockchain", "smart contracts", "javascript"]
+    relative_slides_path: "/assets/ocaps_smartcontracts_WGLD2024.pdf"
+    venue: "[IFIP Working Group on Programming Language Design](http://languagedesign.org/)"
+    place: Pittsburgh, PA
+    country: US
 - year: 2023
   talks:
   - date: October 2023
