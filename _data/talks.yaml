@@ -4,7 +4,7 @@
     type: Seminar
     title: "A gentle introduction to Ethereum and Smart Contracts"
     tags: ["smart contracts", "ethereum", "solidity"]
-    slides_path: "/assets/VanCutsem_Ethereum_SecAppDev24.pdf"
+    relative_slides_path: "/assets/VanCutsem_Ethereum_SecAppDev24.pdf"
     venue: "[SecAppDev 2024](http://secappdev.org) (Secure Application Development course)"
     place: Leuven
     country: BE
@@ -12,7 +12,7 @@
     type: Seminar
     title: "Designing 'Least Authority' JavaScript apps"
     tags: ["security", "javascript"]
-    slides_path: "/assets/VanCutsem_LeastAuthorityJS_SecAppDev24.pdf"
+    relative_slides_path: "/assets/VanCutsem_LeastAuthorityJS_SecAppDev24.pdf"
     venue: "[SecAppDev 2024](http://secappdev.org) (Secure Application Development course)"
     place: Leuven
     country: BE
