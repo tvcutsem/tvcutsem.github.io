@@ -4,7 +4,7 @@
     type: Seminar
     title: "Introduction to Blockchain and Distributed Ledgers"
     tags: ["blockchain", "security", "consensus"]
-    relative_slides_path: "/assets/VanCutsem_Ethereum_SecAppDev24.pdf"
+    relative_slides_path: "/assets/intro_blockchain_cosic_course_2024.pdf"
     venue: "[COSIC Course on Cryptography and Cyber Security](https://www.esat.kuleuven.be/cosic/events/cosic-course/)"
     place: Leuven
     country: BE
