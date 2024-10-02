@@ -11,6 +11,7 @@ comments: true
 If you have ever looked at how Ethereum smart contracts are developed in the Solidity programming language, you will know that one of the most critical aspects of the
 code are the so-called "access control checks": short conditional tests that check whether the call to the contract is "legit": was it made by a party with sufficient rights?
 (e.g. the owner or creator of the contract) Is the contract in the right state to handle the request? Were all the necessary actions executed earlier? And so on.
+Forgetting such a check usually leads to security vulnerabilities [with disastrous consequences](https://blog.blockmagnates.com/the-hacking-of-rubixi-smart-contract-23d339213bbe).
 
 In our recent paper ["Safe design and evolution of smart contracts using dynamic condition response graphs to model generic role-based behaviors"](https://onlinelibrary.wiley.com/doi/10.1002/smr.2730) (which got published last week
 in the Journal of "Software: Evolution and Process"), we develop a method to express such access control logic not as conditional tests scattered throughout the contract code,
