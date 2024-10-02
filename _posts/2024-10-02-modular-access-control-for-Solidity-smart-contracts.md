@@ -36,8 +36,8 @@ integrates the aspect back into the code. (AOP was briefly popular as a programm
 nevertheless the ideas behind AOP are useful to improve modularity of software).
 
 All of the above 
-is primarily the work of Yibin Xu, a PhD student at the University of Copenhagen in Denmark working under the supervision of Profs. Tijs Slaats, Boris Düdder
-and Thomas Troels Hildebrandt.
+is primarily the work of [Yibin Xu](https://xuyibin.top/), a PhD student at the University of Copenhagen in Denmark working under the supervision of Profs. [Tijs Slaats](https://researchprofiles.ku.dk/en/persons/tijs-slaats), [Boris Düdder](https://researchprofiles.ku.dk/en/persons/boris-d%C3%BCdder)
+and [Thomas Troels Hildebrandt](https://researchprofiles.ku.dk/en/persons/thomas-troels-hildebrandt).
 Yibin did some of the work as part of a 6-month research visit in my group at DistriNet KU Leuven in 2023. Thomas and Tijs have been deeply involved in the creation
 and further development of DCR Graphs, and have applied
 them successfully to various other domains, most notably [the simplification of complex administrative business processes](https://documentation.dcr.design/).
