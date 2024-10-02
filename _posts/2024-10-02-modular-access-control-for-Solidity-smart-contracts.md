@@ -31,6 +31,10 @@ We created an extension of the Solidity programming language that allows the con
 Our "DCR-Solidity" compiler then takes such an extended Solidity file and generates a regular Solidity source file where the constraints are compiled into
 imperative checks in-lined in the relevant methods of the contract.
 
+<center>
+  <img src="/assets/DCR-Solidity.png" alt="DCR-Solidity Compiler" width="50%">
+</center>
+
 If you are old enough to remember what "Aspect-oriented Programming" or AOP was, then this will sound familiar. Essentially, the access control logic
 is an "aspect" that we have separated out from the regular business logic of the contract, and our "DCR-Solidity" compiler is an "aspect-weaver" that
 integrates the aspect back into the code. (AOP was briefly popular as a programming paradigm in the early '00s but never really hit the mainstream -
