@@ -19,7 +19,7 @@ but rather as a separately specified set of constraints.
 
 <!--more-->
 
-Our method is based on so-called Dynamic Condition Response Graphs (DCR Graphs for short).
+Our method is based on so-called [Dynamic Condition Response Graphs](https://documentation.dcr.design/history-of-dcr/) (DCR Graphs for short).
 A DCR Graph is a declarative notation for describing a process. Using a DCR Graph one can very concisely model the permitted ordering of operations by
 describing only the constraints between the operations (as opposed to imperatively specifying the sequence of 'legal' orderings, as is commonly done in
 other process languages such as BPMN).
