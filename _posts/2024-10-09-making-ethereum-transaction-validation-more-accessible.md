@@ -1,5 +1,5 @@
 ---
-title: "Making Ethereum transaction validation more accessible by reducing storage costs using a p2p account storage network"
+title: "Validating Ethereum transactions without storing the entire blockchain"
 layout: post
 tags:
   - blockchain
