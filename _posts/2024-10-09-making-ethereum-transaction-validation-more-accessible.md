@@ -15,7 +15,7 @@ The more costly the hardware requirements, the fewer the number of parties capab
 
 This got us thinking: can we modify the block validation protocol used in networks like Ethereum so that storing the full blockchain state is no longer a prerequisite for participating as a block validator? In other words, can we let a node with "small" storage capacity (say, 5-10GB) meaningfully contribute to transaction validation without requiring it to store a full copy of the chain, and without compromising blockchain data integrity?
 
-Today at the [BRAINS 2024](https://brains.dnac.org/2024/) conference in Berlin my PhD student [Weihong Wang](https://distrinet.cs.kuleuven.be/people/WeihongWang) will present our work on [“A Scalable State Sharing Protocol for Low-Resource Validator Nodes in Blockchain Networks”](https://kuleuven-my.sharepoint.com/:b:/g/personal/weihong_wang_kuleuven_be/EbmwgUTesHBCqNzCJIxUw_gBjyK5z-OG0rWQbey-v6io-w?e=NAEgjP) which addresses this question.
+Today at the [BRAINS 2024](https://brains.dnac.org/2024/) conference in Berlin my PhD student [Weihong Wang](https://distrinet.cs.kuleuven.be/people/WeihongWang) presented our work on [“A Scalable State Sharing Protocol for Low-Resource Validator Nodes in Blockchain Networks”](https://arxiv.org/abs/2410.05854) which addresses this question.
 
 <!--more-->
 
@@ -35,7 +35,7 @@ As they say, “the proof of the pudding is in the eating”, and an important n
 
 The quantitative analysis, the design of the protocol, and the validation of the protocol on simulated transaction data was all carried out by my thesis student [Ruben Hias](https://www.linkedin.com/in/rubenhias/), who did this work as part of his Masters thesis project, with mentoring by my PhD students Weihong Wang and Jan Vanhoof. Ruben did outstanding work analyzing the problem, coming up with a proof-of-concept state sharing protocol and setting up simulation experiments to validate the feasibility of the protocol. For the experiments with Verkle trees, he interacted with [Ethereum Foundation](https://ethereum.foundation/) researchers, who were interested to learn the impact on storage needs by switching to Verkle trees, as this not only benefits our protocol, but also light clients. Verkle trees are [on the roadmap](https://ethereum.org/en/roadmap/verkle-trees/) to be integrated into Ethereum.
 
-A [pre-print author-copy of our paper](https://kuleuven-my.sharepoint.com/:b:/g/personal/weihong_wang_kuleuven_be/EbmwgUTesHBCqNzCJIxUw_gBjyK5z-OG0rWQbey-v6io-w?e=NAEgjP) is available. A copy of Weihong’s presentation slides for the paper presentation at BRAINS’24 is [here](https://kuleuven-my.sharepoint.com/:b:/g/personal/weihong_wang_kuleuven_be/ERpQPcqTo1ZEtZn7W6PLmGwBm_-UpNSi8uNnriZXWCnIsg?e=ODepi1).
+A [pre-print author-copy of our paper](https://arxiv.org/abs/2410.05854) is available on Arxiv. A copy of Weihong’s presentation slides for the paper presentation at BRAINS’24 is [here](https://kuleuven-my.sharepoint.com/:b:/g/personal/weihong_wang_kuleuven_be/ERpQPcqTo1ZEtZn7W6PLmGwBm_-UpNSi8uNnriZXWCnIsg?e=ODepi1).
 
 
 
