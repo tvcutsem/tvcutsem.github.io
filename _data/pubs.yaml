@@ -2,7 +2,7 @@
   type: Conference Paper
   authors: ["Ruben Hias", "Weihong Wang", "Jan Vanhoof", "Tom Van Cutsem"]
   title: "A Scalable State Sharing Protocol for Low-Resource Validator Nodes in Blockchain Networks"
-  venue: 6th Conference on Blockchain Research and Applications for Innovative Networks and Services (BRAINS 2024) ([Best Paper Award](https://twitter.com/tvcutsem/status/1844724805922148352/photo/1))
+  venue: [BRAINS 2024](https://brains.dnac.org/2024/) ([Best Paper Award](https://twitter.com/tvcutsem/status/1844724805922148352/photo/1))
   tags: ["blockchain"]
   path: null
   url: "https://arxiv.org/abs/2410.05854"
@@ -11,7 +11,7 @@
   type: Journal Paper
   authors: [ "Yibin Xu", "Tijs Slaats", "Boris Düdder", "Thomas Troels Hildebrandt", "Tom Van Cutsem"]
   title: "Safe design and evolution of smart contracts using dynamic condition response graphs to model generic role-based behaviors"
-  venue: "Journal of Software: Evolution and Process (Wiley)"
+  venue: "Journal of Software: Evolution and Process"
   tags: ["blockchain", "smart contracts"]
   path: null
   publisher_link: "https://onlinelibrary.wiley.com/doi/10.1002/smr.2730"
