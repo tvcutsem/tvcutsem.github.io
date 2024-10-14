@@ -2,7 +2,7 @@
   type: Conference Paper
   authors: ["Ruben Hias", "Weihong Wang", "Jan Vanhoof", "Tom Van Cutsem"]
   title: "A Scalable State Sharing Protocol for Low-Resource Validator Nodes in Blockchain Networks"
-  venue: [BRAINS 2024](https://brains.dnac.org/2024/) ([Best Paper Award](https://twitter.com/tvcutsem/status/1844724805922148352/photo/1))
+  venue: "[BRAINS 2024](https://brains.dnac.org/2024/) ([Best Paper Award](https://twitter.com/tvcutsem/status/1844724805922148352/photo/1))"
   tags: ["blockchain"]
   path: null
   url: "https://arxiv.org/abs/2410.05854"
