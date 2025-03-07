@@ -144,6 +144,14 @@ While membranes were originally proposed as a defensive programming abstraction 
 
 One reason one would want to observe mutations on an object graph is to enable data-binding in a web application framework: the web framework observes the object graph of its web application, and mutations require the web framework to refresh the UI. [This example code](https://github.com/salesforce/observable-membrane/tree/master/examples/reactivo-element) shows how to build reactive web components using this pattern.
 
+### Figma plug-ins
+
+__Note__: this section was added in March 2025, long after publication of the original blog post in 2018.
+
+The Figma team used the membrane pattern to safely embed plug-ins into their main product in such a way that the plug-ins could run on the main thread, with synchronous API access to the Figma document. Membranes were used to ensure that JavaScript values from the surrounding Figma webpage are properly converted into JavaScript values for a small, embedded JavaScript VM.
+
+Their [engineering blog post](https://www.figma.com/blog/how-we-built-the-figma-plugin-system/) actually is a great read on the considerations that go into running untrusted JavaScript code alongside your main application, and the various techniques one might use, along with the trade-offs involved.
+
 ## What experience tells us
 
 We highlighted earlier how it is usually important for membranes to be transparent. Indeed, what experience seems to tell us is that membranes work best when their distortion logic does not attempt to change the actual values that get exchanged across the membrane but instead implements a kind of filter on data or a fail-stop behavior on control flow.
