@@ -1,3 +1,12 @@
+- date: 2025
+  type: Conference Paper
+  authors: ["Weihong Wang", "Tom Van Cutsem"]
+  title: "Depermissioning Web3: a Permissionless Accountable RPC Protocol for Blockchain Networks"
+  venue: "[ICDCS 2025](https://icdcs2025.icdcs.org/)"
+  tags: ["blockchain"]
+  path: null
+  url: "https://arxiv.org/abs/2506.03940"
+
 - date: 2024
   type: Conference Paper
   authors: ["Ruben Hias", "Weihong Wang", "Jan Vanhoof", "Tom Van Cutsem"]
