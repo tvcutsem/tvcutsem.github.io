@@ -6,7 +6,7 @@ tags:
 comments: true
 ---
 
-Over the last few months, with my PhD student [Weihong Wang](https://www.linkedin.com/in/weihongw/) we have been studying issues with Web3's "serving layer" -- the infrastructure that makes data stored on a blockchain accessible to the application layer (aka decentralized apps or "dapps"). One of our key findings is that access to major "permissionless" blockchain networks today is, counter-intuitively, quite "permissioned": because of both technical and economical factors, access is mediated by centralized gatekeepers. In response, we have designed a new RPC (Remote Procedure Call) protocol to interact with permissionless blockchains that attempts to keep the access "depermissioned", yet without compromising on data integrity or accountability issues that plague the naive use of anonymous public RPC endpoints.
+Over the last few months my PhD student [Weihong Wang](https://www.linkedin.com/in/weihongw/) and me have been studying issues with Web3's "serving layer" -- the infrastructure that makes data stored on a blockchain accessible to the application layer (aka decentralized apps or "dapps"). One of our key findings is that access to major "permissionless" blockchain networks today is, counter-intuitively, quite "permissioned": because of both technical and economical factors, access is mediated by centralized gatekeepers. In response, we have designed a new RPC (Remote Procedure Call) protocol to interact with permissionless blockchains that attempts to keep the access "depermissioned", yet without compromising on data integrity or accountability issues that plague the naive use of anonymous public RPC endpoints.
 
 Our paper on this new RPC protocol recently got accepted at the IEEE International Conference on Distributed Computing Systems ([ICDCS 2025](https://icdcs2025.icdcs.org/)). Weihong will present the work in Glasgow next week. Here's a link to the [preprint copy](https://arxiv.org/abs/2506.03940) of the paper. Read on below for a high-level introduction to the work.
 
@@ -16,7 +16,9 @@ Our paper on this new RPC protocol recently got accepted at the IEEE Internation
 
 Blockchain networks can be thought of as highly reliable storage and processing infrastructure for tamper-resistant data. So-called "decentralized applications" (*dapps*) are apps that store (part of) their back-end state on the blockchain. The dapp itself may be a mobile or a web app, but in order for it to function properly, it must somehow fetch data (or send updates to data) to the chain. This is done using a straightforward RPC protocol (for instance, [Ethereum's JSON-RPC API](https://ethereum.org/en/developers/docs/apis/json-rpc/)).
 
-![Web3 RPC](/assets/parp_figures/web3_rpc.png)
+<center>
+  <img src="/assets/parp_figures/web3_rpc.png" alt="Web3 RPC" width="70%">
+</center>
 
 For instance, a dapp that wants to display the account balance of a user with Web3 wallet address `0xD2...` can make a simple JSON-RPC request to invoke the `eth_getbalance` method on a so-called "full node". In blockchain parlance a "full node" is a peer in the blockchain p2p network that holds a copy of the complete blockchain state. A full node may or may not actively help validate new transactions (i.e. be a "validator") -- for the purposes of serving state it does not really matter.
 
@@ -34,7 +36,9 @@ Node providers invest in quality cloud infrastructure, resulting in reliable (hi
 
 Today's picture of Web3's serving layer thus looks somewhat like this:
 
-![Web3 serving layer](/assets/parp_figures/web3_serving_layer.png)
+<center>
+  <img src="/assets/parp_figures/web3_serving_layer.png" alt="Web3 serving layer" width="70%">
+</center>
 
 What is the problem with this picture?
 
@@ -52,7 +56,9 @@ Is there really no alternative to using a node provider if you are highly privac
 
 We call this apparent dilemma between node providers and public RPC endpoints the "access dilemma" of Web3's serving layer:
 
-![Web3 access dilemma](/assets/parp_figures/access_dilemma.png)
+<center>
+  <img src="/assets/parp_figures/access_dilemma.png" alt="Web3 access dilemma" width="70%">
+</center>
 
 So how do we overcome this dilemma?
 
@@ -66,17 +72,23 @@ How do we do this? The basic idea is straightforward: we start from the setup of
 
   * We employ _payment channels_ to allow clients to include micro-payments in their RPC requests, offering financial *incentives* to servers for serving clients. Before a client can issue PARP requests, it must first deposit tokens in an on-chain contract. The design is reminiscent of L2 payment networks such as Lightning Network.
 
-![PARP RPC example](/assets/parp_figures/parp_rpc.png)
+<center>
+  <img src="/assets/parp_figures/parp_rpc.png" alt="PARP RPC example" width="70%">
+</center>
 
 The figure above lays out the basic idea: a pseudonymous client (identified by only their Web3 address) connects to a pseudonymous server (identified by only their IP address). The client issues RPC requests, but now includes small micro-payments (tokens). These tokens could be the network-native token (e.g. ETH in Ethereum), a stablecoin, or a utility token specific to a Web3 dapp or protocol. The server responds with both the RPC response as well as a validity proof. The client can verify the proof to ensure integrity of the data, and can hold the server accountable by posting an invalid proof to an on-chain arbitrage contract. This achieves our three goals: permissionless, accountable, incentivized:
 
-![The access dilemma solved](/assets/parp_figures/access_dilemma_solved.png)
+<center>
+  <img src="/assets/parp_figures/access_dilemma_solved.png" alt="The access dilemma solved" width="70%">
+</center>
 
 The details of how all of this works are explained [in the paper](https://arxiv.org/abs/2506.03940), but it's worth saying a few words about the accountability aspect.
 
 To understand the full picture of PARP, one must look at both the on-chain and off-chain interactions (see Figure below). PARP leverages three modular on-chain smart contracts to 1. manage the clients' payment channels (*channels management module*), 2. to hold PARP server node deposits (*full nodes deposit module*), and 3. to arbitrage in the case of alleged fraud (*fraud detection module*).
 
-![The PARP RPC protocol](/assets/parp_figures/parp_rpc_details.png)
+<center>
+  <img src="/assets/parp_figures/parp_rpc_details.png" alt="The PARP RPC protocol" width="70%">
+</center>
 
 When a PARP client connects to a PARP server, there is an initial handshake to set up the necessary protocol state, including opening a payment channel. After that, all standard RPC request/response interaction (including sending accompanying micro-payments) happens completely off-chain. When the PARP connection closes, the PARP server can close the payment channel to collect the payout.
 
@@ -84,7 +96,9 @@ To detect invalid responses (fraudulent servers), clients rely on so-called merk
 
 If a client receives an invalid proof from a server, it can cause the server to lose (some or all of) its staked funds by posting the invalid proof to the fraud detection smart contract. Of course, now we find ourselves in a somewhat circular situation: the client's only connection to the blockchain is via a server which it has detected to be fraudulent. Obviously, that server is not going to relay any client request to penalize the server to the blockchain. How then can the client relay its fraud proof? The simple solution is that the client needs to open up a new PARP connection to a third-party PARP node (labelled "Honest full node" in the Figure below) to relay the fraud proof on-chain:
 
-![Fraud detection in PARP](/assets/parp_figures/parp_fraud_detection.png)
+<center>
+  <img src="/assets/parp_figures/parp_fraud_detection.png" alt="Fraud detection in PARP" width="70%">
+</center>
 
 The on-chain fraud detection contract receives the information necessary to verify that the proof is indeed an invalid proof of an otherwise valid PARP request-response interaction (this is possible because a PARP response must be signed by the server, and must also contain a cryptographic hash of the corresponding client request).
 
