@@ -22,7 +22,7 @@ Blockchain networks can be thought of as highly reliable storage and processing 
 
 For instance, a dapp that wants to display the account balance of a user with Web3 wallet address `0xD2...` can make a simple JSON-RPC request to invoke the `eth_getbalance` method on a so-called "full node". In blockchain parlance a "full node" is a peer in the blockchain p2p network that holds a copy of the complete blockchain state. A full node may or may not actively help validate new transactions (i.e. be a "validator") -- for the purposes of serving state it does not really matter.
 
-Note that the reason for the front-end/back-end split is that running a full node is expensive - in terms of memory or disk storage, network bandwidth and compute cost. As one data point, storing the state of the Ethereum blockchain as of July 2025 [requires about 1.34GB of storage](https://ycharts.com/indicators/ethereum_chain_full_sync_data_size) and the [recommended hardware spec](https://geth.ethereum.org/docs/getting-started/hardware-requirements) to run a node includes a 2TB SSD drive. As a result, it is unreasonable for the client app to sync all of this data itself, and so it must rely on a "serving layer" -- separate infrastructure (servers) willing to serve blockchain data to clients on-demand.
+Note that the reason for the front-end/back-end split is that running a full node is expensive - in terms of memory or disk storage, network bandwidth and compute cost. As one data point, storing the state of the Ethereum blockchain as of July 2025 [requires about 1.34TB of storage](https://ycharts.com/indicators/ethereum_chain_full_sync_data_size) and the [recommended hardware spec](https://geth.ethereum.org/docs/getting-started/hardware-requirements) to run a node includes a 2TB SSD drive. As a result, it is unreasonable for the client app to sync all of this data itself, and so it must rely on a "serving layer" -- separate infrastructure (servers) willing to serve blockchain data to clients on-demand.
 
 ## What is the issue with today's serving layer?
 
@@ -76,7 +76,7 @@ How do we do this? The basic idea is straightforward: we start from the setup of
   <img src="/assets/parp_figures/parp_rpc.png" alt="PARP RPC example" width="100%" style="border: 1px solid gray; margin: 5px;">
 </center>
 
-The figure above lays out the basic idea: a pseudonymous client (identified by only their Web3 address) connects to a pseudonymous server (identified by only their IP address). The client issues RPC requests, but now includes small micro-payments (tokens). These tokens could be the network-native token (e.g. ETH in Ethereum), a stablecoin, or a utility token specific to a Web3 dapp or protocol.
+The figure above lays out the basic idea: a pseudonymous client (identified by only their Web3 address) connects to a pseudonymous server (identified by only their IP address). The client issues RPC requests, signing an off-chain payment update with each one. The total amount owed is transferred on-chain when the session ends. Micro-payments are made using tokens, which could be network-native tokens (e.g. ETH in Ethereum), stablecoins, or utility tokens specific to a Web3 dapp or protocol.
 
 The server responds with both the RPC response as well as a validity proof. The client can verify the proof to ensure integrity of the data, and can hold the server accountable by posting an invalid proof to an on-chain arbitrage contract. This achieves our three goals: permissionless, accountable, incentivized:
 
@@ -92,7 +92,7 @@ To understand the full picture of PARP, one must look at both the on-chain and o
   <img src="/assets/parp_figures/parp_rpc_details.png" alt="The PARP RPC protocol" width="100%" style="border: 1px solid gray; margin: 5px;">
 </center>
 
-When a PARP client connects to a PARP server, there is an initial handshake to set up the necessary protocol state, including opening a payment channel. After that, all standard RPC request/response interaction (including sending accompanying micro-payments) happens completely off-chain. When the PARP connection closes, the PARP server can close the payment channel to collect the payout.
+When a PARP client connects to a PARP server, there is an initial handshake to set up the necessary protocol state, including opening a payment channel. After that, all standard RPC request/response interaction (including micro-payments) happens completely off-chain. When the PARP connection closes, the PARP server can close the payment channel to collect the payout.
 
 To detect invalid responses (fraudulent servers), clients rely on so-called merkle proofs. These are cryptographic proofs that let the server prove with high probability that their response is valid with respect to the up-to-date blockchain. To verify the proofs, clients must gain access to a small amount of blockchain meta-data (mostly: recent block headers). For networks like Ethereum, this meta-data is served by a subset of validators called the [sync committee](https://eth2book.info/capella/part3/config/preset/#sync-committee) and its output is assumed to be cheaply and widely available (all verifiable, so-called "light client" designs build on this assumption. See e.g. [Helios](https://a16zcrypto.com/posts/article/building-helios-ethereum-light-client/) for a concrete example).
 
