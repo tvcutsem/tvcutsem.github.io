@@ -1,5 +1,13 @@
 - year: 2025
   talks:
+  - date: September 2025
+    type: Summer school
+    title: "Introduction to Blockchain and Distributed Ledgers"
+    tags: ["blockchain", "security", "consensus"]
+    relative_slides_path: "/assets/dare25-vancutsem-blockchain-lecture.pdf"
+    venue: "[DARE 2025](https://dare-lisbon.github.io/): Summer school on Distributed and Replicated Environments"
+    place: Lissabon
+    country: PT
   - date: June 2025
     type: Seminar
     title: "Designing 'Least Authority' JavaScript apps"
