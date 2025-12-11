@@ -1,5 +1,13 @@
 - year: 2025
   talks:
+  - date: December 2025
+    type: KTH Seminar
+    title: "Depermissioning Web3: a Permissionless Accountable RPC Protocol for Blockchain Networks"
+    tags: ["blockchain", "PARP", "security"]
+    relative_slides_path: "/assets/parp-icdcs.pdf"
+    venue: "[WSTDS](https://sites.google.com/view/wstds/): Workshop on Software Technology for Distributed Systems"
+    place: Stockholm
+    country: SE
   - date: September 2025
     type: Summer school
     title: "Introduction to Blockchain and Distributed Ledgers"
