@@ -1,9 +1,11 @@
 ---
 layout: post
-title: "Vibe Coding an Educational Demo in 30 Minutes — and What It Taught Me About CS Education"
+title: "Vibe coding an educational demo in 30 minutes — and what it taught me about CS education"
 date: 2026-03-18
 description: "I vibe-coded a flocking simulation at a workshop. Here's the demo, the full conversation with my AI copilots, and why this experiment actually strengthened my conviction that studying computer science matters more than ever."
 tags: [vibe-coding, ai, education, processing, boids]
+comments: true
+permalink: vibe-coding-boids
 ---
 
 I recently attended a "vibe coding" workshop as part of our lab retreat. The premise was simple: pick a small project, fire up an AI coding agent, and see what you can build in about 30 minutes. No careful planning, no spec — just vibes.
@@ -11,6 +13,8 @@ I recently attended a "vibe coding" workshop as part of our lab retreat. The pre
 What I ended up with surprised me. Not because the result is groundbreaking software, but because of what the *process* revealed about the relationship between domain knowledge, AI tools, and the value of a CS education.
 
 Here's the demo, the full story, and the takeaways.
+
+<!--more-->
 
 ## The demo
 
