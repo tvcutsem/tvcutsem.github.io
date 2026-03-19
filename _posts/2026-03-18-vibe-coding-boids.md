@@ -22,9 +22,7 @@ The demo illustrates the lifelike flocking behavior of little bird-like agents c
 
 You can play with the live demo [here](https://tvcutsem.github.io/voids).
 
-<a href="/voids"><img src="/voids/voids_hero.png" alt="Hero image of the Voids boids flocking demo" style="width: 100%; height: auto; display: block;" /></a>
-
-Add some extra Boids, use your mouse to 'steer' the Boids towards your mouse pointer, and hover over individual Boids to see their velocity vector and the "circle of influence" used to adjust their motion vector based on neighboring Boids.
+<a href="/voids"><img src="/voids/voids_demo.gif" alt="Voids: vibe-coded boids flocking demo" style="width: 100%; height: auto; display: block;" /></a>
 
 ## The idea
 
