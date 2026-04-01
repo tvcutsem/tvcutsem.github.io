@@ -1,0 +1,165 @@
+---
+layout: post
+title: "Python as the Language of AI, JavaScript as the language for AI"
+date: 2026-04-01
+tags: [ai, javascript, typescript, sandboxing]
+comments: true
+permalink: ai-python-typescript
+---
+
+> *AI was built in Python. But the code AI agents write will increasingly be TypeScript.*
+
+This post is about a pattern that I believe will define how AI agents interact with the world — and why JavaScript's unusual history makes it uniquely suited for it.
+
+<!--more-->
+
+It's widely acknowledged that Python is the modern language of AI (a title [once held by Lisp](https://www.norvig.com/Lisp-retro.html), lest we forget). This post is not a Python critique. Python will likely remain central to how *AI systems are built*. The question I want to address is: what language will AI *itself* use to interact with the world around it?
+
+## JavaScript: from Browser sandbox to Agent sandbox
+
+JavaScript has a peculiar and underappreciated property: **the language itself has no built-in powers**. It cannot open files, make network requests, or interact with any external system directly. All interaction with the outside world must happen through explicit function calls provided by a *host environment* that embeds the JavaScript runtime.
+
+This is not a limitation — it is a deliberate architectural feature. When a browser runs JavaScript, it exposes bindings like `fetch()`, `document.getElementById()`, and `localStorage`. These are not part of the language; they are gifts from the host. The language itself can only compute in a vacuum until the host decides what capabilities to expose to affect the world outside.
+
+This model has enabled JavaScript to gain a foothold in new application areas, and I have a hunch that AI agent "harnesses" - the code that wraps individual LLM calls and connects it to tools - will be the host environment of the coming decade:
+
+| Era | Host environment | Example capabilities exposed | What it enabled |
+|-----|-----------------|------------------------------|-----------------|
+| 2000s | The browser | DOM manipulation, user input, HTTP requests | AJAX, Rich Internet Apps |
+| 2010s | Node.js (server-side JS) | Filesystem, network, module system | SSJS, microservices, API economy |
+| 2020s | AI agent harnesses | Your files, apps, email, APIs, services | Personal AI assistants |
+
+Visually:
+
+<center>
+  <img src="/assets/js_three_eras.png" alt="JavaScript's three embedding eras" width="100%" style="border: 1px solid gray; margin: 5px;">
+</center>
+
+The browser sandbox, the Node.js runtime, and now the AI agent harness: each is a new *embedding environment* that grants JavaScript code a specific, curated set of capabilities. **AI agent harnesses are the next chapter in this story**, and JavaScript is well-positioned to be the scripting language of choice precisely because this host-guest model is already baked into its DNA.
+
+## Code Mode: from "LLMs using tools" to "LLMs writing code against APIs"
+
+This architectural shift has recently been formalized into what Cloudflare engineers have named ["Code Mode"](https://blog.cloudflare.com/code-mode/) and [Anthropic](https://www.anthropic.com/engineering/code-execution-with-mcp) engineers have named ["programmatic tool calling"](https://platform.claude.com/docs/en/agents-and-tools/tool-use/programmatic-tool-calling).
+
+The pattern works as follows:
+
+1. The agent harness exposes a typed TypeScript API as the sandbox's host bindings, and feeds the types to the LLM's context window.
+2. The LLM generates TypeScript code that calls this API — rather than issuing raw JSON tool calls.
+3. The agent harness takes the generated code and executes it inside a JavaScript sandboxed runtime (more on this below).
+4. The code's generated output stream flows back to the agent harness, and ultimately as context to the next LLM call.
+
+<center>
+  <img src="/assets/codemode_diagram.png" alt="Code Mode: high-level flow" width="80%" style="border: 1px solid gray; margin: 5px;">
+</center>
+
+*High-level flow: the LLM writes code, the harness executes it in a sandbox, and typed host bindings mediate policy-enforced access to external tools/services.*
+
+What's so great about LLMs writing TypeScript code as opposed to generating MCP (Model Context Protocol) "tool calls" directly? A key advantage is that LLMs can both more easily discover and consume programmatic APIs, and more easily compose ("chain together") multiple tools (API calls) without feeding intermediate results back into the LLM (saving on precious context window space).
+
+Anthropic [has reported](https://www.anthropic.com/engineering/code-execution-with-mcp) that Code Mode produces a **98.7% reduction in token usage** relative to raw tool-call schemas — the result of faster tool discovery and avoiding feeding large API documents into the context window repeatedly, instead letting data flow programmatically through the code itself. Cloudflare similarly [reports](https://blog.cloudflare.com/code-mode-mcp/) **over 99% reduction in token usage** by turning its >2,500-endpoint REST API into two tools: `search` to fetch an API spec that can be programmatically searched, and `execute` to run code that can call `cloudflare.request` to make actual API calls.
+
+To run the code generated by the agent we ideally need a runtime environment that is both fast and secure. JavaScript engines — particularly Google's V8 runtime — have been optimized for decades to run short, on-demand code snippets with minimal startup overhead. Every modern webpage executes dozens of scripts within milliseconds.
+
+But there's more to it: V8's *isolates* are something like a sandbox within a sandbox: extremely lightweight execution contexts within a single OS process, enabling isolated execution of JavaScript code with far lower memory and startup cost than VMs or even containers. Cloudflare has built its [Workers serverless platform](https://workers.cloudflare.com/) on this foundation, and they are now [using the same infrastructure to sandbox LLM-generated code](https://blog.cloudflare.com/dynamic-workers/). The performance characteristics that made V8 great for web scripting turn out to make it great for agent-generated code execution too!
+
+## Why TypeScript Specifically?
+
+Given that the host-guest model favors JavaScript, why call out TypeScript in particular? Several properties converge.
+
+### Types as Machine-Checkable API Documentation
+
+When a host environment exposes its API as TypeScript type declarations (`.d.ts` files), it gives the LLM something valuable: **a compact, structured, verifiable description of what the API can do**. This is types-as-documentation, with the bonus feature that the TypeScript type-checker can check that the generated code actually conforms to the declared API surface.
+
+Compare this to Python, where type hints are optional and largely unenforced at runtime (`mypy` can check them statically, but the ecosystem is more fragmented and the culture of full typing is less consistent). TypeScript's type system is both more expressive — supporting structural typing, union types, conditional types, template literal types — and more uniformly adopted at API boundaries.
+
+TypeScript's type system was engineered specifically to describe *existing JavaScript*, which is inherently dynamic, structural, and often "stringly typed." This forced the type system to develop unusually expressive machinery around object shapes and string literals — exactly what you need to describe the flexible, human-friendly APIs that AI agents will interact with. Incidentally, MCP tool call schemas tend to be similarly shape-oriented rather than nominally typed. TypeScript's structural type system maps onto this more naturally than a traditional class-hierarchy-based type system would.
+
+Schema definitions (such as those used in MCP tool definitions or OpenAPI REST interfaces) can be translated into an equivalent but more compact TypeScript type definition. In fact, Cloudflare has done exactly this with its [codemode helper](https://www.npmjs.com/package/@cloudflare/codemode) utility, which can convert MCP tool schemas into a typed JavaScript object.
+
+Here's a "hello world" example, taken straight from the [codemode library docs](https://www.npmjs.com/package/@cloudflare/codemode), with minor tweaks. The example uses [Vercel AI](https://github.com/vercel/ai), a JavaScript SDK for agentic AI apps (Pythonistas, think LangChain), and [Zod](https://zod.dev/), a library for schema validation (Pythonistas, think Pydantic) with the superpower to auto-convert JSON schemas into TypeScript types:
+
+```js
+import { createCodeTool } from "@cloudflare/codemode/ai";
+import { streamText, tool } from "ai";
+import { z } from "zod";
+
+// 1. Define tools using Vercel AI tool() wrapper
+const tools = {
+  getWeather: tool({
+    description: "Get weather for a location",
+    inputSchema: z.object({ location: z.string() }),
+    execute: async ({ location }) => `Weather in ${location}: 72°F, sunny`
+  }),
+  sendEmail: tool({
+    description: "Send an email",
+    inputSchema: z.object({
+      to: z.string(),
+      subject: z.string(),
+      body: z.string()
+    }),
+    execute: async ({ to, subject, body }) => `Email sent to ${to}`
+  })
+};
+
+// 2. Create a code execution sandbox
+const executor = ...;
+
+// 3. Create the codemode tool
+const codemode = createCodeTool({ tools, executor });
+
+// 4. The LLM writes code that calls your tools
+const result = streamText({
+  model,
+  system: "You are a helpful assistant.",
+  messages,
+  tools: { codemode }
+});
+```
+
+A *typed* `codemode` object is injected into the LLM's context window such that the LLM can emit type-compatible code like:
+
+```ts
+async () => {
+  const weather = await codemode.getWeather({ location: "London" });
+  if (weather.includes("sunny")) {
+    await codemode.sendEmail({
+      to: "team@example.com",
+      subject: "Nice day!",
+      body: `It's ${weather}`
+    });
+  }
+  return { weather, notified: true };
+};
+```
+
+### Typed security policies
+
+The idea behind running code in a sandbox is that the code can't interact with the outside world unless it's given explicit permission to do so. For decades, browsers have served as sandboxed environments that download and run fully untrusted JavaScript code from random websites on your computer in a way that is relatively safe (I say relatively, because of [XSS](https://owasp.org/www-community/attacks/xss/) and other shenanigans).
+
+[Deno](https://deno.com/) is a TypeScript-native runtime with [a permissions model](https://docs.deno.com/runtime/fundamentals/security/#key-principles) that is even more explicit than the browser's — network access, filesystem access, and environment variables are all denied by default and opt-in. Deno's security model makes it trivially easy to set up safe and restricted code sandboxes outside of the browser.
+
+In an AI agent context, coarse-grained permissions like enabling/disabling network or file access are arguably not granular enough: there are plenty of cases where the AI agent *needs* access to the network to get its job done (such as fetching your mail from a mail server), while at the same time granting blanket network access gives *excess* authority (a compromised agent may forward said mail to an attacker).
+
+Following the ["principle of least privilege"](https://en.wikipedia.org/wiki/Principle_of_least_privilege), rather than giving our guest sandbox access to coarse-grained permissions, we need to expose to it a host API whose authority is *tailored precisely* to the task the agent needs to do. Such a host API should be minimal (expose only what the agent needs), typed (so the agent's code can be statically checked), and policy-enforceable (so calls can be intercepted and validated before execution).
+
+Here I'd like to point out the approach taken by [IronCurtain](https://ironcurtain.dev), an open-source AI agent harness designed with security from the ground up. In the [words of its creator](https://ironcurtain.dev/how/):
+
+> "The agent never interacts with your system directly. Instead, it writes TypeScript that runs inside a V8 isolated VM. That code can only do one thing: issue typed function calls that map to MCP tool calls. It has no access to the filesystem, network, or environment variables.
+>
+> Because the agent expresses intent through typed function calls like `gmail.sendEmail({to: "bob@example.com"})` rather than raw HTTP requests, we can write meaningful policy against it."
+
+In other words: we don't reason about the host/guest boundary at the level of "network" or "file system", but rather at the level of typed API calls that map directly to human intent ("send mail", "open doc", "add contact", ...). 
+
+When the agent calls `gmail.sendEmail({to: "bob@example.com"})` rather than issuing an opaque HTTP request, the host can apply meaningful semantic policy — "is this recipient in the user's contacts list?" — in a way that raw network access would not permit.
+
+What is fundamentally new about this kind of host API compared to the browser and server-side runtime APIs that came before is that the agent's host API is no longer fixed, standardized and the same for all users. Instead the host API itself may be auto-generated based on a) the agent's goals (derived from the user prompt), b) the set of available MCP tools and c) a security policy. I don't think we have ever seen such level of flexibility at the host/guest boundary of a code sandbox, and the idea is both exciting and terrifying all at once.
+
+It's worth pointing out that fine-grained permissions, exposed as function bindings to code, are essentially [object capabilities](https://en.wikipedia.org/wiki/Object-capability_model), and inherit its advantages of flexible delegation and attenuation (see [membranes](/2018-07-22-membranes.md)). Thus, we can in principle apply the Code Mode pattern recursively: let an agent break down a problem into sub-tasks, spawn an agent for each sub-task, and give them a typed host API that wraps and attenuates the agent's own host API, thus further restricting what each sub-agent is allowed to do and [reducing overall attack surface](https://www.youtube.com/watch?v=wQHjITxQX0g).
+
+## Summary
+
+JavaScript's trajectory from browser scripting language to networked application server to AI agent sandbox is not an accident — it reflects a consistent architectural pattern: a sandboxed guest language, given curated capabilities by a host, used to script interactions with an increasingly powerful environment.
+
+TypeScript extends this with a type system that serves as machine-checkable documentation and a rich [ecosystem of typed packages](https://github.com/DefinitelyTyped/DefinitelyTyped). Together, these properties make TypeScript a compelling choice for the code that AI agents write when they act in the world.
+
+Python will remain the language in which AI systems are built. But TypeScript may become the language in which AI systems actually "get things done".
