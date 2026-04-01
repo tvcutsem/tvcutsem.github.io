@@ -25,14 +25,14 @@ This model has enabled JavaScript to gain a foothold in new application areas, a
 
 | Era | Host environment | Example capabilities exposed | What it enabled |
 |-----|-----------------|------------------------------|-----------------|
-| 2000s | The browser | DOM manipulation, user input, HTTP requests | AJAX, Rich Internet Apps |
-| 2010s | Node.js (server-side JS) | Filesystem, network, module system | SSJS, microservices, API economy |
-| 2020s | AI agent harnesses | Your files, apps, email, APIs, services | Personal AI assistants |
+| WWW | The browser | DOM ui, user input, HTTP fetch | AJAX, Rich Internet Apps |
+| Web API | Stand-alone runtime | Filesystem, network, modules | SSJS, microservices, API economy |
+| Agents | AI agent harness | Your apps, email, APIs, services | Personal AI assistants |
 
 Visually:
 
 <center>
-  <img src="/assets/js_three_eras.png" alt="JavaScript's three embedding eras" width="100%" style="border: 1px solid gray; margin: 5px;">
+  <img src="/assets/js_three_eras.png" alt="JavaScript's three embedding eras" width="100%" style="margin: 5px;">
 </center>
 
 The browser sandbox, the Node.js runtime, and now the AI agent harness: each is a new *embedding environment* that grants JavaScript code a specific, curated set of capabilities. **AI agent harnesses are the next chapter in this story**, and JavaScript is well-positioned to be the scripting language of choice precisely because this host-guest model is already baked into its DNA.
@@ -49,7 +49,7 @@ The pattern works as follows:
 4. The code's generated output stream flows back to the agent harness, and ultimately as context to the next LLM call.
 
 <center>
-  <img src="/assets/codemode_diagram.png" alt="Code Mode: high-level flow" width="80%" style="border: 1px solid gray; margin: 5px;">
+  <img src="/assets/codemode_diagram.png" alt="Code Mode: high-level flow" width="80%" style="margin: 10px;">
 </center>
 
 *High-level flow: the LLM writes code, the harness executes it in a sandbox, and typed host bindings mediate policy-enforced access to external tools/services.*
@@ -163,3 +163,7 @@ JavaScript's trajectory from browser scripting language to networked application
 TypeScript extends this with a type system that serves as machine-checkable documentation and a rich [ecosystem of typed packages](https://github.com/DefinitelyTyped/DefinitelyTyped). Together, these properties make TypeScript a compelling choice for the code that AI agents write when they act in the world.
 
 Python will remain the language in which AI systems are built. But TypeScript may become the language in which AI systems actually "get things done".
+
+## Acknowledgements
+
+Claude helped me polish and proofread this post. It suggested to include a reference to Deno's permissions system, and suggested that I put the focus on JavaScript's embedding environment, which I did using the (hand-edited) table and figure. For all other content and ideas, blame the human :-)
