@@ -1,3 +1,13 @@
+- year: 2026
+  talks:
+  - date: June 2026
+    type: Seminar
+    title: "Designing 'Least Authority' JavaScript apps"
+    tags: ["security", "javascript"]
+    relative_slides_path: "/assets/LeastAuthorityJS-SecAppDev2026.pdf"
+    venue: "[SecAppDev 2026](http://secappdev.org) (Secure Application Development)"
+    place: Leuven
+    country: BE
 - year: 2025
   talks:
   - date: December 2025
