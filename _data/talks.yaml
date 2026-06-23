@@ -2,6 +2,14 @@
   talks:
   - date: June 2026
     type: Seminar
+    title: "Introduction to Blockchain and Distributed Ledgers"
+    tags: ["blockchain", "security", "consensus"]
+    relative_slides_path: "/assets/intro_blockchain_cosic_course_2026.pdf"
+    venue: "[COSIC Course on Cryptography and Cyber Security](https://www.esat.kuleuven.be/cosic/events/cosic-course/)"
+    place: Leuven
+    country: BE
+  - date: June 2026
+    type: Seminar
     title: "Designing 'Least Authority' JavaScript apps"
     tags: ["security", "javascript"]
     relative_slides_path: "/assets/LeastAuthorityJS-SecAppDev2026.pdf"
