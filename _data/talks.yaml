@@ -8,6 +8,7 @@
     venue: "[COSIC Course on Cryptography and Cyber Security](https://www.esat.kuleuven.be/cosic/events/cosic-course/)"
     place: Leuven
     country: BE
+    video_url: "https://youtu.be/5eGsSXIvkew?si=psOl67xHJyC0aRM_"
   - date: June 2026
     type: Seminar
     title: "Designing 'Least Authority' JavaScript apps"
