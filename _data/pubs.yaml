@@ -1,3 +1,12 @@
+- date: 2026
+  type: Journal Paper
+  authors: ["Ruben Hias", "Weihong Wang", "Joffrey Van Cauwenberghe", "Jan Vanhoof", "Tom Van Cutsem"]
+  title: "The State Network: A Scalable State Sharing Protocol for Low-Storage Validator Nodes in Blockchain Networks"
+  venue: "Distributed Ledger Technology: Research and Practice"
+  tags: ["blockchain", "protocol design", "ethereum"]
+  path: null
+  publisher_link: "https://doi.org/10.1145/3827601"
+
 - date: 2025
   type: Conference Paper
   authors: ["Weihong Wang", "Tom Van Cutsem"]
