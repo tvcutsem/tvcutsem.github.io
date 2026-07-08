@@ -1,4 +1,13 @@
 - date: 2026
+  type: Conference Paper
+  authors: ["Weihong Wang", "Yana Dimova", "Victor Vansteenkiste", "Tom Van Goethem", "Tom Van Cutsem"]
+  title: "The Masks We (Think We) Wear: Privacy Threats of Browser-Extension Wallets in the Web3 Ecosystem"
+  venue: "Proceedings on Privacy Enhancing Technologies (PoPETs) 2026"
+  tags: ["web3", "privacy", "blockchain"]
+  path: null
+  url: "https://arxiv.org/abs/2607.06141"
+
+- date: 2026
   type: Journal Paper
   authors: ["Ruben Hias", "Weihong Wang", "Joffrey Van Cauwenberghe", "Jan Vanhoof", "Tom Van Cutsem"]
   title: "The State Network: A Scalable State Sharing Protocol for Low-Storage Validator Nodes in Blockchain Networks"
