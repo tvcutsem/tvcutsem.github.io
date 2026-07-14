@@ -6,23 +6,31 @@ permalink: /research/
 
 # Research
 
-My research interests include programming languages, distributed systems and software engineering.
+My research interests sit at the intersection of software security, distributed systems and PL/software engineering.
 
-## Conference Program Committees
+In recent years I have focused on decentralized distributed systems, blockchains and smart contracts, both from a language engineering perspective (designing safer languages to write smart contracts) as well as from a systems engineering perspective (building more trustless ways to interact with smart contracts).
 
-See [here](https://distrinet.cs.kuleuven.be/people/TomVanCutsem) for a recent list.
+## Ongoing Work
 
-## Recent Projects
+With my PhD student Weihong Wang I am working on [disintermediating Web3's access layer]({% post_url 2025-07-14-parp-depermissioning-web3s-serving-layer %}). We also study [privacy threats in Web3 wallets](https://arxiv.org/abs/2607.06141).
 
-I study decentralized systems, blockchains and smart contract platforms, both from a language engineering perspective (designing safer languages to write smart contracts) as well as from a systems engineering perspective (improving the transaction scalability of such systems). Can we use [secure distributed objects]({% post_url 2013-01-21-distributed-resilient-secure-ecmascript %}) as the foundation for safer smart contracts?
+With my PhD student Glenn De Witte I am exploring authenticated data structures and specifically transparency log systems and their applications to software supply-chain security.
+
+With my PhD student Olav Blaak I am working towards [Least-privilege WebAssembly](https://dl.acm.org/doi/full/10.1145/3801119.3801125) components and improved software supply-chain security, through a combination of program analysis and middleware tools.
+
+With my PhD student Weihe Gao I am working on byzantine fault-tolerant stateful serverless computing.
+
+A personal interest of mine is the design of [secure distributed object systems]({% post_url 2013-01-21-distributed-resilient-secure-ecmascript %}) as a foundation for writing capability-secure smart contracts. I explore this topic as part of an FWO Fundamental research project called CapableContracts (2026--2029), with my colleagues Dominique Devriese and Steven Keuchel.
 
 ## Past Projects
 
-Below is a brief overview of past research projects I have worked on, with pointers where to learn more.
+Below is a brief overview of past research projects I have worked on in past roles, with pointers on where to learn more.
 
 ### Machine Learning on Code
 
 At Bell Labs between 2018 and 2021 I've worked on novel developer tools that "learn from code", including [code completion](https://arxiv.org/abs/2108.05198) from natural language using neural language models, [code snippet retrieval](https://arxiv.org/abs/2008.12193) via neural code search and a [package recommendation engine](https://bell-labs.com/code-compass) based on machine-learned representations of software libraries ([import2vec](https://arxiv.org/abs/1904.03990)). These tools have been used by software developers at Nokia.
+
+Toward the end of the project, it became clear to us that large language models would enable effective AI pair programming using plain English, a vision that we called [Natural-language Guided Programming](https://arxiv.org/abs/2108.05198), published at the ACM Onward! Symposium just a few months before Github Copilot turned this vision into a fledgling reality.
 
 ### Distributed Stream Processing
 
@@ -68,10 +76,33 @@ Our AmbientTalk language supports [traits with state and visibility control](htt
 
 Later I designed a JavaScript library called [Traits.js](https://github.com/traitsjs/traits.js). To learn more about it, see this [blog post](https://howtonode.org/traitsjs) on HowToNode.
 
-### Distributed Secure Computing
+### Secure Distributed Objects
 
 See [this post]({% post_url 2013-01-21-distributed-resilient-secure-ecmascript %}).
 
-### Miscellaneous projects
+### Programming Languages
 
-A variety of software projects can be found on my [GitHub page](https://github.com/tvcutsem).
+Programming languages, their history, their design and their implementation are my favourite part of computer science. I enjoy reading about the genealogy of programming languages, how ideas from one language find their way into other languages, and so on. I am particularly fond of Scheme, Self, Smalltalk, Javascript, Prolog, Ruby, Clojure and Erlang. If you want to read some of my musings, see this [essay on why I do research on programming languages.]({% post_url 2011-01-23-why-programming-languages %})
+
+I've been inspired the most by the following language designers:
+
+  * Mark Miller, creator of E, for showing that security and modularity are two sides of the same coin.
+  * Rich Hickey, creator of Clojure, for clearly articulating the differences between state and identity.
+  * Doug Crockford, discoverer of JSON, for showing that less can be a lot more.
+  * Dave Ungar and Randy Smith, creators of Self, for stressing the power of simplicity.
+  * Alan Kay, creator of Smalltalk, for stressing uniformity.
+  * Rob Pike, creator of Limbo, Plan 9 and Go, for reminding me of the power of CSP-style concurrency.
+  * Joe Armstrong, creator of Erlang, for showing that actors can be damned practical for building robust software.
+
+One of the best talks on the history of computing I came across is a talk by Doug Crockford titled [The Early Years](http://developer.yahoo.com/yui/theater/video.php?v=crockonjs-1) where he describes the major influences on Javascript. A more whimsical treatment of the history of programming languages is Guy Steele and Richard Gabriel's anniversary talk [50 in 50](http://blip.tv/file/1472720).
+
+<div style="text-align: center; margin-left: auto; margin-right: auto;">
+<img alt="lambda" src="/assets/lambda.gif"/>
+<strong>Power to the lambda!</strong>
+</div>
+
+<div style="text-align:justify;font-size:0.8em; margin: 10px;">
+  In its semantic structure Scheme is as closely akin to Algol 60 as to early Lisps. Algol 60, never to be an active language again, lives on in the genes of Scheme and Pascal. It would be difficult to find two languages that are the communicating coin of two more different cultures than those gathered around these two languages. Pascal is for building pyramids -- imposing, breathtaking, static structures built by armies pushing heavy blocks into place. Lisp is for building organisms -- imposing, breathtaking, dynamic structures built by squads fitting fluctuating myriads of simpler organisms into place. The organizing principles used are the same in both cases, except for one extraordinarily important difference: The discretionary exportable functionality entrusted to the individual Lisp programmer is more than an order of magnitude greater than that to be found within Pascal enterprises. Lisp programs inflate libraries with functions whose utility transcends the application that produced them. The list, Lisp's native data structure, is largely responsible for such growth of utility. The simple structure and natural applicability of lists are reflected in functions that are amazingly nonidiosyncratic. In Pascal the plethora of declarable data structures induces a specialization within functions that inhibits and penalizes casual cooperation. It is better to have 100 functions operate on one data structure than to have 10 functions operate on 10 data structures. As a result the pyramid must stand unchanged for a millennium; the organism must evolve or perish.
+</div>
+
+<div style="text-align:right">- Alan Perlis, from the foreword of the book Structure and Interpretation of Computer Programs by Abelson and Sussman.</div>
