@@ -2,40 +2,42 @@
 layout: default
 ---
 
+<div class="post-list">
 {% for post in paginator.posts %}
-<div class="article">
-    <div class="well">
-        <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d, %Y" }} - {{ post.title }}</a></h1>
-        {% if site.comments == true and post.comments == true and site.disqus != '' %}
-          <p class="author"><a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread">Comments</a></p>
-        {% endif %}
-        <div class="content">
+    <article class="post-preview">
+        <p class="post-date kicker">{{ post.date | date: "%B %-d, %Y" }}</p>
+        <h2 class="post-preview-title"><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h2>
+        <div class="post-excerpt prose">
             {{ post.excerpt }}
-            {% capture content_words %} 
-              {{ post.content | number_of_words }} 
-            {% endcapture %} 
-            {% capture excerpt_words %} 
-              {{ post.excerpt | number_of_words }} 
-            {% endcapture %} 
-            {% if excerpt_words != content_words %}
-            <p><a class="btn btn-sm btn-primary" href="{{ post.url }}" role="button">Read more</a>
-            </p>
-            {% endif %}
         </div>
-    </div>
-</div>
+        {% capture content_words %}
+          {{ post.content | number_of_words }}
+        {% endcapture %}
+        {% capture excerpt_words %}
+          {{ post.excerpt | number_of_words }}
+        {% endcapture %}
+        <p class="post-preview-links">
+        {% if excerpt_words != content_words %}
+            <a class="read-more" href="{{ site.baseurl }}{{ post.url }}">Read more &rarr;</a>
+        {% endif %}
+        {% if site.comments == true and post.comments == true and site.disqus != '' %}
+            <a class="comments-link" href="{{ site.baseurl }}{{ post.url }}/#disqus_thread">Comments</a>
+        {% endif %}
+        </p>
+    </article>
 {% endfor %}
+</div>
 
-<div class="pagination">
+<nav class="pagination" aria-label="Pagination">
   {% if paginator.previous_page %}
       {% if paginator.previous_page == 1 %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">Newer</a>
+        <a class="pagination-link newer" href="{{ site.baseurl }}/index.html">&larr; Newer</a>
       {% else %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.previous_page }}" class="previous">Newer</a>
+        <a class="pagination-link newer" href="{{ site.baseurl }}/page{{ paginator.previous_page }}">&larr; Newer</a>
       {% endif %}
-  {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% else %}<span></span>{% endif %}
+  <span class="page_number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
   {% if paginator.next_page %}
-    <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">Older</a>
-  {% endif %}
-</div>
+    <a class="pagination-link older" href="{{ site.baseurl }}/page{{ paginator.next_page }}">Older &rarr;</a>
+  {% else %}<span></span>{% endif %}
+</nav>

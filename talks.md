@@ -8,18 +8,19 @@ permalink: /talks/
 
 I regularly speak at developer conferences, academic conferences, meetups and universities. Below is a list of my keynotes, conference talks, seminars and lectures, with link to slides (and recordings where available).
 
-<table class="table table-hover">
+<div class="table-scroll">
+<table class="data-table talk-table">
 
 <colgroup>
-<col width="8%" />
-<col width="8%" />
-<col width="60%" />
-<col width="15%" />
-<col width="9%" />
+<col class="col-date" />
+<col class="col-type" />
+<col class="col-title" />
+<col class="col-venue" />
+<col class="col-place" />
 </colgroup>
 
 <thead>
-<tr class="header">
+<tr>
 <th>Date</th>
 <th>Type</th>
 <th>Title</th>
@@ -29,33 +30,30 @@ I regularly speak at developer conferences, academic conferences, meetups and un
 </thead>
 <tbody>
 {% for year in site.data.talks %}
-<tr class="info">
-  <td markdown="span">**{{year.year}}**</td>
-  <td markdown="span"></td>
-  <td markdown="span"></td>
-  <td markdown="span"></td>
-  <td markdown="span"></td>
-</tr>
+<tr class="year-row"><td colspan="5"><span class="year-band">{{year.year}}</span></td></tr>
 {% for talk in year.talks %}
   <tr>
-    <td markdown="span">{{talk.date}}</td>
-    <td markdown="span">{{talk.type}}</td>
-    <td markdown="span">{{talk.title}}<br>
-    {%- if talk.slides_path -%}<a class="btn btn-info btn-xs" target="_blank" href="{{site.asseturl}}/{{talk.slides_path}}">slides</a>
+    <td class="cell-date" markdown="span">{{talk.date}}</td>
+    <td class="cell-type" markdown="span">{{talk.type}}</td>
+    <td class="cell-title"><span class="work-title" markdown="span">{{talk.title}}</span>
+    <span class="row-links">
+    {%- if talk.slides_path -%}<a class="action-link" target="_blank" href="{{site.asseturl}}/{{talk.slides_path}}">slides</a>
     {% endif %}
-    {%- if talk.relative_slides_path -%}<a class="btn btn-info btn-xs" target="_blank" href="{{talk.relative_slides_path | relative_url }}">slides</a>
+    {%- if talk.relative_slides_path -%}<a class="action-link" target="_blank" href="{{talk.relative_slides_path | relative_url }}">slides</a>
     {% endif %}
-    {%- if talk.video_url -%}<a class="btn btn-warning btn-xs" target="_blank" href="{{ talk.video_url }}">video recording</a>
+    {%- if talk.video_url -%}<a class="action-link" target="_blank" href="{{ talk.video_url }}">video recording</a>
     {% endif %}
-    {%- for tag in talk.tags -%}<span class="btn btn-default btn-xs disabled">{{tag}}</span> {% endfor %}
+    {%- for tag in talk.tags -%}<span class="tag-chip">{{tag}}</span> {% endfor %}
+    </span>
     </td>
-    <td markdown="span">{{talk.venue}}</td>
-    <td markdown="span">{{talk.place}}<br><span title="{{talk.country}}" class="flag-icon flag-icon-{{talk.country | downcase}} flag-icon-squared"></span></td>
+    <td class="cell-venue" markdown="span">{{talk.venue}}</td>
+    <td class="cell-place" markdown="span">{{talk.place}} <span title="{{talk.country}}" class="flag-icon flag-icon-{{talk.country | downcase}} flag-icon-squared"></span></td>
   </tr>
 {% endfor %}
 {% endfor %}
 </tbody>
 </table>
+</div>
 
 ## 2011
 

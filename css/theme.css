@@ -1,63 +1,1061 @@
+/* ==========================================================================
+   "Warm Academic" theme — tvcutsem.github.io
+   Warm paper background, near-black ink, one deep-teal accent.
+   Headings/UI: Source Sans 3 — Body: Source Serif 4.
+   No frameworks; plain modern CSS.
+   ========================================================================== */
+
+:root {
+    --paper: #faf9f6;
+    --ink: #23211d;
+    --ink-soft: #57534a;
+    --meta: #8a857c;
+    --accent: #0f766e;
+    --accent-dark: #0b5c56;
+    --accent-faint: rgba(15, 118, 110, 0.35);
+    --hairline: #e7e2d7;
+    --hairline-strong: #d8d2c3;
+    --plate-bg: #ffffff;
+    --code-bg: #2b2926;
+    --code-ink: #ded7c9;
+    --inline-code-bg: #f1eee6;
+
+    --sans: "Source Sans 3", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Helvetica, Arial, sans-serif;
+    --serif: "Source Serif 4", Georgia, "Iowan Old Style", "Times New Roman",
+        serif;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas,
+        "Liberation Mono", monospace;
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
 body {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--serif);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
 }
 
-.copyright {
-    color: #ffffff;
+a {
+    color: var(--accent);
+    text-decoration: none;
 }
 
-.footer {
-    text-align: center;
-    font-size: 0.8em;
+a:hover {
+    color: var(--accent-dark);
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
 }
 
-.footer a {
-    color: #727272;
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }
 
-.sidebar h1 {
-    color: #ee4444;
-    font-size: 1.3em;
+::selection {
+    background: rgba(15, 118, 110, 0.18);
 }
 
-.sidebar a {
-    color: #428bca;
+/* Small teal small-caps label used for dates, section markers, etc. */
+.kicker {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--accent);
 }
 
-.sidebar li {
-    margin-top: .7em;
-    line-height: 1em;
+/* --------------------------------------------------------------------------
+   Page frame
+   -------------------------------------------------------------------------- */
+
+.site-wrap {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 0 1.25rem;
 }
 
-.sidebar a:hover {
-    color: #3071a9;
+.layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 15.5rem;
+    column-gap: 3.25rem;
+    align-items: start;
+    padding: 2.75rem 0 4.5rem;
 }
 
-.container-left {
+.content {
+    max-width: 46rem;
+    min-width: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Header + navigation (no JS; checkbox hamburger on small screens)
+   -------------------------------------------------------------------------- */
+
+.site-header {
+    background: var(--paper);
+    border-bottom: 1px solid var(--hairline);
+}
+
+.site-header-inner {
+    max-width: 72rem;
+    margin: 0 auto;
+    padding: 1.1rem 1.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 0.5rem 1.5rem;
+    font-family: var(--sans);
+}
+
+.site-brand {
+    color: var(--ink);
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+    white-space: nowrap;
+}
+
+.site-brand:hover {
+    text-decoration: none;
+    color: var(--ink);
+}
+
+.site-brand strong {
+    font-size: 1.2rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+}
+
+.site-brand:hover strong {
+    color: var(--accent);
+}
+
+.site-brand-sub {
+    font-size: 0.85rem;
+    color: var(--meta);
+    font-weight: 400;
+}
+
+.site-nav {
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.15rem 1.35rem;
+    align-items: baseline;
+}
+
+.site-nav a {
+    font-size: 0.92rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    padding: 0.15rem 0;
+}
+
+.site-nav a:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.site-nav a[aria-current="page"] {
+    color: var(--accent);
+    box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.nav-toggle {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    align-self: center;
+    margin-left: auto;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    padding: 0.4rem 0;
+    cursor: pointer;
+}
+
+.nav-toggle-label span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--ink);
+    border-radius: 1px;
+}
+
+.nav-mobile-only {
+    display: none;
+}
+
+/* --------------------------------------------------------------------------
+   Sidebar — quiet column behind a hairline rule
+   -------------------------------------------------------------------------- */
+
+.sidebar {
+    border-left: 1px solid var(--hairline);
+    padding-left: 2rem;
+    font-family: var(--sans);
+}
+
+.sidebar-section {
+    margin-bottom: 2.75rem;
+}
+
+.sidebar-section h1 {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 650;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 0.9rem;
+}
+
+.sidebar-section ul {
+    list-style: none;
+    margin: 0 0 1.75rem;
+    padding: 0;
+}
+
+.sidebar-section ul:last-child {
+    margin-bottom: 0;
+}
+
+.sidebar-section li {
+    margin: 0 0 0.6rem;
+    font-size: 0.92rem;
+    line-height: 1.45;
+}
+
+.sidebar-section li p {
     margin: 0;
 }
 
-.well h1 {
-    color: #727272;
-    font-size: 1.3em;
+.sidebar-section a {
+    color: var(--ink);
 }
 
-.author {
-    color: #727272;
+.sidebar-section a:hover {
+    color: var(--accent);
 }
 
-.author a {
-    color: #727272;
+.sidebar bsky-embed {
+    display: block;
+    font-size: 0.85rem;
 }
 
-blockquote {
-    color: gray;
-    border-left: 4px solid gray;
-    font-size: 1em;
+/* The standalone /links.html page (mobile fallback for the sidebar) */
+.links-page {
+    font-family: var(--sans);
+}
+
+/* --------------------------------------------------------------------------
+   Home page — post previews + pagination
+   -------------------------------------------------------------------------- */
+
+.post-preview {
+    padding: 0 0 2.75rem;
+}
+
+.post-preview + .post-preview {
+    border-top: 1px solid var(--hairline);
+    padding-top: 2.5rem;
+}
+
+.post-date {
+    margin: 0 0 0.4rem;
+}
+
+.post-preview-title {
+    font-family: var(--sans);
+    font-size: 1.5rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    line-height: 1.25;
+    margin: 0 0 0.9rem;
+}
+
+.post-preview-title a {
+    color: var(--ink);
+}
+
+.post-preview-title a:hover {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.post-preview-links {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    margin: 0.75rem 0 0;
+    display: flex;
+    gap: 1.5rem;
+    align-items: baseline;
+}
+
+.read-more {
+    font-weight: 600;
+}
+
+.read-more:hover {
+    text-decoration: none;
+    color: var(--accent-dark);
+}
+
+.comments-link {
+    color: var(--meta);
+    font-size: 0.85rem;
+}
+
+.comments-link:hover {
+    color: var(--accent);
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 1rem;
+    border-top: 1px solid var(--hairline);
+    padding-top: 1.5rem;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+}
+
+.pagination-link {
+    font-weight: 600;
+}
+
+.page_number {
+    color: var(--meta);
+    font-size: 0.82rem;
+}
+
+/* --------------------------------------------------------------------------
+   Post page
+   -------------------------------------------------------------------------- */
+
+.post-header {
+    margin-bottom: 2.25rem;
+}
+
+.post-header::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: var(--accent);
+    margin-top: 1.4rem;
+}
+
+.post-title {
+    font-family: var(--sans);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.post-meta {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    color: var(--meta);
+    margin: 0.6rem 0 0;
+}
+
+.post-meta a {
+    color: var(--meta);
+}
+
+.post-meta a:hover {
+    color: var(--accent);
+}
+
+.post-footer {
+    margin-top: 2.75rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--sans);
+}
+
+.post-tags-label {
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--meta);
+    margin-right: 0.35rem;
+}
+
+/* Prev/next navigation */
+.post-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 3rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--hairline);
+}
+
+.post-nav-link {
+    max-width: 47%;
+}
+
+.post-nav-link:hover {
+    text-decoration: none;
+}
+
+.post-nav-link.older {
+    margin-left: auto;
+    text-align: right;
+}
+
+.post-nav-title {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.35;
+    margin-top: 0.3rem;
+}
+
+.post-nav-link:hover .post-nav-title {
+    color: var(--accent);
+}
+
+/* Disqus */
+#disqus_thread {
+    margin-top: 3rem;
+    border-top: 1px solid var(--hairline);
+    padding-top: 2rem;
+}
+
+.dsq-brlink {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    color: var(--meta);
+}
+
+/* --------------------------------------------------------------------------
+   Prose — long-form reading styles (posts and pages)
+   -------------------------------------------------------------------------- */
+
+.prose {
+    font-family: var(--serif);
+}
+
+.prose p {
+    margin: 0 0 1.3em;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+    font-family: var(--sans);
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    margin: 2.1em 0 0.7em;
+}
+
+.prose h1 {
+    font-size: 1.75rem;
+    margin-top: 0.5em;
+}
+
+.prose h2 {
+    font-size: 1.4rem;
+}
+
+.prose h3 {
+    font-size: 1.15rem;
+}
+
+.prose h4,
+.prose h5,
+.prose h6 {
+    font-size: 1rem;
+}
+
+.prose ul,
+.prose ol {
+    margin: 0 0 1.3em;
+    padding-left: 1.5em;
+}
+
+.prose li {
+    margin-bottom: 0.4em;
+}
+
+.prose li > p {
+    margin-bottom: 0.5em;
+}
+
+.prose blockquote {
+    margin: 1.6em 0;
+    padding: 0.1em 0 0.1em 1.35em;
+    border-left: 2px solid var(--accent-faint);
     font-style: italic;
+    color: var(--ink-soft);
 }
 
-.post-tags {
-  font-size: 0.8em;
+.prose blockquote p:last-child {
+    margin-bottom: 0;
+}
+
+.prose hr {
+    border: none;
+    border-top: 1px solid var(--hairline);
+    margin: 2.75em 0;
+}
+
+.prose sub {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    line-height: 1.5;
+    color: var(--meta);
+    vertical-align: baseline;
+    display: inline-block;
+    margin: 0.35rem 0 1rem;
+}
+
+.prose iframe {
+    max-width: 100%;
+    border: 0;
+    margin: 1.25em 0;
+}
+
+/* Legacy <center> blocks in older posts must keep centering */
+center {
+    display: block;
+    text-align: center;
+    margin: 1.6em 0;
+}
+
+/* Figures: "plate" treatment so white-background images sit cleanly on the
+   warm paper. width="NN%" attributes keep working via border-box sizing. */
+.prose img {
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    background: var(--plate-bg);
+    padding: 0.5rem;
+    border: 1px solid var(--hairline-strong);
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(35, 33, 29, 0.07);
+}
+
+/* Prose tables (used by a few older posts) */
+.prose table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--sans);
+    font-size: 0.92rem;
+    line-height: 1.5;
+    margin: 1.6em 0;
+}
+
+.prose th {
+    text-align: left;
+    font-weight: 650;
+    padding: 0.45em 0.9em 0.45em 0;
+    border-bottom: 1px solid var(--hairline-strong);
+}
+
+.prose td {
+    padding: 0.45em 0.9em 0.45em 0;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+}
+
+/* --------------------------------------------------------------------------
+   Code — deep warm dark blocks; quiet warm-light inline code
+   (token colors live in css/github.css)
+   -------------------------------------------------------------------------- */
+
+code {
+    font-family: var(--mono);
+    font-size: 0.85em;
+    background: var(--inline-code-bg);
+    border: 1px solid var(--hairline);
+    border-radius: 4px;
+    padding: 0.08em 0.35em;
+    color: var(--ink);
+}
+
+pre {
+    background: var(--code-bg);
+    color: var(--code-ink);
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    padding: 1.1rem 1.3rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(35, 33, 29, 0.13);
+    overflow-x: auto;
+    margin: 1.6em 0;
+}
+
+pre code {
+    background: none;
+    border: none;
+    padding: 0;
+    font-size: 1em;
+    color: inherit;
+}
+
+/* Rouge wrappers: kramdown fenced blocks and {% highlight %} figures */
+div.highlighter-rouge,
+figure.highlight {
+    margin: 1.6em 0;
+}
+
+div.highlighter-rouge pre,
+figure.highlight pre {
+    margin: 0;
+}
+
+.highlight {
+    background: transparent;
+}
+
+/* --------------------------------------------------------------------------
+   Tag chips — hairline outline, no fill
+   -------------------------------------------------------------------------- */
+
+.tag-chip {
+    display: inline-block;
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+    color: var(--ink-soft);
+    border: 1px solid var(--hairline-strong);
+    border-radius: 999px;
+    padding: 0.1em 0.7em;
+    white-space: nowrap;
+}
+
+a.tag-chip {
+    color: var(--ink-soft);
+}
+
+a.tag-chip:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   Year bands — teal small-caps section markers
+   -------------------------------------------------------------------------- */
+
+.year-band {
+    font-family: var(--sans);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: var(--accent);
+}
+
+/* --------------------------------------------------------------------------
+   Archive
+   -------------------------------------------------------------------------- */
+
+.archive-header {
+    margin-bottom: 2rem;
+}
+
+.archive-title {
+    font-family: var(--sans);
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    margin: 0 0 0.4rem;
+}
+
+.archive-jump {
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    color: var(--meta);
+    margin: 0;
+}
+
+h2.year-band {
+    margin: 2.5rem 0 0.9rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--hairline);
+}
+
+.archive-by-date h2.year-band:first-of-type {
+    border-top: none;
+    padding-top: 0.25rem;
+    margin-top: 1.5rem;
+}
+
+.archive-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.archive-list li {
+    display: grid;
+    grid-template-columns: 5rem minmax(0, 1fr);
+    column-gap: 1.25rem;
+    align-items: baseline;
+    padding: 0.32rem 0;
+}
+
+.archive-date {
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: var(--meta);
+    white-space: nowrap;
+}
+
+.archive-list a {
+    color: var(--ink);
+}
+
+.archive-list a:hover {
+    color: var(--accent);
+}
+
+.archive-section-title {
+    font-family: var(--sans);
+    font-size: 1.35rem;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+    margin: 3.5rem 0 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--hairline);
+}
+
+.tag-index {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 0 0 2.25rem;
+    padding: 0;
+}
+
+.tag-heading {
+    font-family: var(--sans);
+    font-size: 1rem;
+    font-weight: 650;
+    color: var(--ink);
+    margin: 2.25rem 0 0.5rem;
+    scroll-margin-top: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Publications & Talks — stripped data tables with year bands
+   -------------------------------------------------------------------------- */
+
+.table-scroll {
+    overflow-x: auto;
+    margin: 2rem 0;
+}
+
+.data-table {
+    width: 100%;
+    min-width: 44rem;
+    border-collapse: collapse;
+    font-family: var(--sans);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.data-table th {
+    text-align: left;
+    font-size: 0.72rem;
+    font-weight: 650;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--meta);
+    padding: 0.4rem 1.1rem 0.55rem 0;
+    border-bottom: 1px solid var(--hairline-strong);
+}
+
+.data-table td {
+    padding: 0.85rem 1.1rem 0.85rem 0;
+    border-bottom: 1px solid var(--hairline);
+    vertical-align: top;
+}
+
+.data-table th:last-child,
+.data-table td:last-child {
+    padding-right: 0;
+}
+
+.data-table tr.year-row td {
+    padding: 1.9rem 0 0.35rem;
+    border-bottom: 1px solid var(--accent-faint);
+}
+
+.data-table .cell-date,
+.data-table .cell-type {
+    font-size: 0.82rem;
+    color: var(--meta);
+}
+
+.data-table .work-title {
+    font-weight: 600;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 0.1rem;
+}
+
+.data-table .row-links {
+    display: block;
+    margin-top: 0.35rem;
+}
+
+.data-table .row-links .tag-chip {
+    margin: 0 0.3rem 0.25rem 0;
+    font-size: 0.7rem;
+    color: var(--meta);
+}
+
+.data-table .cell-venue,
+.data-table .cell-place {
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+.data-table .cell-place .flag-icon {
+    margin-left: 0.15rem;
+    vertical-align: -0.1em;
+    border-radius: 2px;
+}
+
+.author-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 0.85rem;
+    color: var(--ink-soft);
+}
+
+.author-list li {
+    margin: 0 0 0.15rem;
+}
+
+.author-list strong {
+    color: var(--ink);
+    font-weight: 650;
+}
+
+/* Small quiet action links: author copy / publisher / slides / video */
+.action-link {
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-right: 0.85rem;
+    white-space: nowrap;
+}
+
+.action-link:hover {
+    color: var(--accent-dark);
+}
+
+/* Column widths */
+.pub-table .col-type {
+    width: 13%;
+}
+
+.pub-table .col-authors {
+    width: 22%;
+}
+
+.pub-table .col-title {
+    width: 47%;
+}
+
+.pub-table .col-venue {
+    width: 18%;
+}
+
+.talk-table .col-date {
+    width: 11%;
+}
+
+.talk-table .col-type {
+    width: 11%;
+}
+
+.talk-table .col-title {
+    width: 52%;
+}
+
+.talk-table .col-venue {
+    width: 16%;
+}
+
+.talk-table .col-place {
+    width: 10%;
+}
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+.site-footer {
+    border-top: 1px solid var(--hairline);
+    padding: 1.6rem 0 2.5rem;
+    font-family: var(--sans);
+    font-size: 0.82rem;
+    color: var(--meta);
+    text-align: center;
+}
+
+.site-footer p {
+    margin: 0 0 0.35rem;
+}
+
+.site-footer a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 0.15em;
+    text-decoration-color: var(--hairline-strong);
+}
+
+.site-footer a:hover {
+    color: var(--accent);
+    text-decoration-color: var(--accent);
+}
+
+.colophon {
+    font-size: 0.76rem;
+}
+
+/* --------------------------------------------------------------------------
+   Responsive
+   -------------------------------------------------------------------------- */
+
+@media (max-width: 900px) {
+    .layout {
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 2rem;
+    }
+
+    .content {
+        max-width: none;
+    }
+
+    /* Sidebar stacks below the content as a quiet appendix */
+    .sidebar {
+        border-left: none;
+        border-top: 1px solid var(--hairline);
+        margin-top: 3rem;
+        padding: 2.25rem 0 0;
+    }
+}
+
+@media (max-width: 700px) {
+    .nav-toggle-label {
+        display: flex;
+    }
+
+    .site-nav {
+        display: none;
+        flex-basis: 100%;
+        flex-direction: column;
+        gap: 0;
+        border-top: 1px solid var(--hairline);
+        margin-top: 0.75rem;
+        padding-top: 0.5rem;
+    }
+
+    .nav-toggle:checked ~ .site-nav {
+        display: flex;
+    }
+
+    .site-nav a {
+        padding: 0.5rem 0;
+        font-size: 1rem;
+    }
+
+    .site-nav a[aria-current="page"] {
+        box-shadow: none;
+    }
+
+    .nav-mobile-only {
+        display: block;
+    }
+
+    .site-brand-sub {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .post-title {
+        font-size: 1.55rem;
+    }
+
+    .post-preview-title {
+        font-size: 1.3rem;
+    }
+
+    .archive-list li {
+        grid-template-columns: 4.25rem minmax(0, 1fr);
+        column-gap: 0.9rem;
+    }
+
+    .post-nav {
+        flex-direction: column;
+        gap: 1.25rem;
+    }
+
+    .post-nav-link,
+    .post-nav-link.older {
+        max-width: none;
+        margin-left: 0;
+        text-align: left;
+    }
+
+    pre {
+        border-radius: 6px;
+        padding: 0.9rem 1rem;
+    }
 }

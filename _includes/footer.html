@@ -1,18 +1,13 @@
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span12 footer navbar-inverse navbar-fixed-bottom">
-            <p class="copyright">&copy;{{ site.time | date: '%Y' }} {{ site.author }} |
-              {% if site.github != '' %}
-                <a href="https://github.com/{{ site.github }}">View source</a>
-              {% endif %}
-                    | <a href="{{ site.baseurl }}/feed.xml">RSS</a> | 
-
-               <a href="http://jekyllrb.com">Jekyll</a> theme by <a href="https://github.com/scotte/jekyll-clean">Scott Emmons</a>
-            under
-            <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
-        </div>
+<footer class="site-footer">
+    <div class="site-wrap">
+        <p class="copyright">&copy;{{ site.time | date: '%Y' }} {{ site.author }}
+          {% if site.github != '' %}
+            &middot; <a href="https://github.com/{{ site.github }}">View source</a>
+          {% endif %}
+          &middot; <a href="{{ site.baseurl }}/feed.xml">RSS</a></p>
+        <p class="colophon">Built with <a href="http://jekyllrb.com">Jekyll</a>, based on the <a href="https://github.com/scotte/jekyll-clean">Jekyll Clean</a> theme by Scott Emmons under <a href="http://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a></p>
     </div>
-</div>
+</footer>
 
 {% include disqus-counts.html %}
 {% include analytics.html %}

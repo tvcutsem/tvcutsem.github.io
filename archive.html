@@ -1,32 +1,35 @@
 ---
 layout: default
 ---
-<p>Posts indexed <a href="#bydate">by date</a> | <a href="#bytag">by tag</a>
-  
-<a name="bydate"></a>
-<div class="well">
-<h3>By Date</h3>
-{%for post in site.posts %}
-    {% unless post.next %}
-        <h1>{{ post.date | date: '%Y' }}</h1>
-        <ul>
-    {% else %}
-        {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-        {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-        {% if year != nyear %}
-            </ul>
-            <h1>{{ post.date | date: '%Y' }}</h1>
-            <ul>
-        {% endif %}
-    {% endunless %}
-    <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%b %-d" }} - {{ post.title }}</a></li>
+
+<div class="archive">
+
+<header class="archive-header">
+  <h1 class="archive-title">Archive</h1>
+  <p class="archive-jump">Posts indexed <a href="#bydate">by date</a> &middot; <a href="#bytag">by tag</a></p>
+</header>
+
+<section id="bydate" class="archive-by-date">
+{% assign prev_year = '' %}
+{% for post in site.posts %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if year != prev_year %}
+    {% unless prev_year == '' %}</ul>{% endunless %}
+    <h2 class="year-band">{{ year }}</h2>
+    <ul class="archive-list">
+    {% assign prev_year = year %}
+  {% endif %}
+    <li>
+      <span class="archive-date">{{ post.date | date: "%b %-d" }}</span>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
 {% endfor %}
 </ul>
-</div>
+</section>
 
-<a name="bytag"></a>
-<div class="well">
-<h3>By Tag</h3>
+<section id="bytag" class="archive-by-tag">
+<h2 class="archive-section-title">By tag</h2>
+
 {% capture tags %}
   {% for tag in site.tags %}
     {{ tag[0] }},
@@ -34,12 +37,23 @@ layout: default
 {% endcapture %}
 {% assign sortedtags = tags | strip_newlines | remove: ' ' | split:',' | sort %}
 
+<ul class="tag-index">
 {% for tag in sortedtags %}
-  <h1 id="{{ tag }}">{{ tag }}</h1>
-  <ul>
+  <li><a class="tag-chip" href="#tag-{{ tag | slugify }}">{{ tag }}</a></li>
+{% endfor %}
+</ul>
+
+{% for tag in sortedtags %}
+  <h3 class="tag-heading" id="tag-{{ tag | slugify }}">{{ tag }}</h3>
+  <ul class="archive-list">
   {% for post in site.tags[tag] %}
-    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+    <li>
+      <span class="archive-date">{{ post.date | date: "%b %Y" }}</span>
+      <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+    </li>
   {% endfor %}
   </ul>
 {% endfor %}
+</section>
+
 </div>

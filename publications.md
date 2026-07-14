@@ -13,19 +13,18 @@ Below is a selection of my scientific publications. For a complete list, see:
 *   My [ACM Portal](http://portal.acm.org/author_page.cfm?id=81100203786) author page.
 *   My [ResearchGate](https://www.researchgate.net/profile/Tom_Van_Cutsem) profile (not maintained).
 
-<table class="table table-hover">
+<div class="table-scroll">
+<table class="data-table pub-table">
 
 <colgroup>
-<col width="6%" />
-<col width="8%" />
-<col width="18%" />
-<col width="55%" />
-<col width="13%" />
+<col class="col-type" />
+<col class="col-authors" />
+<col class="col-title" />
+<col class="col-venue" />
 </colgroup>
 
 <thead>
-<tr class="header">
-<th>Date</th>
+<tr>
 <th>Type</th>
 <th>Authors</th>
 <th>Title</th>
@@ -33,14 +32,19 @@ Below is a selection of my scientific publications. For a complete list, see:
 </tr>
 </thead>
 <tbody>
+{% assign prev_year = '' %}
 {% for pub in site.data.pubs %}
+  {% capture pub_year %}{{ pub.date }}{% endcapture %}
+  {% if pub_year != prev_year %}
+  <tr class="year-row"><td colspan="4"><span class="year-band">{{ pub_year }}</span></td></tr>
+  {% assign prev_year = pub_year %}
+  {% endif %}
   <tr>
-    <td markdown="span">{{pub.date}}</td>
-    <td markdown="span">{{pub.type}}</td>
-    <td>
-      <ul class="list-unstyled">      
+    <td class="cell-type" markdown="span">{{pub.type}}</td>
+    <td class="cell-authors">
+      <ul class="author-list">
       {%- for author in pub.authors -%}
-      <li>      
+      <li>
       {%- if author == 'Tom Van Cutsem' %}<strong>{{author}}</strong>
       {%- else %}{{ author }}
       {%- endif %}
@@ -48,15 +52,18 @@ Below is a selection of my scientific publications. For a complete list, see:
       {% endfor %}
       </ul>
     </td>
-    <td markdown="span">{{pub.title}}<br>
-    {% if pub.path %}<a class="btn btn-info btn-xs" target="_blank" href="{{site.asseturl}}/{{pub.path}}">author copy</a>{% endif %}
-    {%- if pub.url %}<a class="btn btn-info btn-xs" target="_blank" href="{{pub.url}}">author copy</a>{% endif %}
-    {% if pub.publisher_link %}<a class="btn btn-warning btn-xs" target="_blank" href="{{ pub.publisher_link }}">publisher link</a>{% endif %}
-    {%- if pub.slides_path %}<a class="btn btn-warning btn-xs" target="_blank" href="{{site.asseturl}}/{{ pub.slides_path }}">talk slides</a>{% endif %}
-    {% for tag in pub.tags -%}<span class="btn btn-default btn-xs disabled">{{tag}}</span> {% endfor %}
+    <td class="cell-title"><span class="work-title" markdown="span">{{pub.title}}</span>
+    <span class="row-links">
+    {% if pub.path %}<a class="action-link" target="_blank" href="{{site.asseturl}}/{{pub.path}}">author copy</a>{% endif %}
+    {%- if pub.url %}<a class="action-link" target="_blank" href="{{pub.url}}">author copy</a>{% endif %}
+    {% if pub.publisher_link %}<a class="action-link" target="_blank" href="{{ pub.publisher_link }}">publisher link</a>{% endif %}
+    {%- if pub.slides_path %}<a class="action-link" target="_blank" href="{{site.asseturl}}/{{ pub.slides_path }}">talk slides</a>{% endif %}
+    {% for tag in pub.tags -%}<span class="tag-chip">{{tag}}</span> {% endfor %}
+    </span>
     </td>
-    <td markdown="span">{{pub.venue}}</td>
+    <td class="cell-venue" markdown="span">{{pub.venue}}</td>
   </tr>
 {% endfor %}
 </tbody>
 </table>
+</div>
