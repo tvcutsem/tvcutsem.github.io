@@ -645,7 +645,8 @@ figure.highlight pre {
     margin: 0;
 }
 
-.highlight {
+/* wrapper div only — pre.highlight (fenced blocks) must keep the dark bg */
+div.highlight {
     background: transparent;
 }
 
