@@ -8,52 +8,32 @@ permalink: /talks/
 
 I regularly speak at developer conferences, academic conferences, meetups and universities. Below is a list of my keynotes, conference talks, seminars and lectures, with link to slides (and recordings where available).
 
-<div class="table-scroll">
-<table class="data-table talk-table">
-
-<colgroup>
-<col class="col-date" />
-<col class="col-type" />
-<col class="col-title" />
-<col class="col-venue" />
-<col class="col-place" />
-</colgroup>
-
-<thead>
-<tr>
-<th>Date</th>
-<th>Type</th>
-<th>Title</th>
-<th>Venue</th>
-<th>Place</th>
-</tr>
-</thead>
-<tbody>
 {% for year in site.data.talks %}
-<tr class="year-row"><td colspan="5"><span class="year-band">{{year.year}}</span></td></tr>
+<h2 class="ref-year" id="talks-{{ year.year }}">{{ year.year }}</h2>
+<ul class="ref-list">
 {% for talk in year.talks %}
-  <tr>
-    <td class="cell-date" markdown="span">{{talk.date}}</td>
-    <td class="cell-type" markdown="span">{{talk.type}}</td>
-    <td class="cell-title"><span class="work-title" markdown="span">{{talk.title}}</span>
-    <span class="row-links">
-    {%- if talk.slides_path -%}<a class="action-link" target="_blank" href="{{site.asseturl}}/{{talk.slides_path}}">slides</a>
-    {% endif %}
-    {%- if talk.relative_slides_path -%}<a class="action-link" target="_blank" href="{{talk.relative_slides_path | relative_url }}">slides</a>
-    {% endif %}
-    {%- if talk.video_url -%}<a class="action-link" target="_blank" href="{{ talk.video_url }}">video recording</a>
-    {% endif %}
-    {%- for tag in talk.tags -%}<span class="tag-chip">{{tag}}</span> {% endfor %}
-    </span>
-    </td>
-    <td class="cell-venue" markdown="span">{{talk.venue}}</td>
-    <td class="cell-place" markdown="span">{{talk.place}} <span title="{{talk.country}}" class="flag-icon flag-icon-{{talk.country | downcase}} flag-icon-squared"></span></td>
-  </tr>
+<li class="ref-item">
+  <div class="ref-meta">
+    <span>{{ talk.date }}</span>
+    <span>{{ talk.type }}</span>
+  </div>
+  <div class="ref-body">
+    <span class="ref-title" markdown="span">{{ talk.title }}</span>
+    <span class="ref-venue" markdown="span">{{ talk.venue }}</span>
+    <span class="ref-place">{{ talk.place }} <span title="{{ talk.country }}" class="flag-icon flag-icon-{{ talk.country | downcase }} flag-icon-squared"></span></span>
+    <div class="ref-actions">
+      {% if talk.slides_path %}<a class="ref-link" target="_blank" href="{{ site.asseturl }}/{{ talk.slides_path }}">slides</a>{% endif %}
+      {%- if talk.relative_slides_path %}<a class="ref-link" target="_blank" href="{{ talk.relative_slides_path | relative_url }}">slides</a>{% endif %}
+      {% if talk.video_url %}<a class="ref-link" target="_blank" href="{{ talk.video_url }}">video recording</a>{% endif %}
+    </div>
+    {% if talk.tags %}<div class="ref-tags">{{ talk.tags | join: " &middot; " }}</div>{% endif %}
+  </div>
+</li>
 {% endfor %}
+</ul>
 {% endfor %}
-</tbody>
-</table>
-</div>
+
+<div class="talks-legacy" markdown="1">
 
 ## 2011
 
@@ -108,3 +88,5 @@ I regularly speak at developer conferences, academic conferences, meetups and un
 
 *   [The Io Programming Language - PROG 26 November 2004]({{site.asseturl}}/IO-tvcutsem-26-11-04.pdf)
 *   [Strong Mobility: CoDAMoS Deliverable - KULeuven 14 October 2004]({{site.asseturl}}/CoDAMoS-Mobility-14-10-04.pdf)
+
+</div>

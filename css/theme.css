@@ -783,152 +783,168 @@ h2.year-band {
 }
 
 /* --------------------------------------------------------------------------
-   Publications & Talks — stripped data tables with year bands
+   Publications & Talks — vitae-style rows grouped by year
+   (meta column on the left; title, venue, links and tags in one block)
    -------------------------------------------------------------------------- */
 
-.table-scroll {
-    overflow-x: auto;
-    margin: 2rem 0;
-}
-
-.data-table {
-    width: 100%;
-    min-width: 44rem;
-    border-collapse: collapse;
+.ref-year {
     font-family: var(--sans);
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-.data-table th {
-    text-align: left;
-    font-size: 0.72rem;
-    font-weight: 650;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: var(--meta);
-    padding: 0.4rem 1.1rem 0.55rem 0;
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    margin: 3rem 0 0;
+    padding-bottom: 0.45rem;
     border-bottom: 1px solid var(--hairline-strong);
 }
 
-.data-table td {
-    padding: 0.85rem 1.1rem 0.85rem 0;
-    border-bottom: 1px solid var(--hairline);
-    vertical-align: top;
+.ref-list {
+    list-style: none;
+    margin: 0 0 1rem;
+    padding: 0;
 }
 
-.data-table th:last-child,
-.data-table td:last-child {
-    padding-right: 0;
+.ref-item {
+    display: grid;
+    grid-template-columns: 8.5rem minmax(0, 1fr);
+    column-gap: 1.5rem;
+    padding: 1.15rem 0;
+    border-top: 1px solid var(--hairline);
 }
 
-.data-table tr.year-row td {
-    padding: 1.9rem 0 0.35rem;
-    border-bottom: 1px solid var(--accent-faint);
+.ref-list .ref-item:first-child {
+    border-top: none;
 }
 
-.data-table .cell-date,
-.data-table .cell-type {
-    font-size: 0.82rem;
-    color: var(--meta);
-}
-
-.data-table .work-title {
-    font-weight: 600;
-    color: var(--ink);
-    display: block;
-    margin-bottom: 0.1rem;
-}
-
-.data-table .row-links {
-    display: block;
-    margin-top: 0.35rem;
-}
-
-.data-table .row-links .tag-chip {
-    margin: 0 0.3rem 0.25rem 0;
+.ref-meta {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.3rem;
+    font-family: var(--sans);
     font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--meta);
+    padding-top: 0.4em;
 }
 
-.data-table .cell-venue,
-.data-table .cell-place {
-    font-size: 0.85rem;
+.ref-body {
+    min-width: 0;
+}
+
+.ref-title {
+    font-family: var(--sans);
+    font-weight: 650;
+    color: var(--ink);
+}
+
+.ref-authors {
+    display: block;
+    font-size: 0.95em;
     color: var(--ink-soft);
+    margin-top: 0.15rem;
 }
 
-.data-table .cell-place .flag-icon {
-    margin-left: 0.15rem;
+.ref-authors strong {
+    color: var(--ink);
+    font-weight: 650;
+}
+
+.ref-venue {
+    display: block;
+    font-style: italic;
+    font-size: 0.95em;
+    color: var(--ink-soft);
+    margin-top: 0.15rem;
+}
+
+.ref-place {
+    display: block;
+    font-family: var(--sans);
+    font-size: 0.82em;
+    color: var(--meta);
+    margin-top: 0.15rem;
+}
+
+.ref-place .flag-icon,
+.ref-venue .flag-icon {
+    margin-left: 0.35em;
     vertical-align: -0.1em;
     border-radius: 2px;
 }
 
-.author-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    font-size: 0.85rem;
-    color: var(--ink-soft);
+.ref-actions {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 1.1rem;
+    row-gap: 0.35rem;
+    align-items: baseline;
+    margin-top: 0.55rem;
 }
 
-.author-list li {
-    margin: 0 0 0.15rem;
+.ref-actions:empty {
+    display: none;
 }
 
-.author-list strong {
-    color: var(--ink);
-    font-weight: 650;
-}
-
-/* Small quiet action links: author copy / publisher / slides / video */
-.action-link {
+.ref-link {
     font-family: var(--sans);
     font-size: 0.78rem;
     font-weight: 600;
     color: var(--accent);
-    margin-right: 0.85rem;
     white-space: nowrap;
 }
 
-.action-link:hover {
+.ref-link::after {
+    content: "\00a0\2197"; /* ↗ */
+    font-size: 0.85em;
+}
+
+.ref-link:hover {
     color: var(--accent-dark);
 }
 
-/* Column widths */
-.pub-table .col-type {
-    width: 13%;
+/* tags on their own line, dot-separated, quiet */
+.ref-tags {
+    font-family: var(--sans);
+    font-size: 0.74rem;
+    letter-spacing: 0.05em;
+    color: var(--meta);
+    margin-top: 0.35rem;
 }
 
-.pub-table .col-authors {
-    width: 22%;
+/* legacy (pre-2012) talk lists: echo the year markers, keep the lists plain */
+.talks-legacy h2 {
+    font-family: var(--sans);
+    font-size: 1.45rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    margin: 3rem 0 0.75rem;
+    padding-bottom: 0.45rem;
+    border-bottom: 1px solid var(--hairline-strong);
 }
 
-.pub-table .col-title {
-    width: 47%;
+.talks-legacy ul {
+    padding-left: 1.2rem;
 }
 
-.pub-table .col-venue {
-    width: 18%;
+.talks-legacy li {
+    margin-bottom: 0.6rem;
 }
 
-.talk-table .col-date {
-    width: 11%;
-}
+@media (max-width: 640px) {
+    .ref-item {
+        display: block;
+    }
 
-.talk-table .col-type {
-    width: 11%;
-}
-
-.talk-table .col-title {
-    width: 52%;
-}
-
-.talk-table .col-venue {
-    width: 16%;
-}
-
-.talk-table .col-place {
-    width: 10%;
+    .ref-meta {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 0.9rem;
+        padding-top: 0;
+        margin-bottom: 0.35rem;
+    }
 }
 
 /* --------------------------------------------------------------------------
