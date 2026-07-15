@@ -13,50 +13,40 @@ Below is a selection of my scientific publications. For a complete list, see:
 *   My [ACM Portal](http://portal.acm.org/author_page.cfm?id=81100203786) author page.
 *   My [ResearchGate](https://www.researchgate.net/profile/Tom_Van_Cutsem) profile (not maintained).
 
-<table class="table table-hover">
-
-<colgroup>
-<col width="6%" />
-<col width="8%" />
-<col width="18%" />
-<col width="55%" />
-<col width="13%" />
-</colgroup>
-
-<thead>
-<tr class="header">
-<th>Date</th>
-<th>Type</th>
-<th>Authors</th>
-<th>Title</th>
-<th>Venue</th>
-</tr>
-</thead>
-<tbody>
+{% assign prev_year = "" %}
 {% for pub in site.data.pubs %}
-  <tr>
-    <td markdown="span">{{pub.date}}</td>
-    <td markdown="span">{{pub.type}}</td>
-    <td>
-      <ul class="list-unstyled">      
+{%- capture pub_year %}{{ pub.date }}{% endcapture -%}
+{%- if pub_year != prev_year -%}
+{%- unless forloop.first %}
+</ul>
+{% endunless %}
+<h2 class="ref-year" id="pub-{{ pub_year }}">{{ pub_year }}</h2>
+<ul class="ref-list">
+{%- endif %}
+<li class="ref-item">
+  <div class="ref-meta">
+    <span>{{ pub.type }}</span>
+  </div>
+  <div class="ref-body">
+    <span class="ref-title" markdown="span">{{ pub.title }}</span>
+    <span class="ref-authors">
       {%- for author in pub.authors -%}
-      <li>      
-      {%- if author == 'Tom Van Cutsem' %}<strong>{{author}}</strong>
-      {%- else %}{{ author }}
-      {%- endif %}
-      </li>
-      {% endfor %}
-      </ul>
-    </td>
-    <td markdown="span">{{pub.title}}<br>
-    {% if pub.path %}<a class="btn btn-info btn-xs" target="_blank" href="{{site.asseturl}}/{{pub.path}}">author copy</a>{% endif %}
-    {%- if pub.url %}<a class="btn btn-info btn-xs" target="_blank" href="{{pub.url}}">author copy</a>{% endif %}
-    {% if pub.publisher_link %}<a class="btn btn-warning btn-xs" target="_blank" href="{{ pub.publisher_link }}">publisher link</a>{% endif %}
-    {%- if pub.slides_path %}<a class="btn btn-warning btn-xs" target="_blank" href="{{site.asseturl}}/{{ pub.slides_path }}">talk slides</a>{% endif %}
-    {% for tag in pub.tags -%}<span class="btn btn-default btn-xs disabled">{{tag}}</span> {% endfor %}
-    </td>
-    <td markdown="span">{{pub.venue}}</td>
-  </tr>
+        {%- if author == 'Tom Van Cutsem' -%}<strong>{{ author }}</strong>{%- else -%}{{ author }}{%- endif -%}
+        {%- unless forloop.last %}, {% endunless -%}
+      {%- endfor -%}
+    </span>
+    <span class="ref-venue" markdown="span">{{ pub.venue }}</span>
+    <div class="ref-actions">
+      {% if pub.path %}<a class="ref-link" target="_blank" href="{{ site.asseturl }}/{{ pub.path }}">author copy</a>{% endif %}
+      {%- if pub.url %}<a class="ref-link" target="_blank" href="{{ pub.url }}">author copy</a>{% endif %}
+      {% if pub.publisher_link %}<a class="ref-link" target="_blank" href="{{ pub.publisher_link }}">publisher link</a>{% endif %}
+      {%- if pub.slides_path %}<a class="ref-link" target="_blank" href="{{ site.asseturl }}/{{ pub.slides_path }}">talk slides</a>{% endif %}
+    </div>
+    {% if pub.tags %}<div class="ref-tags">{{ pub.tags | join: " &middot; " }}</div>{% endif %}
+  </div>
+</li>
+{%- assign prev_year = pub_year -%}
+{%- if forloop.last %}
+</ul>
+{% endif -%}
 {% endfor %}
-</tbody>
-</table>

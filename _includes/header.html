@@ -3,11 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>{{ site.name }}</title>
+    <title>{% if page.title %}{{ page.title }} &middot; {{ site.name }}{% else %}{{ site.name }}{% endif %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-    <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="{{ site.description }}">
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }}" href="{{ site.baseurl }}/feed.xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400..700;1,400..700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400..700;1,8..60,400..700&display=swap" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/github.css" rel="stylesheet">
     <link href="{{ site.baseurl }}/css/flag-icon.min.css" rel="stylesheet">
@@ -15,31 +17,27 @@
 
 <body>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.name }}</a>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                  {% for page in site.pages %}
-                    {% if page.title %}
-                      {% unless page.url contains '/voids/' %}
-                      <li class="active"><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-                      {% endunless %}
-                    {% endif %}
-                  {% endfor %}
-                    <li class="active visible-xs-block"><a href="{{ site.baseurl }}/links.html">Links</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/archive.html">Archive</a></li>
-                </ul>
-              </div>
-        </div>
+{% assign brand_parts = site.name | split: '|' %}
+<header class="site-header">
+    <div class="site-header-inner">
+        <a class="site-brand" href="{{ site.baseurl }}/">
+            <strong>{{ brand_parts[0] | strip }}</strong>
+            {% if brand_parts[1] %}<span class="site-brand-sub">{{ brand_parts[1] | strip }}</span>{% endif %}
+        </a>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
+        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </label>
+        <nav class="site-nav" aria-label="Site">
+            {% for p in site.pages %}
+              {% if p.title %}
+                {% unless p.url contains '/voids/' %}
+                <a href="{{ p.url | prepend: site.baseurl }}"{% if p.url == page.url %} aria-current="page"{% endif %}>{{ p.title }}</a>
+                {% endunless %}
+              {% endif %}
+            {% endfor %}
+            <a class="nav-mobile-only" href="{{ site.baseurl }}/links.html">Links</a>
+            <a href="{{ site.baseurl }}/archive.html"{% if page.url == '/archive.html' %} aria-current="page"{% endif %}>Archive</a>
+        </nav>
     </div>
-</div>
+</header>

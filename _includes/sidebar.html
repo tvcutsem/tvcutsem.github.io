@@ -1,26 +1,8 @@
-<!--
-<div class="sidebar well">
-{{ site.description }}
-</div>
--->
-
-
-<!--
-<div class="sidebar well">
-    <h1>Recent Posts</h1>
-    <ul>
-        {% for post in site.posts limit:3 %}
-          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-    </ul>
-</div>
--->
-
-<div class="sidebar well">
+<div class="sidebar-section">
   {% include links-list.html %}
 </div>
 
-<div class="sidebar well">
+<div class="sidebar-section">
   <h1>BlueSky Posts</h1>
   <bsky-embed username="tvcutsem.bsky.social" limit="1" load-more="true"></bsky-embed>
   <script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js"></script>
