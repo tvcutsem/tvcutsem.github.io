@@ -24,11 +24,15 @@
             <strong>{{ brand_parts[0] | strip }}</strong>
             {% if brand_parts[1] %}<span class="site-brand-sub">{{ brand_parts[1] | strip }}</span>{% endif %}
         </a>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-hidden="true">
-        <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
-            <span></span><span></span><span></span>
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span class="nav-toggle-text">Menu</span>
+            <span class="nav-toggle-bars" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </span>
         </label>
         <nav class="site-nav" aria-label="Site">
+            <a class="nav-mobile-only" href="{{ site.baseurl }}/links.html"{% if page.url == '/links.html' %} aria-current="page"{% endif %}>Featured</a>
             {% for p in site.pages %}
               {% if p.title %}
                 {% unless p.url contains '/voids/' %}
@@ -36,7 +40,6 @@
                 {% endunless %}
               {% endif %}
             {% endfor %}
-            <a class="nav-mobile-only" href="{{ site.baseurl }}/links.html">Links</a>
             <a href="{{ site.baseurl }}/archive.html"{% if page.url == '/archive.html' %} aria-current="page"{% endif %}>Archive</a>
         </nav>
     </div>
