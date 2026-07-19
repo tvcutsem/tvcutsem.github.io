@@ -97,7 +97,9 @@ a:hover {
     grid-template-columns: minmax(0, 1fr) 15.5rem;
     column-gap: 3.25rem;
     align-items: start;
-    padding: 2.75rem 0 4.5rem;
+    /* top/bottom only — the shorthand would cancel .site-wrap's side padding */
+    padding-top: 2.75rem;
+    padding-bottom: 4.5rem;
 }
 
 .content {
@@ -186,22 +188,68 @@ a:hover {
 }
 
 .nav-toggle-label {
-    display: none;
+    display: none;              /* becomes flex at ≤700px */
     align-self: center;
     margin-left: auto;
-    flex-direction: column;
-    justify-content: center;
-    gap: 4px;
-    padding: 0.4rem 0;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.4rem 0.85rem;
+    border: 1px solid var(--hairline-strong);
+    border-radius: 999px;
     cursor: pointer;
+    color: var(--ink-soft);
 }
 
-.nav-toggle-label span {
+.nav-toggle-text {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nav-toggle-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.nav-toggle-bars span {
     display: block;
-    width: 22px;
+    width: 18px;
     height: 2px;
-    background: var(--ink);
+    background: currentColor;
     border-radius: 1px;
+    transition: transform 160ms ease, opacity 120ms ease;
+}
+
+.nav-toggle:checked + .nav-toggle-label {
+    color: var(--accent);
+    border-color: var(--accent-faint);
+}
+
+/* bars are 2px tall with 4px gaps → outer bars travel 6px to the middle */
+.nav-toggle:checked + .nav-toggle-label .nav-toggle-bars span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle:checked + .nav-toggle-label .nav-toggle-bars span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle:checked + .nav-toggle-label .nav-toggle-bars span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+/* the checkbox itself is invisible, so surface its focus on the label */
+.nav-toggle:focus-visible + .nav-toggle-label {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-toggle-bars span {
+        transition: none;
+    }
 }
 
 .nav-mobile-only {
@@ -1036,8 +1084,16 @@ h2.year-band {
         display: block;
     }
 
+    /* stack the brand on two lines so the subtitle stays visible */
+    .site-brand {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.1rem;
+    }
+
     .site-brand-sub {
-        display: none;
+        font-size: 0.8rem;
+        line-height: 1.3;
     }
 }
 
