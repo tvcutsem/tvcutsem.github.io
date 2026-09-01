@@ -1,5 +1,13 @@
 - year: 2026
   talks:
+  - date: September 2026
+    type: Summer school
+    title: "Introduction to Blockchain and Distributed Ledgers"
+    tags: ["blockchain", "security", "consensus"]
+    relative_slides_path: "/assets/dare26-vancutsem-blockchain-lecture.pdf"
+    venue: "[DARE 2026](https://dare-milan.github.io/): Summer school on Distributed and Replicated Environments"
+    place: Milan
+    country: IT
   - date: June 2026
     type: Seminar
     title: "Introduction to Blockchain and Distributed Ledgers"
