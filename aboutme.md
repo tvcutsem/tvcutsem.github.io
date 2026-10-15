@@ -29,6 +29,7 @@ See [here](https://distrinet.cs.kuleuven.be/people/TomVanCutsem) for a recent li
 
 ## Past work that I am proud of
 
+*   With my PhD student Weihong Wang and colleagues at DistriNet, we uncovered several systemic user privacy issues in Web3 (cryptocurrency) wallets, work published at [PETS 2026](https://petsymposium.org/popets/2026/popets-2026-0094.php) and featured in the press ([KU Leuven press release](https://nieuws.kuleuven.be/nl/2026/ku-leuven-onderzoekers-leggen-verborgen-privacyrisicos-van-cryptowallets-bloot), [Het Nieuwsblad](https://www.nieuwsblad.be/binnenland/ku-leuven-onderzoekers-ontdekken-privacylekken-in-populaire-cryptowallets/158511291.html), [ITDaily](https://itdaily.be/nieuws/beveiliging/ku-leuven-cryptowallet-privacy/), [Computable.be](https://www.computable.be/2026/07/09/je-cryptowallet-is-misschien-minder-anoniem-dan-je-denkt/), [Techzine.eu](https://www.techzine.eu/news/security/142820/ku-leuven-discovers-privacy-leaks-in-popular-crypto-wallets/), [Coinpedia.org](https://coinpedia.org/news/study-exposes-severe-leaks-and-tracking-risks-in-85-crypto-wallet-extensions/)).
 *   At KU Leuven, I designed a full semester Blockchain course as part of the [Advanced Master in Cybersecurity](https://www.kuleuven.be/programmes/master-cybersecurity).
 *   I designed the [Unix Game](https://unixgame.io), an online coding game
     built for the occasion of the 50th birthday of the Unix operating system.
